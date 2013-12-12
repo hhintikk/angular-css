@@ -69,7 +69,7 @@
 </div>		<!-- END ROW -->   
 
 <div class="row-fluid">    <!-- ROW -->
-      <h2 id="lomake">Lomakekentät <small>-kesken-</small></h2>    
+      <h2 id="lomake">Lomakekentät <small></small></h2>    
         <div class="well">
             <form class="form-horizontal">
                 <div class="control-group">
@@ -104,7 +104,7 @@
         <h4>h4 Otsikko</h4>
         <h5>h5 Otsikko</h5>
         <h6>h6 Otsikko</h6>
-        <p>Paragraph. Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan.</p>
+        <p>Paragraph. Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan. Ja Yada.</p>
         
     </div>    
 </div>				<!-- END ROW -->
@@ -123,13 +123,12 @@
     <h2 id="alertit">Alertit <small></small></h2>
     <div class="well">
         <div class="alert">Alert</div>
-        <div class="alert alert-block">Alert Block</div>
         <div class="alert alert-error">Alert error</div>
-        <div class="alert alert-block alert-error">Alert Block error</div>
         <div class="alert alert-success">Alert success</div>
-        <div class="alert alert-block alert-success">Alert Block success</div>
         <div class="alert alert-info">Alert info</div>
-        <div class="alert alert-block alert-info">Alert Block info</div>
+        <div class="alert alert-block"><img src="img/alert-icon28x29.png">Alert Block</div>
+        <div class="alert alert-block alert-success"><img src="img/confirm-icon28x29.png">Alert Block success</div>
+        <div class="alert alert-block alert-info"><img src="img/info-icon28x29.png">Alert Block info</div>
     </div>
 </div> 					<!-- END ROW -->
     
@@ -148,21 +147,22 @@
     <h2 id="tabit">Tabit <small></small></h2>
     <div class="well">
         <ul class="nav nav-tabs">
-        <li class="active">
-            <a href="#">Yksi</a>
-        </li>
-        <li><a href="#">Kaksi</a></li>
-        <li><a href="#">Kolme</a></li>
+            <li class="active"><a href="#tab1" data-toggle="tab">Yksi</a>
+            </li>
+            <li><a href="#tab2" data-toggle="tab">Kaksi</a></li>
+            <li><a href="#tab3" data-toggle="tab">Kolme</a></li>
         </ul>
         <div class="tab-content">
-    <div class="tab-pane active" id="tab1">
-      <p>I'm in Section 1.</p>
-    </div>
-    <div class="tab-pane" id="tab2">
-      <p>Howdy, I'm in Section 2.</p>
-    </div>
-  </div>
-    </div>
+            <div class="tab-pane active" id="tab1">
+                <p>Section 1.</p>
+            </div>
+            <div class="tab-pane" id="tab2">
+                <p>Section 2.</p>
+            </div>
+            <div class="tab-pane" id="tab3">
+                <p>Section 3.</p>
+            </div>        
+        </div>
     </div>
 </div> 					<!-- END ROW -->
     
