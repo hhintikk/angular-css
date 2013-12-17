@@ -1,7 +1,7 @@
 /* TYYLIKIRJASTO VIRKAILIJAN TYÖPÖYTÄKÄYTTÖLIITTYMÄÄ VARTEN */
 /* Täydentää bootstrap 2.3.1 css tyylejä */
 /* Tämä tyylikirjasto ladataan bootstrap versio 2.3.1 tyylitiedoston jälkeen */
-/* päivitetty 3.12.2013 */
+/* päivitetty 17.12.2013 */
 
 /* NAPPULAT */
 
@@ -198,24 +198,18 @@ h6 {
 
 .alert-error {
     background-color: #f2dede;
-    /*background-image: url("../img/alert-icon28x29.png"); 
-    background-repeat: no-repeat; 
-    background-position: left; */
+
 }
 
 
 .alert-success {
     background-color: #e3f4e5;
-    /*background-image: url("../img/confirm-icon28x29.png"); 
-    background-repeat: no-repeat; 
-    background-position: left; */
+
 }
 
 .alert-info {
     background-color: #e4f4f9;
-    /* background-image: url("../img/info-icon28x29.png"); 
-    background-repeat: no-repeat; 
-    background-position: left; */
+
 }
 
 
