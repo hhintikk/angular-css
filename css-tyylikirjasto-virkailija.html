@@ -74,7 +74,9 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="ylatunniste">Ylätunniste <small></small></h2>
 <div class="well">
-Ylätunnisteen ja navigaation välissä on 6px korkea raja, joka muodostetaan oheisella kuvalla. <a href="img/menupattern_3x6px.png" download="menupattern_3x6px.png">Lataa kuva</a> 
+<p>Ylätunnisteen korkeus on 48px ja leveys 100% selaimen ikkunan leveydestä. Vasempaan reunaan sijoitetaan palvelun logo. Sisäänkirjautumistiedot sijoitetaan oikeaan reunaan. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
+<p><img src="img/virkailija_header.png"></p>
+    Ylätunnisteen ja navigaation välissä on 6px korkea raja, joka muodostetaan oheisella kuvalla. <a href="img/menupattern_3x6px.png" download="menupattern_3x6px.png">Lataa kuva</a> 
 <div style="height: 6px; width:600px; background: #FFF url(img/menupattern_3x6px.png) repeat;"></div>    
     </div>
 </div> 					<!-- END ROW -->
@@ -95,6 +97,7 @@ Ylätunnisteen ja navigaation välissä on 6px korkea raja, joka muodostetaan oh
     
     <h2 id="nappulat">Nappulat</h2>
     <div class="well">
+        <p>Nappuloissa on käytössä kaksi perustyyliä joita voi käyttää kahdessa koossa. Näiden luokat ovat bootstrap koodissa <code>.btn</code> ja <code>.btn-primary</code>. Isomman nappulan saa lisäämällä luokan  <code>.btn-large</code></p>
     <p>
         <button class="btn">Nappula default</button>
         <button class="btn" disabled>Nappula disabled</button>
@@ -117,6 +120,7 @@ Ylätunnisteen ja navigaation välissä on 6px korkea raja, joka muodostetaan oh
 <div class="row-fluid">    <!-- ROW -->
     <h2 id="nappulat-ikonit">Nappula + ikoni</h2>    
         <div class="well">
+            <p>Jos nappulaan on tarve lisätä ikoni sen voi tehdä käyttämällä bootstrapin normaalia ikonikirjastoa. Esimerkiksi: <code>class="icon-plus-sign"</code></p>
             <p>    
             <button class="btn">Nappula default <i class="icon-plus-sign"></i></button>
             <button class="btn"><i class="icon-arrow-left"></i></button>
@@ -184,22 +188,25 @@ Ylätunnisteen ja navigaation välissä on 6px korkea raja, joka muodostetaan oh
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="alertit">Alertit <small></small></h2>
     <div class="well">
-        <div class="alert">Alert</div>
-        <div class="alert alert-error">Alert error</div>
-        <div class="alert alert-success">Alert success</div>
-        <div class="alert alert-info">Alert info</div>
+        <p>Alertteja on käytössä kolme eri väriä, keltainen <code>.alert</code> vihreä <code>alert-success</code> ja sininen <code>alert-info</code>. Keltainen ilmoittaa virheestä, vihreä onnistuneesta toiminnosta, sininen on neutraali ilmoitus. Bootstrapin punaista alerttia ei käytetä Virkailijan käyttöliittymässä. Ikonin näyttäminen alertin sisällä on suositeltavaa. Jos ikonia käytetään täytyy lisätä luokka <code> alert-block</code>, joka tuottaa isomman paddingin alertin sisään.</p>
+        <h3>Alert ikonin kanssa</h3>
         <div class="alert alert-block"><img style="margin-right:10px;" src="img/alert-icon28x29.png">Alert Block</div>
         <div class="alert alert-block alert-success"><img style="margin-right:10px;" src="img/confirm-icon28x29.png">Alert Block success</div>
         <div class="alert alert-block alert-info"><img style="margin-right:10px;" src="img/info-icon28x29.png">Alert Block info</div>
+        <h3>Alert ilman ikonia</h3>
+        <div class="alert">Alert</div>
+        <div class="alert alert-success">Alert success</div>
+        <div class="alert alert-info">Alert info</div>
     </div>
 </div> 					<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="dialogit">Dialogi <small></small></h2>
     <div class="well">
+        <p>Bootstrapin perusdialogi. Tuotetaan käyttämällä luokkaa <code>.modal</code>. </p>
         <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
     <div class="modal-header"><h3>Otsikko</h3></div>
-        <div class="modal-body">Body. Lorem ipsum dolor sit amet.</div>
+        <div class="modal-body">Qui ipsorum lingua Celtae, nostra Galli appellantur. Quisque ut dolor gravida, placerat libero vel, euismod. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Sed haec quis possit intrepidus aestimare tellus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.</div>
         <div class="modal-footer"><button class="btn btn-secondary">Button</button><button class="btn btn-primary">Button</button></div>
     </div>
     </div>
