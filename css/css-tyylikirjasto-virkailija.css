@@ -236,6 +236,8 @@ input:focus, textarea:focus {
      background-color: #ffffff;
 }
 
+/*LINKIT*/
+
 a {
     color: #0c566e;
 }
@@ -252,10 +254,32 @@ a :visited {
     color:#730d02;
 }
 
-
-
+/* EROTINVIIVA */
 hr { 
     color: #149ecb; 
     background: #149ecb;  
     height: 1px; 
 } 
+
+
+/* TAULUKOT NORMAALI & STRIPED */
+
+.table {
+    border-top-color:#06526B; 
+}
+
+.table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
+    background-color: rgba(20, 158, 203, 0.06);
+    border-top-color:rgba(6, 82, 107, 0.12);
+    border-bottom-color:rgba(6, 82, 107, 0.12);
+    
+}
+
+.table th, .table td {
+   border-top-color: rgba(6, 82, 107, 0.12);
+}
+
+.table thead tr th{
+    font-weight:normal;
+    text-transform:uppercase;
+}
