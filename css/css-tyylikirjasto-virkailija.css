@@ -253,3 +253,9 @@ a :visited {
 }
 
 
+
+hr { 
+    color: #149ecb; 
+    background: #149ecb;  
+    height: 1px; 
+} 

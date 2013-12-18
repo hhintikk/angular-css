@@ -43,9 +43,11 @@
 <p>Versio 0.1 — 13.12.2103</p>    
 <div class="row-fluid">  <!-- ROW -->
 <h1>Esittely</h1>
-    <p>Tämä dokumentti esittelee Virkailijan työpöytäpalvelun visuaaliset elementit. </p>
-<p>Tässä dokumentissa esiteltyjen elementtien käyttö edellyttää että käytössä on Bootstrap web-kehitysympäristö tai joku muu Bootstrapin css-kirjastoa käyttävä kehitysympäristö, kuten AngularJS. Jos kuitenkin kehitysypäristönä käytetään jotain muuta ympäristöä tai työkalua, on visuaalinen tyyli mahdollista toistaa rakentamalla css-tyylit siten että ne vastaavat tässä esitettyä. Painikkeet (ja muut elementit) on myös mahdollista toteuttaa graafisina bitmap-elementteinä. Tätä ei voi pitää parhaana mahdollisena ratkaisuna koska niiden ulkoasua ei välttämättä saa täysin vastaamaan css-tekniikalla toteutettuja painikkeita.</p>
-<p>Tässä dokumentissa on esitelty vain ne bootstrapillä toteuttavat elementit jotka ovat tällä hetkellä Virkailija-palvelulla käytössä. Boostrap css-kirjasto sisältää lukuisia käyttöliittymäelementtejä jotka on mahdollista muuntaa "virkailija-tyyliseksi". Tämä muuntaminen on tehtävä tapauskohtaisesti jos uusia käyttöliittymäelementtejä halutaan ottaa käyttöön.</p>    
+    <p>Tässä dokumentissa esitellään Virkailijan työpöytäpalvelun visuaaliset elementit.</p>
+<p>Osan tässä dokumentissa esiteltyjen elementtien käyttö edellyttää että käytössä on Bootstrap web-kehitysympäristö tai joku muu Bootstrapin css-kirjastoa käyttävä kehitysympäristö, kuten AngularJS. Jos kuitenkin kehitysypäristönä käytetään jotain muuta ympäristöä tai työkalua, on visuaalinen tyyli mahdollista toistaa rakentamalla css-tyylit siten että ne vastaavat tässä esitettyä. Painikkeet (ja muut elementit) on myös mahdollista toteuttaa graafisina bitmap-elementteinä. Tätä ei voi pitää parhaana mahdollisena ratkaisuna koska niiden ulkoasua ei välttämättä saa täysin vastaamaan css-tekniikalla toteutettuja painikkeita.</p>
+<p>Tässä dokumentissa on esitelty vain ne bootstrapillä toteuttavat elementit jotka ovat tällä hetkellä Virkailija-palvelussa käytössä. Boostrap css-kirjasto sisältää lukuisia käyttöliittymäelementtejä jotka on mahdollista muuntaa "virkailija-tyyliseksi". Tämä muuntaminen on tehtävä tapauskohtaisesti jos uusia käyttöliittymäelementtejä halutaan ottaa käyttöön.</p>
+<p>Käytännössä virkailija tyylin käyttöönotto tapahtuu siten että perus css-tyylikirjaston lisäksi ladataan css-tyylikirjasto-virkailija.css joka vaihtaa käyttöliittymäelementit virkailija-tyyliin.</p>
+<p>Tämän dokumentin alussa kuvataan myös joitakin yleisiä tyyliseikkoja, joita ei ole toteutettu bootstrapilla. Näitä ovat Logo, Värit, Ylätunniste, Footer.</p>
 </div>
 
 <div class="row-fluid"> <!-- ROW -->
@@ -74,63 +76,83 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="ylatunniste">Ylätunniste <small></small></h2>
 <div class="well">
-<p>Ylätunnisteen korkeus on 48px ja leveys 100% selaimen ikkunan leveydestä. Vasempaan reunaan sijoitetaan palvelun logo. Sisäänkirjautumistiedot sijoitetaan oikeaan reunaan. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
+<p>Ylätunnisteen korkeus on 48px ja leveys 100% selaimen ikkunan leveydestä. Ylätunnisteen väri on #149ecb. Palvelun logo sijoitetaan ylätunnisteen vasempaan reunaan. Oikeaan reunaan sijoitetaan sisäänkirjautumistiedot. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
 <p><img src="img/virkailija_header.png"></p>
-    Ylätunnisteen ja navigaation välissä on 6px korkea raja, joka muodostetaan oheisella kuvalla. <a href="img/menupattern_3x6px.png" download="menupattern_3x6px.png">Lataa kuva</a> 
+    Ylätunnisteen ja navigaation välissä on 100% leveä ja 6px korkea elementti, joka muodostetaan oheisella kuvalla. <a href="img/menupattern_3x6px.png" download="menupattern_3x6px.png">Lataa kuva</a> 
 <div style="height: 6px; width:600px; background: #FFF url(img/menupattern_3x6px.png) repeat;"></div>    
     </div>
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="navigaatio">Navigaatio <small></small></h2>
-<div class="well"><p style="color:red;">Boldaus activesta pois</p>
+<div class="well"><p>Allaolevassa kuvassa on kuvattu navigaatiopalkin tiedot. Boldaus activesta pois</p>
  <img src="img/virkailija_navigaatiomenu1.png">    
      </div>
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="footer">Footer <small></small></h2>
-<div class="well"><p>Footer koostuu laatikosta jossa voi tarpeen mukaan listata linkit kaikkiin Virkailijan palvelun sovelluksiin. Footerin alapuolelle sijoitetaan alatunniste jossa näytetään Opetushallituksen ja Opetus- ja kulttuuriministeriön logot ja osoitteet. Näiden edellämainittujen alle sijoitetaan copyright-lauseke.</p><img src="img/Virkailija_Footer_17.12.2013.png"> </div>
+<div class="well"><p>Footer koostuu laatikosta jossa voi tarpeen mukaan näyttää linkit kaikkiin Virkailijan palvelun sovelluksiin. Footerin alapuolelle sijoitetaan alatunniste jossa näytetään Opetushallituksen ja Opetus- ja kulttuuriministeriön logot ja osoitteet. Näiden edellämainittujen alle sijoitetaan copyright-lauseke.</p><img src="img/Virkailija_Footer_17.12.2013.png"> </div>
 </div> 					<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
     
-    <h2 id="nappulat">Nappulat</h2>
+    <h2 id="nappulat">Painikkeet</h2>
     <div class="well">
-        <p>Nappuloissa on käytössä kaksi perustyyliä joita voi käyttää kahdessa koossa. Näiden luokat ovat bootstrap koodissa <code>.btn</code> ja <code>.btn-primary</code>. Isomman nappulan saa lisäämällä luokan  <code>.btn-large</code></p>
+        <p>Nappuloissa on käytössä kaksi perustyyliä, joita voi käyttää kahdessa koossa. Näiden luokat ovat bootstrap-koodissa <code>.btn</code> ja <code>.btn-primary</code>. Isomman painikkeen saa lisäämällä koodiin luokan <code>.btn-large</code></p>
+        <p>Kultainen painike valitaan tärkeimmälle toiminnolle. Sininen painike vähemmän tärkeille toiminnoille.</p>
+        
     <p>
-        <button class="btn">Nappula default</button>
-        <button class="btn" disabled>Nappula disabled</button>
+        <button class="btn">Painike default</button>
+        <button class="btn" disabled>Painike disabled</button>
     </p>
     <p>    
-        <button class="btn btn-primary">Nappula primary</button>
-        <button class="btn btn-primary" disabled>Nappula primary disabled</button>
+        <button class="btn btn-primary">Painike primary</button>
+        <button class="btn btn-primary" disabled>Painike primary disabled</button>
     </p>    
     <p>
-        <button class="btn btn-large">Nappula default iso</button>
-        <button class="btn btn-large" disabled>Nappula default iso disabled</button>  
+        <button class="btn btn-large">Painike default iso</button>
+        <button class="btn btn-large" disabled>Painike default iso disabled</button>  
     </p>
     <p>
-        <button class="btn btn-primary btn-large">Nappula primary iso</button>
-        <button class="btn btn-primary btn-large" disabled>Nappula primary iso disabled</button>
+        <button class="btn btn-primary btn-large">Painike primary iso</button>
+        <button class="btn btn-primary btn-large" disabled>Painike primary iso disabled</button>
     </p>
+    <h5>Milloin iso painike?</h5>
+        <p>Isoa painiketta voi käyttää näkymissä, joissa on vain vähän toimintoja ja pieni painike näyttäisi suhteettoman pieneltä muuten tyhjällä sivulla. Esimerkiksi jos näkymässä on vain yksi hakukenttä ja painike. Hakukenttä on kuitenkin silloin oltava suhteessa painikkeen kokoon.</p>
     </div>
 </div>		<!-- END ROW -->
 
 <div class="row-fluid">    <!-- ROW -->
-    <h2 id="nappulat-ikonit">Nappula + ikoni</h2>    
+    <h2 id="nappulat-ikonit">Painike + ikoni</h2>    
         <div class="well">
-            <p>Jos nappulaan on tarve lisätä ikoni sen voi tehdä käyttämällä bootstrapin normaalia ikonikirjastoa. Esimerkiksi: <code>class="icon-plus-sign"</code></p>
+            <p>Jos painikkeeseen on tarve lisätä ikoni sen voi tehdä käyttämällä bootstrapin normaalia ikonikirjastoa. Esimerkiksi: <code>class="icon-plus-sign"</code>. Jos painikkeessa on tekstiä on tekstin ja ikonin väliin jätettävä välilyönti.</p>
             <p>    
-            <button class="btn">Nappula default <i class="icon-plus-sign"></i></button>
+            <div>
+            <h5>Painike asioiden lisäämiseen</h5>
+            <button class="btn">Painike default <i class="icon-plus-sign"></i></button>
+            <button class="btn btn-primary">Painike primary <i class="icon-plus-sign"></i></button>
+            </div>
+            
+            <div>
+            <h5>Painike Taaksepäin/Eteenpäin</h5>
             <button class="btn"><i class="icon-arrow-left"></i></button>
             <button class="btn"><i class="icon-arrow-right"></i></button>
-            </p>
-            <p>
-            <button class="btn btn-primary">Nappula primary <i class="icon-plus-sign"></i></button>
             <button class="btn btn-primary"><i class="icon-arrow-left"></i></button>
-            <button class="btn btn-primary"><i class="icon-arrow-right"></i></button>
+            <button class="btn btn-primary"><i class="icon-arrow-right"></i></button>    
+            </div>
+            <div>
+            <h5>Muita esimerkkejä</h5>
+            <p>Nämä eivät ole tällä hetkellä käytössä, mutta niitä voi käyttää tarpeen vaatiessa.</p>
+            <button class="btn">Sähköposti <i class="icon-envelope"></i></button>    
+            <button class="btn">Käyttäjä <i class="icon-user"></i></button>
+            <button class="btn">Hae <i class="icon-search"></i></button>
+            <button class="btn">Lataa <i class="icon-download"></i></button>
+            <button class="btn">Tulosta <i class="icon-print"></i></button>
+            <button class="btn">Muokkaa <i class="icon-pencil"></i></button>
+            </div>
             </p>
+            
         </div>
 </div>		<!-- END ROW -->   
 
@@ -164,13 +186,19 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
 <h2 id="typografia">Typografia</h2>
     <div class="well">
+
+        <h5>Body-fontin koko ja riviväli</h5>
+        <p>Tekstin koko on 13px ja riviväli 20px. Suhteellisia mittayksiköitä voi myös käyttää kunhan ne tuottavat selaimessa vastaavankokoisen lopputuloksen.</p>
+        <h5>Fontstack</h5>
+        <p><code>"Helvetica Neue",Helvetica,Arial,sans-serif;</code></p>
+
         <h1>h1 Otsikko. 28px</h1>
         <h2>h2 Otsikko. 22px.</h2>
         <h3>h3 Otsikko. 18px.</h3>
         <h4>h4 Otsikko. 16px.</h4>
         <h5>h5 Otsikko. 13px.</h5>
         <h6>h6 Otsikko. 12px.</h6>
-        <p>Paragraph. Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan. Ja Yada.</p>
+        <p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan.</p>        
         
     </div>    
 </div>				<!-- END ROW -->
@@ -186,9 +214,10 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div>					<!-- END ROW -->
             
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="alertit">Alertit <small></small></h2>
+    <h2 id="alertit">Alertit <small>eli huomiolaatikot</small></h2>
     <div class="well">
-        <p>Alertteja on käytössä kolme eri väriä, keltainen <code>.alert</code> vihreä <code>alert-success</code> ja sininen <code>alert-info</code>. Keltainen ilmoittaa virheestä, vihreä onnistuneesta toiminnosta, sininen on neutraali ilmoitus. Bootstrapin punaista alerttia ei käytetä Virkailijan käyttöliittymässä. Ikonin näyttäminen alertin sisällä on suositeltavaa. Jos ikonia käytetään täytyy lisätä luokka <code> alert-block</code>, joka tuottaa isomman paddingin alertin sisään.</p>
+        <p>Alertteja varten on joissakin Virkailijasovelluksissa tehty oma komponentti, mutta jos sitä ei ole käytössä, voi käyttää allaolevia bootstrapin virkailija-tyyliin muokattuja komponentteja.</p>
+        <p>Alertteja on käytössä kolme eri väriä, keltainen <code>.alert</code> vihreä <code>.alert-success</code> ja sininen <code>.alert-info</code>. Keltainen ilmoittaa virheestä, vihreä onnistuneesta toiminnosta, sininen on neutraali ilmoitus. Bootstrapin punataustaista alerttia ei käytetä Virkailijan käyttöliittymässä vaan se korvataan keltataustaisella. Ikonin näyttäminen alertin sisällä on suositeltavaa. Jos ikonia käytetään täytyy lisätä luokka <code> .alert-block</code>, joka tuottaa isomman paddingin alertin sisään.</p>
         <h3>Alert ikonin kanssa</h3>
         <div class="alert alert-block"><img style="margin-right:10px;" src="img/alert-icon28x29.png">Alert Block</div>
         <div class="alert alert-block alert-success"><img style="margin-right:10px;" src="img/confirm-icon28x29.png">Alert Block success</div>
@@ -236,12 +265,15 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="xxx">XXX <small></small></h2>
-<div class="well"></div>
+    <h2 id="xxx">HR <small>eli vaakaviiva tai erotin</small></h2>
+<div class="well">
+    <p>Vaakaviivaa voi käyttää erottamaan elementtejä näkymässä silloin kun halutaan että esimerkiksi lomakkeen kentät muodostavat selkeitä ryhmiä.</p>
+    <hr>
+    </div>
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="xxx">XXX <small></small></h2>
+    <h2 id="xxx"><small></small></h2>
 <div class="well"></div>
 </div> 					<!-- END ROW -->
     
