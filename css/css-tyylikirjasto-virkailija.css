@@ -7,6 +7,7 @@
 
 /* normaalikokoinen perusnappula */
 .btn {
+color:#333333;    
 border-radius: 3px;
 border-color: rgb(146, 204, 224);
 font-size: 13px;
@@ -280,6 +281,6 @@ hr {
 }
 
 .table thead tr th{
-    font-weight:normal;
+    font-size:12px;
     text-transform:uppercase;
 }

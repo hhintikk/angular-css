@@ -10,6 +10,10 @@
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 
+.well {
+  background:white;  
+    }
+    
 </style>    
 </head>
 <body>
@@ -76,10 +80,10 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="ylatunniste">Ylätunniste <small></small></h2>
 <div class="well">
-<p>Ylätunnisteen korkeus on 48px ja leveys 100% selaimen ikkunan leveydestä. Ylätunnisteen väri on #149ecb. Palvelun logo sijoitetaan ylätunnisteen vasempaan reunaan. Oikeaan reunaan sijoitetaan sisäänkirjautumistiedot. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
+<p>Ylätunnisteen korkeus on 48px ja leveys 100% selaimen ikkunan leveydestä. Ylätunnisteen väri on #149ecb. Ylätunnisteessa käytettävän tekstin väri on #ffffff. Palvelun logo sijoitetaan ylätunnisteen vasempaan reunaan. Oikeaan reunaan sijoitetaan sisäänkirjautumistiedot. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
 <p><img src="img/virkailija_header.png"></p>
     Ylätunnisteen ja navigaation välissä on 100% leveä ja 6px korkea elementti, joka muodostetaan oheisella kuvalla. <a href="img/menupattern_3x6px.png" download="menupattern_3x6px.png">Lataa kuva</a> 
-<div style="height: 6px; width:600px; background: #FFF url(img/menupattern_3x6px.png) repeat;"></div>    
+<div style="height: 6px; width:100%; background: #FFF url(img/menupattern_3x6px.png) repeat;"></div>    
     </div>
 </div> 					<!-- END ROW -->
 
@@ -205,11 +209,22 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
             
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="linkit">Linkit <small></small></h2>
-    <div class="well">
-    <p>Idle: <a href="#">Linkki</a></p>
-    <p>Hover: <a href="#" style="text-decoration:underline;">Linkki</a></p>
-    <p>Active: <a href="#" style="text-decoration:underline;">Linkki</a></p>    
-    <p>Visited: <a href="#" style="color:#730d02;">Linkki</a></p>
+    <div style="height:200px;" class="well">
+        <div style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" class="span6">
+            <h5>Linkkien värit valkoisella taustalla</h5>
+            <p>Idle: <a href="#">Linkki</a></p>
+            <p>Hover: <a href="#" style="text-decoration:underline;">Linkki</a></p>
+            <p>Active: <a href="#" style="text-decoration:underline;">Linkki</a></p>    
+            <p>Visited: <a href="#" style="color:#730d02;">Linkki</a></p>
+        </div>
+        <div style="background:#149ecb; border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" class="span6">
+            <h5>Linkkien värit ylätunnisteessa</h5>
+            <p>Idle: <a href="#" style="color:#ffffff;">Linkki</a></p>
+            <p>Hover: <a href="#" style="color:#ffffff; text-decoration:underline;">Linkki</a></p>
+            <p>Active: <a href="#" style="color:#ffffff; text-decoration:underline;">Linkki</a></p>    
+            <p>Visited: <a href="#" style="color:#ffffff; color:#ebebeb;">Linkki</a></p>
+        </div>
+    
     </div>
 </div>					<!-- END ROW -->
             
@@ -275,7 +290,10 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="xxx">Taulukko<small></small></h2>
 <div style="background:white;" class="well">
+    <p>Seuraavat taulukkoelementit on muokattu Virkailijatyyliin.</p>
     <table class="table">
+        <h3>Perustaulukko</h3>
+        <p>Tuotetaan lisäämällä luokka <code>.table</code> <code>&lt;table&gt;</code>elementtiin.</p>
         <thead>
             <tr>
                 <th>One</th>
@@ -306,6 +324,40 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
         </tbody>
     </table>
         <table class="table table-striped">
+            <h3>Taulukko raidoituksella</h3>
+            <p>Tuotetaan lisäämällä luokka <dode>.table-striped</dode></p>
+            <thead>
+            <tr>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+                <th>Four</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yksi</td>
+                <td>Kaksi</td>
+                <td>Kolme</td>
+                <td>Neljä</td>
+            </tr>
+            <tr>
+                <td>Un</td>
+                <td>Dos</td>
+                <td>Tres</td>
+                <td>Quatro</td>
+            </tr>
+            <tr>
+                <td>Ichi</td>
+                <td>Ni</td>
+                <td>San</td>
+                <td>Chi</td>
+            </tr>
+        </tbody>
+    </table>
+            <table class="table table-hover">
+                <h3>Taulukko jossa hover-tila</h3>
+                <p>Tuotetaan lisäämällä luokka <code>.table-hover</code></p>
         <thead>
             <tr>
                 <th>One</th>
@@ -339,7 +391,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div> 					<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="xxx">XXX <small></small></h2>
+    <h2 id="murupolku">Murupolku <small></small></h2>
 <div class="well"></div>
 </div> 					<!-- END ROW -->
     
