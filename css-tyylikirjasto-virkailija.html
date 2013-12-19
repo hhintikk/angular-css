@@ -35,10 +35,12 @@
           <li><a href="#typografia">Typografia</a></li>
           <li><a href="#linkit">Linkit</a></li>
           <li><a href="#alertit">Alertit</a></li>
-          <li><a href="#ikonit">Ikonit</a></li>
-          <li><a href="#XXX">XXX</a></li>
-          <li><a href="#XXX">XXX</a></li>
-          <li><a href="#XXX">XXX</a></li>
+          <li><a href="#dialogit">Dialogit</a></li>
+          <li><a href="#tabit">Tabit</a></li>
+          <li><a href="#hr">HR</a></li>
+          <li><a href="#taulukot">Taulukot</a></li>
+          <li><a href="#murupolku">Murupolku</a></li>
+          <li><a href="#muuta">Muuta</a></li>
           <li><a href="#XXX">XXX</a></li>            
             
         </ul>
@@ -184,7 +186,22 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
                         </div>
                 </div>    
             </form>
-	</div>
+<hr>                
+<form class="form-search">
+  <input type="text" class="input-medium">
+  <button type="submit" class="btn">Search</button>
+</form>
+<hr>
+<form class="form-inline">
+  <input type="text" class="input-small" placeholder="Email">
+  <input type="password" class="input-small" placeholder="Password">
+  <label class="checkbox">
+    <input type="checkbox"> Remember me
+  </label>
+  <button type="submit" class="btn">Sign in</button>
+</form>                
+                
+            </div>
 </div>		<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
@@ -245,7 +262,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div> 					<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="dialogit">Dialogi <small></small></h2>
+    <h2 id="dialogit">Dialogit <small></small></h2>
     <div class="well">
         <p>Bootstrapin perusdialogi. Tuotetaan käyttämällä luokkaa <code>.modal</code>. </p>
         <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
@@ -288,12 +305,12 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="xxx">Taulukko<small></small></h2>
+    <h2 id="taulukot">Taulukot <small></small></h2>
 <div style="background:white;" class="well">
     <p>Seuraavat taulukkoelementit on muokattu Virkailijatyyliin.</p>
     <table class="table">
         <h3>Perustaulukko</h3>
-        <p>Tuotetaan lisäämällä luokka <code>.table</code> <code>&lt;table&gt;</code>elementtiin.</p>
+        <p>Tuotetaan lisäämällä luokka <code>.table</code> <code>&lt;table&gt;</code> elementtiin.</p>
         <thead>
             <tr>
                 <th>One</th>
@@ -325,7 +342,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
     </table>
         <table class="table table-striped">
             <h3>Taulukko raidoituksella</h3>
-            <p>Tuotetaan lisäämällä luokka <dode>.table-striped</dode></p>
+            <p>Tuotetaan lisäämällä luokka <code>.table-striped</code></p>
             <thead>
             <tr>
                 <th>One</th>
@@ -396,9 +413,26 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div> 					<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
+    <h2 id="muuta">Muuta <small></small></h2>
+<div class="well">
+    <p><i class="icon-remove"></i> Poistetaan</p>
+    <p><i class="icon-trash"></i> Roskakoriin</p>
+    <p><i class="icon-pencil"></i> Muokkaa</p>
+    <p><i class="icon-folder-open"></i> Hakemisto auki</p>
+    <p><i class="icon-folder-close"></i> Hakemisto kiinni</p>
+    <p><i class="icon-file"></i> Tiedosto</p>
+    </div>
+</div> 					<!-- END ROW -->
+
+<div class="row-fluid"> <!-- ROW -->
     <h2 id="xxx">XXX <small></small></h2>
 <div class="well"></div>
 </div> 					<!-- END ROW -->
+    
+<div class="row-fluid"> <!-- ROW -->
+    <h2 id="xxx">XXX <small></small></h2>
+<div class="well"></div>
+</div> 					<!-- END ROW -->    
     
 </div> <!-- end span10 -->    
 </div>  <!--  end outer row-->           
