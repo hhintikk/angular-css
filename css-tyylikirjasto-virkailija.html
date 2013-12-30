@@ -17,8 +17,17 @@
 </style>    
 </head>
 <body>
-<div class="container">    <!-- container -->
-<div> 
+<div class="container-fluid">    <!-- container -->
+<div class="navbar"> <!-- NAVI -->
+<div class="navbar-inner">
+    <a class="brand" href="#">Opintopolku.fi</a>
+    <ul class="nav">
+      <li class="active"><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+      <li><a href="interaktio-ohje.html">Interaktioiden tyyliopas</a></li>
+    </ul>
+  </div>    
+    </div>
+    <div> 
     <h1>Virkailijan visuaalinen tyyli <small>Bootstrap versio 2.3.1</small></h1>
 </div>
 <div class="row-fluid">
@@ -53,7 +62,7 @@
 <p>Osan tässä dokumentissa esiteltyjen elementtien käyttö edellyttää että käytössä on Bootstrap web-kehitysympäristö tai joku muu Bootstrapin css-kirjastoa käyttävä kehitysympäristö, kuten AngularJS. Jos kuitenkin kehitysypäristönä käytetään jotain muuta ympäristöä tai työkalua, on visuaalinen tyyli mahdollista toistaa rakentamalla css-tyylit siten että ne vastaavat tässä esitettyä. Painikkeet (ja muut elementit) on myös mahdollista toteuttaa graafisina bitmap-elementteinä. Tätä ei voi pitää parhaana mahdollisena ratkaisuna koska niiden ulkoasua ei välttämättä saa täysin vastaamaan css-tekniikalla toteutettuja painikkeita.</p>
 <p>Tässä dokumentissa on esitelty vain ne bootstrapillä toteuttavat elementit jotka ovat tällä hetkellä Virkailija-palvelussa käytössä. Bootstrap css-kirjasto sisältää lukuisia käyttöliittymäelementtejä jotka on mahdollista muuntaa "virkailija-tyyliseksi". Tämä muuntaminen on tehtävä tapauskohtaisesti jos uusia käyttöliittymäelementtejä halutaan ottaa käyttöön.</p>
 <p>Käytännössä virkailija tyylin käyttöönotto tapahtuu siten että perus css-tyylikirjaston lisäksi ladataan css-tyylikirjasto-virkailija.css joka vaihtaa käyttöliittymäelementit virkailija-tyyliin.</p>
-<p>Tämän dokumentin alussa kuvataan myös joitakin yleisiä tyyliseikkoja, joita ei ole toteutettu bootstrapilla. Näitä ovat Logo, Värit, Ylätunniste, Footer.</p>
+<p>Tämän dokumentin alussa kuvataan myös joitakin yleisiä tyyliseikkoja, joita ei ole toteutettu bootstrapilla. Näitä ovat logo, värit, ylätunniste ja footer.</p>
 </div>
 
 <div class="row-fluid"> <!-- ROW -->
@@ -67,16 +76,34 @@
     
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="varit">Värit <small></small></h2>
-<div style="height:100px" class="well">
-<div style="background-color:#149ecb; border-style:solid;
+<div style="" class="well">
+    <h5>Yleistä värien käytöstä</h5>
+    <p>Värejä ei pidä käyttä itsetarkoituksellisesti koristeena vaan niiden käytössä on muistettava seuraavat periaatteet. xxx Pääväri on sininen, joka toimii tunnisteena koko palvelulle ja yhdistää Oppijan ja Virkailijan palvelut. Huomiovärinä toimii keltainen, joka korostaa pääasiallisia toimintoja. </p>
+    <p>Oheinen kuva osoittaa miten värit sijoittuvat väriympyrälle. Värimuunnelmat on muodostettu säätämällä päävärien, sinisen ja keltaisen, valoisuutta. </p>    
+<div style="background-color:#149ecb; text-align:center; vertical-align: middle; padding:2em; border-style:solid;
+border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); border-radius:3px;" class="span2">#149ecb</div>
+<div style="background-color:#06526B; text-align:center; vertical-align: middle; padding:2em; border-style:solid;
+border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); border-radius:3px; color:#ffffff;" class="span2">#06526B</div>
+<div style="background-color:#feedbd; text-align:center; vertical-align: middle; padding:2em; border-style:solid;
+border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); border-radius:3px;" class="span2">#feedbd</div>
+<div style="background-color:#feba00; text-align:center; vertical-align: middle; padding:2em; border-style:solid;
+border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); border-radius:3px;" class="span2">#feba00</div>
+<div style="background-color:#333333; text-align:center; vertical-align: middle; padding:2em; border-style:solid;
+border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); border-radius:3px; color:#ffffff;" class="span2">#333333</div>
+    <div class="">
+    <img style="margin-top:20px" class="img-rounded" src="img/variympyra.png">
+    </div>    
+<!--
+    <div style="background-color:#149ecb; border-style:solid;
 border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); width: 100px; height:100px; padding-top:35px; padding-left:20px;" class="span1">#149ecb</div>
 <div style="background-color:#06526B; border-style:solid;
 border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); width: 100px; height:100px; padding-top:35px; padding-left:20px;" class="span1">#06526B</div>
 <div style="background-color:#feedbd; border-style:solid;
 border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); width: 100px; height:100px; padding-top:35px; padding-left:20px;" class="span1">#feedbd</div>
-    <div style="background-color:#fedc7d; border-style:solid;
-border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); width: 100px; height:100px; padding-top:35px; padding-left:20px;" class="span1">#fedc7d</div>    
+    <div style="background-color:#feba00; border-style:solid;
+border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5); width: 100px; height:100px; padding-top:35px; padding-left:20px;" class="span1">#feba00</div>    
     </div>
+-->
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
@@ -165,6 +192,8 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid">    <!-- ROW -->
       <h2 id="lomake">Lomakekentät <small></small></h2>    
         <div class="well">
+            <p>Virkailijan lomakkeissa tulee käyttää keskitettyä tyyliä, jossa labelit tasataan oikeaan ja syöttökentät vasempaan.</p>
+            <hr>
             <form class="form-horizontal">
                 <div class="control-group">
                     <label for="YourName" class="control-label">Nimi</label>
@@ -186,20 +215,39 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
                         </div>
                 </div>    
             </form>
-<hr>                
+<hr>
+<p>Hakukenttä ja painike yhdistelmä.</p>
 <form class="form-search">
   <input type="text" class="input-medium">
-  <button type="submit" class="btn">Search</button>
+  <button type="submit" class="btn btn-primary">Hae</button>
+    <a href="#" type="submit" class="">Edistynyt haku</a>
 </form>
 <hr>
+<p>Käyttämällä luokkaa <code>.input-append</code> voi saada tiiviimmän sommittelun.</p>                
+<div class="input-append">
+  <input class="span2" id="#" type="text">
+  <button class="btn btn-primary" type="button">Hae</button>
+</div>
+
+<hr>
+<p>Jos tilaa on käytössä niukasti, voi käyttää luokkaa <code>.form-inline</code> jolla saa tiviimmän ryhmän. Tätä ei tulisi kuitenkaan käyttää laajojen paljon tietoja sisältävien näkymien sommitteluun, vaan silloin parempi vaihtoehto on ylempänä esitetty keskitetty sommittelu sen ilmavuuden ja helpomman luettavuden takia.</p>                
 <form class="form-inline">
-  <input type="text" class="input-small" placeholder="Email">
-  <input type="password" class="input-small" placeholder="Password">
+  <input type="text" class="input-small" placeholder="Sähköposti">
+  <input type="password" class="input-small" placeholder="Salasana">
   <label class="checkbox">
-    <input type="checkbox"> Remember me
+    <input type="checkbox"> Muista tiedot
   </label>
-  <button type="submit" class="btn">Sign in</button>
-</form>                
+  <button type="submit" class="btn">Kirjaudu</button>
+</form>
+<hr>
+        <div class="well" style="background:#149ecb; border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" >
+<p>Esimerkki hakukentästä ylätunnisteessa</p>
+<form class="form-search">
+  <input type="text" class="input-medium">
+  <button type="submit" class="btn btn-primary">Hae</button>
+    <a href="#" type="submit" style="color:#ffffff;">Edistynyt haku</a>
+</form>
+</div>
                 
             </div>
 </div>		<!-- END ROW -->
@@ -226,15 +274,15 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
             
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="linkit">Linkit <small></small></h2>
-    <div style="height:200px;" class="well">
-        <div style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" class="span6">
+    <div class="well" style="min-height=200px;">
+        <div class="well" style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;">
             <h5>Linkkien värit valkoisella taustalla</h5>
             <p>Idle: <a href="#">Linkki</a></p>
             <p>Hover: <a href="#" style="text-decoration:underline;">Linkki</a></p>
             <p>Active: <a href="#" style="text-decoration:underline;">Linkki</a></p>    
             <p>Visited: <a href="#" style="color:#730d02;">Linkki</a></p>
         </div>
-        <div style="background:#149ecb; border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" class="span6">
+        <div class="well" style="background:#149ecb; border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" >
             <h5>Linkkien värit ylätunnisteessa</h5>
             <p>Idle: <a href="#" style="color:#ffffff;">Linkki</a></p>
             <p>Hover: <a href="#" style="color:#ffffff; text-decoration:underline;">Linkki</a></p>
@@ -299,7 +347,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="xxx">&lt;HR&gt; <small>eli vaakaviiva tai erotin</small></h2>
 <div class="well">
-    <p>Vaakaviivaa voi käyttää erottamaan elementtejä näkymässä silloin kun halutaan että esimerkiksi lomakkeen kentät muodostavat selkeitä ryhmiä.</p>
+    <p>Vaakaviivaa voi käyttää erottamaan elementtejä näkymässä silloin kun halutaan esimerkiksi erottaa lomakkeen sisältöryhmiä toisistaan.</p>
     <hr>
     </div>
 </div> 					<!-- END ROW -->
