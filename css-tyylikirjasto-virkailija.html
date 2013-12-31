@@ -38,7 +38,7 @@
           <li><a href="#ylatunniste">Ylätunniste</a></li>
           <li><a href="#navigaatio">Navigaatio</a></li>
           <li><a href="#footer">Footer</a></li>    
-          <li><a href="#nappulat">Nappulat</a></li>
+          <li><a href="#nappulat">Painikkeet</a></li>
           <li><a href="#nappulat-ikonit">Nappulat + ikonit</a></li>
           <li><a href="#lomake">Lomakekentät</a></li>
           <li><a href="#typografia">Typografia</a></li>
@@ -192,28 +192,41 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid">    <!-- ROW -->
       <h2 id="lomake">Lomakekentät <small></small></h2>    
         <div class="well">
-            <p>Virkailijan lomakkeissa tulee käyttää keskitettyä tyyliä, jossa labelit tasataan oikeaan ja syöttökentät vasempaan.</p>
+            <p>Virkailijan lomakkeissa tulee käyttää keskitettyä tyyliä, jossa labelit tasataan oikeaan ja syöttökentät vasempaan. Luokka <code>.form-horizontal</code>.</p>
             <hr>
             <form class="form-horizontal">
                 <div class="control-group">
-                    <label for="YourName" class="control-label">Nimi</label>
+                    <label for="YourName" class="control-label">Sähköposti</label>
                         <div class="controls">
                             <input name="YourName" id="YourName" type="text" placeholder="Kirjoita jotain">
                         </div>
                 </div>
                 <div class="control-group">
-                    <label for="YourLastName" class="control-label">Sukunimi</label>
+                    <label for="YourLastName" class="control-label">Salasana</label>
                         <div class="controls">
                             <input name="YourLastName" id="YourLastName" type="text" placeholder="Kirjoita jotain">
                         </div>
                 </div>
-            <form>
+<!--
                 <div class="control-group">
                     <label for="YourStory" class="control-label">Tarinani</label>
                         <div class="controls">
                             <textarea name="YourStory" id="YourStory"  rows="5"></textarea>
                         </div>
-                </div>    
+                
+                </div>
+-->
+                <div class="control-group">
+                    <div class="controls">
+                        <label class="checkbox">
+                        <input type="checkbox"> Muista tiedot</label>
+                        </div>
+                    </div>
+                
+                <div class="form-actions">
+                <button type="button" class="btn">Peruuta</button>
+                <button type="submit" class="btn btn-primary">Kirjaudu</button>
+                </div>
             </form>
               
 <hr>
@@ -224,9 +237,9 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
     <a href="#" type="submit" class="">Edistynyt haku</a>
 </form>
 <hr>
-<p>Käyttämällä luokkaa <code>.input-append</code> voi saada tiiviimmän sommittelun.</p>                
+<p>Käyttämällä luokkaa <code>.input-append</code> painikkeen voi liittää kiinni syöttökenttään.</p>                
 <div class="input-append">
-  <input class="span2" id="#" type="text">
+  <input class="input-medium" id="#" type="text">
   <button class="btn btn-primary" type="button">Hae</button>
 </div>
 
@@ -236,9 +249,9 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
   <input type="text" class="input-small" placeholder="Sähköposti">
   <input type="password" class="input-small" placeholder="Salasana">
   <label class="checkbox">
-    <input type="checkbox"> Muista tiedot
-  </label>
-  <button type="submit" class="btn">Kirjaudu</button>
+    <input type="checkbox"> Muista tiedot</label>
+    <button type="button" class="btn">Peruuta</button>
+  <button type="submit" class="btn btn-primary">Kirjaudu</button>
 </form>
 <hr>
         <div class="well" style="background:#149ecb; border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" >
@@ -249,7 +262,14 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
     <a href="#" type="submit" style="color:#ffffff;">Edistynyt haku</a>
 </form>
 </div>
-                
+<hr>
+<p>Esimerkki disabloiduista tekstikentistä. Tuotetaan lisäämällä input tagiin parametri <code>disabled</code>.</p>
+<div>
+<input class="input" id="disabledInput" type="text" placeholder="Disabloitu tekstikenttä" disabled>
+</div>
+<div>                
+    <textarea name="YourStory" id="YourStory"  rows="5" placeholder="Disabloitu tekstikenttä" disabled></textarea>
+</div>                
             </div>
 </div>		<!-- END ROW -->
     
@@ -317,7 +337,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
         <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
     <div class="modal-header"><h3>Otsikko</h3></div>
         <div class="modal-body">Qui ipsorum lingua Celtae, nostra Galli appellantur. Quisque ut dolor gravida, placerat libero vel, euismod. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae. Sed haec quis possit intrepidus aestimare tellus. Nihilne te nocturnum praesidium Palati, nihil urbis vigiliae.</div>
-        <div class="modal-footer"><button class="btn btn-secondary">Button</button><button class="btn btn-primary">Button</button></div>
+        <div class="modal-footer"><button class="btn btn-secondary">Painike</button><button class="btn btn-primary">Painike</button></div>
     </div>
     </div>
 </div> 					<!-- END ROW -->    
