@@ -10,8 +10,8 @@
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 
-.well {
-  background:white;  
+.well { 
+  background: #ffffff;  
     }
     
 </style>    
@@ -39,7 +39,7 @@
           <li><a href="#navigaatio">Navigaatio</a></li>
           <li><a href="#footer">Footer</a></li>    
           <li><a href="#nappulat">Painikkeet</a></li>
-          <li><a href="#nappulat-ikonit">Nappulat + ikonit</a></li>
+          <li><a href="#nappulat-ikonit">Painikkeet + ikonit</a></li>
           <li><a href="#lomake">Lomakekentät</a></li>
           <li><a href="#typografia">Typografia</a></li>
           <li><a href="#linkit">Linkit</a></li>
@@ -63,14 +63,20 @@
 <p>Tässä dokumentissa on esitelty vain ne bootstrapillä toteuttavat elementit jotka ovat tällä hetkellä Virkailija-palvelussa käytössä. Bootstrap css-kirjasto sisältää lukuisia käyttöliittymäelementtejä jotka on mahdollista muuntaa "virkailija-tyyliseksi". Tämä muuntaminen on tehtävä tapauskohtaisesti jos uusia käyttöliittymäelementtejä halutaan ottaa käyttöön.</p>
 <p>Käytännössä virkailija tyylin käyttöönotto tapahtuu siten että perus css-tyylikirjaston lisäksi ladataan css-tyylikirjasto-virkailija.css joka vaihtaa käyttöliittymäelementit virkailija-tyyliin.</p>
 <p>Tämän dokumentin alussa kuvataan myös joitakin yleisiä tyyliseikkoja, joita ei ole toteutettu bootstrapilla. Näitä ovat logo, värit, ylätunniste ja footer.</p>
+<h2>Yleistä oppijan visuaalisesta tyylistä</h2>
+<p>Oppijan visuaalisen tyylin perusteet ovat yksinkertaisessa ja selkeässä värimaailmassa. Visuaalisia kolmiulotteisuutta imitoivia efektejä käytetään erittäin hillitysti. Painikkeita ja välilehtiä on hiukan korostettu liukuväreillä, muuten väripinnat ovat aina tasaisia.</p>
+<p>Kulmien pyöristystä käytetään sisältölaatikoissa, testinsyöttökentissä ja painikkeissa. Arvona käytetään silloin 3px.</p>
 </div>
 
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="logo">Logo <small></small></h2>
 <div class="well">
-    <img src="img/Opintopolku_FI_CMYK_pixelperfect_50.png">
-    <img src="img/Opintopolku_FI_CMYK_pixelperfect.png">
-    Logon käyttö ja linkki ohjeisiin.
+    <img src="img/Opintopolku-FI-134px-34px.png">
+    <p>Logo virkailijan sivuston ylätunnistetta varten, koko 134 x 34 pikseliä.</p>
+        <img src="img/Opintopolku-FI-225px-50px.png">
+    <p>Logo julkista opintopolkua varten, koko 225 x 50 pikseliä.</p>
+    
+    <p>Logon käyttöä ohjaavat erilliset ohjeet joita tulee aina noudattaa. Logosta ei tule valmistaa uusia versioita muista kuin alkuperäisistä vektorimuodossa olevasta tiedostosta.</p>
     </div>
 </div> 					<!-- END ROW -->    
     
@@ -109,7 +115,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
     <h2 id="ylatunniste">Ylätunniste <small></small></h2>
 <div class="well">
-<p>Ylätunnisteen korkeus on 48px ja leveys 100% selaimen ikkunan leveydestä. Ylätunnisteen väri on #149ecb. Ylätunnisteessa käytettävän tekstin väri on #ffffff. Palvelun logo sijoitetaan ylätunnisteen vasempaan reunaan. Oikeaan reunaan sijoitetaan sisäänkirjautumistiedot. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
+<p>Ylätunnisteen korkeus on 51px ja leveys 100% selaimen ikkunan leveydestä. Ylätunnisteen väri on #149ecb. Ylätunnisteessa käytettävän tekstin väri on #ffffff. Palvelun logo sijoitetaan ylätunnisteen vasempaan reunaan. Oikeaan reunaan sijoitetaan sisäänkirjautumistiedot. Kun selaimen ikkunaa suurennetaan leveyssyynnassa, palvelun logon tulisi pysyä asemoituna sisällön vasempaan reunaan. Logon koko on 153px kertaa 34px, jolloin logon ylä ja alapuolelle jää 7px marginaalit.</p>
 <p><img src="img/virkailija_header.png"></p>
     Ylätunnisteen ja navigaation välissä on 100% leveä ja 6px korkea elementti, joka muodostetaan oheisella kuvalla. <a href="img/menupattern_3x6px.png" download="menupattern_3x6px.png">Lataa kuva</a> 
 <div style="height: 6px; width:100%; background: #FFF url(img/menupattern_3x6px.png) repeat;"></div>    
