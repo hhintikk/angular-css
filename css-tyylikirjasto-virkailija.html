@@ -50,12 +50,12 @@
           <li><a href="#taulukot">Taulukot</a></li>
           <li><a href="#murupolku">Murupolku</a></li>
           <li><a href="#muuta">Muuta</a></li>
-          <!-- <li><a href="#XXX">XXX</a></li> -->            
-            
+          <li><a href="#sivutus">Sivutus</a></li>          
+          <li><a href="#mallisivuja">Mallisivuja</a></li>  
         </ul>
     </div>
 <div class="span10">
-<p>Versio 0.2 — 9.1.2014 - matti.kilponen@cresense.com</p>    
+<p>Versio 0.3 — 21.1.2014 - matti.kilponen@cresense.com</p>    
 <div class="row-fluid">  <!-- ROW -->
 <h1>Esittely</h1>
     <p>Tässä dokumentissa esitellään Virkailijan työpöytäpalvelun visuaaliset elementit.</p>
@@ -323,7 +323,9 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
         <h5>Esimerkkitekstiä</h5>
         <p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan.</p>
 
-<p><em>Kursiiviteksti</em></p>
+<h5>Ohjeteksti kirjoitetaan kursiivilla käyttäen tagia <code>&lt;em&gt;</code> ja luokkaa <code>.muted</code>. Koko 13px. Väri #999999.</h5>        
+
+<p class="muted"><em>Ohjeteksti. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</em></p>
 <p><strong>Vahvistettu teksti</strong></p>
 
 <p>Numeroimaton lista</p>
@@ -436,7 +438,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 </div> 					<!-- END ROW -->
 
 <div class="row-fluid"> <!-- ROW -->
-    <h2 id="xxx">&lt;HR&gt; <small>eli vaakaviiva tai erotin</small></h2>
+    <h2 id="hr">&lt;HR&gt; <small>eli vaakaviiva tai erotin</small></h2>
 <div class="well">
     <p>Vaakaviivaa voi käyttää erottamaan elementtejä näkymässä silloin kun halutaan esimerkiksi erottaa lomakkeen sisältöryhmiä toisistaan.</p>
     <hr>
@@ -572,13 +574,59 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
     </div>
 </div> 					<!-- END ROW -->
 
-<!--    
+ 
 <div class="row-fluid"> 
-    <h2 id="xxx">XXX <small></small></h2>
-<div class="well">   
+    <h2 id="sivutus">Sivutus<small></small></h2>
+<div class="well">
+Sivutukseen on olemassa seuraavanlainen komponentti, jonka saa käyttöön laittamalla div tagin sisään luokan <code>.pagination</code>. Itse html luodaan käyttämällä <code>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;/ul&gt;</code> rakennetta.
+<div class="pagination">
+    <ul>
+    <li><a href="#">Edellinen</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">Seuraava</a></li>
+  </ul>
+</div>
+
+<p>Tilan säästämiseksi voi käyttää nuolia &larr; ja &rarr; .</p>
+<div class="pagination">
+    <ul>
+    <li><a href="#">&larr;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&rarr;</a></li>
+  </ul>
+</div>    
+<p>Sivutuselementti keskitetään aina sivulle käyttämällä <code>.pagination-centered</code> luokkaa. Kun sivutusta käytetään se on aina sijoitettava sekä sivun ylä-, että alareunaan.</p>
+<div class="pagination pagination-centered">
+    <ul>
+    <li><a href="#">&larr;</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&rarr;</a></li>
+  </ul>
+</div>    
+    </div>
+</div> 					    
+    
+  
+<div class="row-fluid"> 
+    <h2 id="mallisivuja">Mallisivuja<small></small></h2>
+<div class="well">
+    <p>Oheiset mallisuvut on tarkoitettu suuntaa-antaviksi malleiksi, joita käyttämällä voi aloittaa sovelluksen käyttöliittymän rakentamisen.</p>
+    <a href="sivumalli1.html" target="_blank">Linkit mallisivuihin tähän.</a>
     </div>
 </div> 					 
---> 
+ 
 
 <!-- 
 <div class="row-fluid"> 
@@ -594,3 +642,5 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <script src="js/bootstrap.js"></script>    
 </body>
 </html>
+
+
