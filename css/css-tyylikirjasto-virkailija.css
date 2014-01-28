@@ -305,7 +305,7 @@ input[disabled], select[disabled], textarea[disabled], input[readonly], select[r
     background-repeat: repeat;
 }
 
-<<<<<<< HEAD
+
 /* korjaa checkboxin ympärillä olevan ikävän laatikon */
 /* sekä ongelman jossa checbox, radiobutton ja label eivät asetu pystysuunnassa samaan linjaan */
 /* testattu mac chrome,safari,firefox, w7 IE11,chrome,firefox */
@@ -384,7 +384,7 @@ input[type="radio"] {
     -moz-border-radius-bottomright:3px;
     border-bottom-right-radius:3px;
 }
->>>>>>> 19a73f5b4ce73f88cd9bae0d81776e041503d296
+
 
 
 
