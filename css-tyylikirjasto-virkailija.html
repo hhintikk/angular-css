@@ -60,7 +60,7 @@
 <p>Versio 0.4 — 25.3.2014 - matti.kilponen@cresense.com</p>    
 <div class="row-fluid">  <!-- ROW -->
 <h1>Esittely</h1>
-    <p>Tässä dokumentissa esitellään Virkailijan työpöytäpalvelun visuaaliset elementit.</p>
+    <p>Tässä dokumentissa esitellään Oppijan verkkopalvelun ja Virkailijan työpöytäpalvelun visuaaliset elementit.</p>
 <p>Osan tässä dokumentissa esiteltyjen elementtien käyttö edellyttää että käytössä on Bootstrap web-kehitysympäristö tai joku muu Bootstrapin css-kirjastoa käyttävä kehitysympäristö, kuten AngularJS. Jos kuitenkin kehitysypäristönä käytetään jotain muuta ympäristöä tai työkalua, on visuaalinen tyyli mahdollista toistaa rakentamalla css-tyylit siten että ne vastaavat tässä esitettyä. Painikkeet (ja muut elementit) on myös mahdollista toteuttaa graafisina bitmap-elementteinä. Tätä ei voi pitää parhaana mahdollisena ratkaisuna koska niiden ulkoasua ei välttämättä saa täysin vastaamaan css-tekniikalla toteutettuja painikkeita.</p>
 <p>Tässä dokumentissa on esitelty vain ne bootstrapillä toteuttavat elementit jotka ovat tällä hetkellä Virkailija-palvelussa käytössä. Bootstrap css-kirjasto sisältää lukuisia käyttöliittymäelementtejä jotka on mahdollista muuntaa "virkailija-tyyliseksi". Tämä muuntaminen on tehtävä tapauskohtaisesti jos uusia käyttöliittymäelementtejä halutaan ottaa käyttöön.</p>
 <p>Käytännössä virkailija tyylin käyttöönotto tapahtuu siten että perus css-tyylikirjaston lisäksi ladataan css-tyylikirjasto-virkailija.css joka vaihtaa käyttöliittymäelementit virkailija-tyyliin.</p>
@@ -311,11 +311,11 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div class="row-fluid"> <!-- ROW -->
 <h2 id="typografia">Typografia</h2>
     <div class="well">
+    <h3>Virkailijan palvelu</h3>    
         <h5>Fontstack</h5>
           
-        <p>Käytössä on seuraava fontstack: <code>"Helvetica Neue",Helvetica,Arial,sans-serif;</code></p>
-        <p>Pääasiallinen fontti on Helvetica Neue. Jos sitä ei löydy koneesta yritetään käyttää seuraavia fontteja: Helvetica, Arial tai geneerinen sans-serif fontti.</p>
-
+        <p>Virkailijan palvelussa on käytössä on seuraavanlainen fontstack: <code>"Helvetica Neue",Helvetica,Arial,sans-serif;</code></p>
+        <p>Pääasiallinen fontti on Helvetica Neue. Jos sitä ei löydy koneesta yritetään käyttää seuraavia fontteja: Helvetica, Arial tai geneerinen sans-serif fontti.</p>        
         <h1>H1 Otsikko. 28px</h1>
         <a href="#"><h1>H1 Otsikko. 28px</h1></a>
         <p>H1 tason otsikko. Koko: 28px, väri: #333333, tyyli: bold.</p>
@@ -378,7 +378,10 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 	<li>Luku</li>
 </ol>
 
-        
+<h3>Oppijan palvelu</h3>
+<p>Oppijan palvelussa on käytössä seuraavanlainen fontstack: <code>"PT Sans Narrow", "Helvetica Neue", Helvetica, Arial, sans-serif;</code>. Otsikkotasot H1 - H3 tuotetaan PTSans Narrow fontilla, H4 - H6 Helvetica Neue fontilla. Lisäksi on käytössä fontti PTSerif Italic korostusteksteissä.</p>
+<p>PTSerif ja PTSans fontit ladataan webbifonttina Googlen <a href="https://www.google.com/fonts">Google Fonts</a> palvelusta.</p>        
+<img src="img/oppija-typografia.png">
     </div>    
 </div>				<!-- END ROW -->
             
@@ -566,6 +569,38 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
             </tr>
         </tbody>
     </table>
+                <table class="table table-bordered">
+                <h3>Taulukko kehyksillä</h3>
+                <p>Tuotetaan lisäämällä luokka <code>.table-bordered</code></p>
+        <thead>
+            <tr>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+                <th>Four</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Yksi</td>
+                <td>Kaksi</td>
+                <td>Kolme</td>
+                <td>Neljä</td>
+            </tr>
+            <tr>
+                <td>Un</td>
+                <td>Dos</td>
+                <td>Tres</td>
+                <td>Quatro</td>
+            </tr>
+            <tr>
+                <td>Ichi</td>
+                <td>Ni</td>
+                <td>San</td>
+                <td>Chi</td>
+            </tr>
+        </tbody>
+    </table>
     </div>
 </div> 					<!-- END ROW -->
     
@@ -673,14 +708,17 @@ Sivutukseen on olemassa seuraavanlainen komponentti, jonka saa käyttöön laitt
 <h5>Katso myös muu koulutus</h5>
 <p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle.</p>
     </div>
+    </div>
+<div style="margin:10px 0 10px 0;">    
+    <div class="notification">
+<img src="img/alert-icon28x29.png"><h5>Huomio, tärkeää tietoa</h5>
+<p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle.</p>
+    </div>    
 </div>
 <div style="margin:10px 0 10px 0;">
     <div class="infobox">
-<p>Koulutus alkaa: <strong>13.1.2014</strong></p>
-<p>Opetuskieli: <strong>suomi</strong></p>
-<p>Opetusmuoto: <strong>Päiväopetus</strong></p>
-<p>Koulutuksen laajuus: <strong>120 ov</strong></p>
-<p>Suunniteltu kesto: <strong>2 vuotta</strong></p>    
+<h5>Lisätietoa</h5>
+<p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle.</p>    
     </div>
 </div>    
     </div>
