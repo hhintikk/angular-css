@@ -183,6 +183,25 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
     </p>
     <h5>Milloin iso painike?</h5>
         <p>Isoa painiketta voi käyttää näkymissä, joissa on vain vähän toimintoja ja pieni painike näyttäisi suhteettoman pieneltä muuten tyhjällä sivulla. Esimerkiksi jos näkymässä on vain yksi hakukenttä ja painike. Hakukenttä on kuitenkin silloin oltava suhteessa painikkeen kokoon. Katso esimerkki kohdasta <a href="#lomake">lomakekentät</a></p>
+
+<h5>Oppijan palvelun painikkeet</h5>
+<p>Oppijan palvelussa on tällä hetkellä käytössä hieman virkailijan tyylistä poikkeavat painikkeet. Sininen default-painike on korvattu harmaalla painikkeella. css-tyylikirjasto-virkailija.css tyylitiedostossa harmaa painike on määritelty kohdassa <code>.btn-harmaa.</code> ja kyseistä luokkaa käyttämällä harmaan painikkeen voi ottaa angular/bootstrap ympäristössä käyttöön.</p>
+    <p>
+        <button class="btn btn-harmaa">Painike default</button>
+        <button class="btn" disabled>Painike disabled</button>
+    </p>
+    <p>    
+        <button class="btn btn-primary">Painike primary</button>
+        <button class="btn btn-primary" disabled>Painike primary disabled</button>
+    </p>    
+    <p>
+        <button class="btn btn-large btn-harmaa">Painike default iso</button>
+        <button class="btn btn-large" disabled>Painike default iso disabled</button>  
+    </p>
+    <p>
+        <button class="btn btn-primary btn-large">Painike primary iso</button>
+        <button class="btn btn-primary btn-large" disabled>Painike primary iso disabled</button>
+    </p>                
     </div>
 </div>		<!-- END ROW -->
 
@@ -248,7 +267,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
                         <label class="radio">
                         <input type="radio">Muista tiedot</label>
                         </div>
-                    </div>
+                    
                 
                 <div class="form-actions">
                 <button type="button" class="btn">Peruuta</button>
@@ -305,7 +324,7 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
 <div>                
     <textarea name="YourStory" id="YourStory"  rows="5" placeholder="Disabloitu tekstikenttä" disabled></textarea>
 </div>                
-            </div>
+</div>            
 </div>		<!-- END ROW -->
     
 <div class="row-fluid"> <!-- ROW -->
@@ -395,12 +414,20 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
             <p>Active: <a href="#" style="color:#06526b; text-decoration:underline;">Lorem ipsum dolor sit amet</a></p>    
             <p>Visited: <a href="#" style="color:#707070; text-decoration:underline;">Lorem ipsum dolor sit amet</a></p>
         </div>
+<div class="well" style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;">
+            <h5>Linkkien värit valkoisella taustalla H1 otsikoissa</h5>
+            <h1>Idle: <a href="#">Lorem ipsum dolor sit amet</a></h1>
+            <h1>Hover: <a href="#" style="color:#062B37; text-decoration:underline;">Lorem ipsum dolor sit amet</a></h1>
+            <h1>Active: <a href="#" style="color:#06526b; text-decoration:underline;">Lorem ipsum dolor sit amet</a></h1>    
+            <h1>Visited: <a href="#" style="color:#707070; text-decoration:underline;">Lorem ipsum dolor sit amet</a></h1>
+        </div>        
         <div class="well" style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;">
             <h5>Linkkien värit bodytekstin sisällä</h5>
 <p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli <a style="color:#707070;" href="www.iltalehti.fi">Historia, perinteet ja kulttuuri -teeman mukaista koulutusta järjestävät korkeakoulut</a> häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, <a href="www.iltasanomat.fi">Kulttuurintutkimus - ylempi korkeakoulututkinto muualla</a> olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan.</p>
         </div>
         <div class="well" style="background:#149ecb; border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;" >
             <h5>Linkkien värit ylätunnisteessa</h5>
+            <p>Tummalla taustalla, kuten ylätunnisteessa käytetään aina valkoista ja alleviivattua linkkityyliä.</p>
             <p>Idle: <a href="#" style="color:#ffffff;">Lorem ipsum dolor sit amet</a></p>
             <p>Hover: <a href="#" style="color:#ffffff; text-decoration:underline;">Lorem ipsum dolor sit amet</a></p>
             <p>Active: <a href="#" style="color:#ffffff; text-decoration:underline;">Lorem ipsum dolor sit amet</a></p>    
@@ -670,7 +697,10 @@ Sivutukseen on olemassa seuraavanlainen komponentti, jonka saa käyttöön laitt
     <li><a href="#">5</a></li>
     <li><a href="#">&rarr;</a></li>
   </ul>
-</div>      
+</div>
+<h5>Sivutus ja tulosten järjestäminen</h5>    
+<p>Allaolevassa kuvassa esitetään miten sivutuksen voi toteuttaa käytännössä.</p>
+<img src="img/Sivutus.png">    
     </div>
 </div> 					    
 
