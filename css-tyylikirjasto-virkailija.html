@@ -7,13 +7,21 @@
     
 <link href="css/bootstrap-combined.css" rel="stylesheet"  media="all">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" media="all">
+<link rel="stylesheet" href="fontello/css/fontello.css"><!-- ikoniresurssi -->    
 
 <!-- styles -->
 <style>
 .well { 
   background: #ffffff;  
     }
-</style>
+
+i {
+  padding-right:0.20em;
+  
+}
+    
+    
+    </style>
 
 </head>
 <body>
@@ -433,7 +441,45 @@ border-width:5px; border-color:white; box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.5
             <p>Active: <a href="#" style="color:#ffffff; text-decoration:underline;">Lorem ipsum dolor sit amet</a></p>    
             <p>Visited: <a href="#" style="color:#ffffff; text-decoration:underline;">Lorem ipsum dolor sit amet</a></p>
         </div>
+        <div class="well" style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;">
+
+<p>Linkkilistat ja ulkoiset linkit voi varustaa ikonilla, ikoni muodostetaan webfontilla joka kutsutaan resurssikansiosta <code>fontello</code>. Webfontin käyttämiseksi dokumenttiin täytyy lisätä linkki tyylitiedostoon <code>fontello.css</code>. Fontti on optimoitu siten että se sisältää ainoastaan seuraavat merkit:</p>
+<p>
+<div title="Code: 0xe801" class="the-icons"><i class="icon-link-ext-alt"></i> <span class="i-name">icon-link-ext-alt</span></div>
+<div title="Code: 0xe802" class="the-icons"><i class="icon-angle-double-right"></i> <span class="i-name">icon-angle-double-right</span></div>            
+</p>
+<p>Ikoni lisätään seuraavanlaisella koodilla: <code>&lt;i class="icon-link-ext-alt"&gt;</i></code></p>
+<p>Webfontin käytöstä on se hyöty verrattuna bitmap-ikoniin että se skaalautuu käytetyn tekstin koon mukaan. Eri kokoisille teksteille ei siis tarvitse luoda eri ikoneita ja ikoni skaalautuu myös jos käyttäjä muuttaa tekstin kokoa selaimen kautta.</p>
+<p>
+Ikonin ja sitä välittömästi seuraavan tekstin väliin on luotava tyhjää tilaa esimerkiksi seuraavalla tavalla: 
+<code>
+i { padding-right:0.20em; }    
+</code>    
+    </p>
+
+<h5>Ikonilla varustetut linkkilistat</h5>
+<div>
+<h5>Lue lisää</h5>
+    <a href="#"><i class="icon-angle-double-right"></i>Helsingin yliopiston muu koulutus</a></br>
+    <a href="#"><i class="icon-angle-double-right"></i>Historia, perinteet ja kulttuuri -teeman mukainen koulutus muualla</a></br>
+    <a href="#"><i class="icon-angle-double-right"></i>Kulttuurintutkimus - ylempi korkeakoulututkinto muualla</a></br>
+    <a href="#"><i class="icon-angle-double-right"></i>Historia, perinteet ja kulttuuri -teeman mukaista koulutusta järjestävät korkeakoulut</a></br>
+</div>
     
+<div>
+<h5>Ulkoisia linkkejä</h5>
+
+    <a href="#"><i class="icon-link-ext-alt"></i>Helsingin yliopiston muu koulutus</a></br>
+    <a href="#"><i class="icon-link-ext-alt"></i>Historia, perinteet ja kulttuuri -teeman mukainen koulutus muualla</a></br>
+    <a href="#"><i class="icon-link-ext-alt"></i>Kulttuurintutkimus - ylempi korkeakoulututkinto muualla</a></br>
+    <a href="#"><i class="icon-link-ext-alt"></i>Historia, perinteet ja kulttuuri -teeman mukaista koulutusta järjestävät korkeakoulut</a></br>
+
+</div>
+        </div>        
+<div class="well" style="border-style:solid; border-width:1px; border-color:rgba(20, 158, 203, 0.45); border-radius:3px; padding:10px;">
+<h5>Ulkoisia linkkejä tekstipalstan sisällä</h5>    
+<p>Jukolan talo, eteläisessä Hämeessä, seisoo erään mäen pohjaisella rinteellä, liki Toukolan kylää. Sen läheisin ympäristö on kivinen tanner, mutta alempana alkaa pellot, joissa, ennenkuin talo oli <a style="color:#707070;" href="www.iltalehti.fi"><i class="icon-link-ext-alt"></i>Historia, perinteet ja kulttuuri -teeman mukaista koulutusta järjestävät korkeakoulut</a> häviöön mennyt, aaltoili teräinen vilja. Peltojen alla on niittu, apilaäyräinen, halkileikkaama monipolvisen ojan; ja runsaasti antoi se heiniä, ennenkuin joutui laitumeksi kylän karjalle. Muutoin on talolla avaria metsiä, soita ja erämaita, jotka, tämän tilustan ensimmäisen perustajan oivallisen toiminnan kautta, <a href="www.iltasanomat.fi"><i class="icon-link-ext-alt"></i>Kulttuurintutkimus - ylempi korkeakoulututkinto muualla</a> olivat langenneet sille osaksi jo ison-jaon käydessä entisinä aikoina. Silloinpa Jukolan isäntä, pitäen enemmän huolta jälkeentulevainsa edusta kuin omasta parhaastansa, otti vastaan osaksensa kulon polttaman metsän ja sai sillä keinolla seitsemän vertaa enemmän kuin toiset naapurinsa. Mutta kaikki kulovalkean jäljet olivat jo kadonneet hänen piiristänsä ja tuuhea metsä kasvanut sijaan.—Ja tämä on niiden seitsemän veljen koto, joiden elämänvaiheita tässä nyt käyn kertoilemaan.</p>
+</div>    
     </div>
 </div>					<!-- END ROW -->
             
