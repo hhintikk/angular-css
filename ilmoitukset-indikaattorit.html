@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ilmoitukset ja tilaindikaattorit</title>
+<style type="text/css"></style>
+<link href="css/bootstrap-combined.css" rel="stylesheet" type="text/css">
+<link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+.well {
+	background: white;
+}
+
+.sidebar-nav-fixed {
+     position:fixed;
+     top:60px;
+     width:16%;
+ }
+
+ @media (max-width: 767px) {
+     .sidebar-nav-fixed {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 979px) {
+     .sidebar-nav-fixed {
+         position:static;
+        width: auto;
+     }
+
+}
+</style>
+</head>
+<body>
+<div class="container-fluid"> 
+  <!-- container -->
+  <div class="navbar"> <!-- PÄÄNAVI -->
+    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
+      <ul class="nav">
+        <li><a href="johdanto.html">Johdanto</a></li>
+        <li><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+        <li><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
+        <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
+        <li><a href="tietojen-lisaaminen.html">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li><a href="navigointi.html">Navigointi</a></li>
+        <li><a href="haku.html">Haku</a></li>
+        <li class="active"><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja tilaindikaattorit</a></li>
+        <li><a href="sivupohjat.html">Sivupohjat</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- END PÄÄNAVI -->
+  
+  <div class="row-fluid"> 
+    <!-- CONTAINER -->
+    <div class="span2"> <!-- SIVUNAVI -->
+      <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
+        <li><a href="#ilmoitukset">Ilmoitukset ja tilaindikaattorit</a></li>
+        <li><a href="#neutraali">Neutraali</a></li>
+        <li><a href="#palaute">Palaute</a></li>
+        <li><a href="#virheilmoitus">Virheilmoitus</a></li>
+        <li><a href="#tila">Järjestelmän tila</a></li>
+        <li><a href="#jarjestelmavirhe">Järjestelmävirhe</a></li>
+        <li><a href="#yhteysvirhe">Yhteysvirhe</a></li>
+        <li><a href="#koulutushaku">Koulutushaun tila</a></li>
+        <li><a href="#tiedon_alkupera">Tiedon alkuperä</a></li>
+        <li><a href="#tiedon_tila">Tiedon tila</a></li>
+      </ul>
+    </div>
+    <!-- END SIVUNAVI -->
+    
+    <div class="span10">
+      
+      <div class="row-fluid">
+        <h1 id="ilmoitukset">Ilmoitukset ja tilaindikaattorit</h1>
+        <hr>
+        <p>Käyttöliittymässä käytetään useita erilaisia ilmoitustyyppejä, jotka on määritelty tässä. Ilmoitukset parantavat käyttöliittymän opittavuutta sekä järjestelmän tilan kommunikointia käyttäjälle ja niitä tulee käyttää systemaattisesti tässä määritettävien ohjeiden mukaisesti.</p>
+        <p>Ilmoitukset esitetään sivun ylälaidassa 70% näytön leveydeltä niin, että ne ovat aina näkyvissä ilmestyessään riippumatta käyttäjän sijainnista sivulla. Ensisijaisesti käytetään kuvakkeellista ilmoitusta. Mikäli tilanpuutteen tai muun perustellun syyn vuoksi on tarpeen käyttää kuvakkeetonta ilmoitusta voidaan niin tehdä.</p>
+        <p>Mikäli ilmoitus annetaan dialogissa esitetään se dialogi-ikkunan leveydeltä.</p>
+        <h2 id="neutraali">Neutraali</h2>
+        <div class="well">
+        <p>Neutraalia ilmoitusta käytetään kun käyttäjälle halutaan viestiä yleistä tai ohjaavaa informaatiota mikä ei liity suoranaisesti vahvistavaan palautteeseen tehdystä toiminnosta tai virheeseen. Neutraalia ilmoitusta käytetään esimerkiksi ohjaamaan käyttäjää haun käytössä kun haku ei palauta yhtään osumaa tai Virkailijan palvelussa lomakenäkymissä kokoamaan edellisissä näkymissä tehtyjä valintoja.</p>
+        <p>Neutraali ilmoitus on aina väriltään sininen.</p>
+        <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa.</p>
+        <p>Kuvakkeeton nautraali-ilmoitus:<br>
+          <img src="img/kuvakkeeton_neutraali.png"></p>
+        <p>Kuvakkeellinen neutraali-ilmoituksesta:<br>
+          <img src="img/kuvakkeellinen_neutraali.png"></p>
+          </div>
+          
+        <h2 id="palaute">Palaute</h2>
+        <div class="well">
+        <p>Palauteilmoitusta käytetään kun käyttäjälle halutaan vahvistaa, että toiminto on toteutettu onnistuneesti, yleensä Lähettäminen tai Tallentaminen. Ilmoitus esitetään välittömästi toiminnon onnistuneen toteutumisen jälkeen.</p>
+        <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa. Esimerkiksi Virkailijan palvelun lomakenäkymässä onnistuneen tallennuksen palaute poistuu näkyvistä kun käyttäjä muokkaa lomaketta edelleen.</p>
+        <p>Palauteilmoitus on aina väriltään vihreä.</p>
+        <p>Kuvakkeeton palauteilmoitus:<br>
+          <img src="img/kuvakkeeton_palaute.png"></p>
+        <p>Kuvakkeellinen palauteilmoitus:<br>
+          <img src="img/kuvakkeellinen_palaute.png"></p>
+          </div>
+          
+        <h2 id="virheilmoitus">Virheilmoitus</h2>
+        <div class="well">
+        Virheilmoitus esitetään kun järjestelmän toiminta epäonnistuu käyttäjästä johtuen. Tällöin käyttäjälle annetaan mahdollisuus korjata virhe pysymällä siinä näytössä jossa virhe tapahtui ja kertomalla siitä käyttäjälle virheilmoituksella. Virheilmoituksen tulee kertoa valitulla käyttöliittymän kielellä selkeästi minkälainen virhe on tapahtunut, mistä virhe johtuu ja kuinka käyttäjän tulee toimia virheen korjaamiseksi.
+        <p></p>
+        <p>Virheilmoitus esitetään välittömästi toiminnon virheellisen tai epäonnistuneen toteutumisen jälkeen</p>
+        <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä, tai, mikäli mahdollista, kunnes voidaan todeta, että käyttäjä on korjannut virheet tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa.</p>
+        <p>Virheilmoitus on aina väriltään keltainen.</p>
+        <p>Kuvakkeeton virheilmoitus:<br>
+          <img src="img/kuvakkeeton_virhe.png"></p>
+        <p>Kuvakkeellinen virheilmoitus:<br>
+          <img src="img/kuvakkeellinen_virhe.png"></p>
+        <h3>Kenttäkohtainen virheilmoitus</h3>
+        <p>Mikäli virhe koskee lomakkeen syöttökenttää, esitetään yleisen virheilmoituksen lisäksi kenttäkohtainen virheilmoitus jokaisen kentän yhteydessä jossa virhe esiintyy. Kenttäkohtainen virheilmoitus esitetään kuvakkeellisella virheilmoituksella ko. kentän alapuolella, ennen mahdollista kenttäkohtaista syöttöohjetta, ja se sisältää virheen syyn ko. kenttää koskien. Kenttäkohtainen virheilmoitus käyttäytyy kuten yleinen virheilmoitus.</p>
+        <p>Kenttäkohtainen virheilmoitus:<br>
+          <img src="img/kenttakohtainen_virhe.png"></p>
+          </div>
+          
+        <h2 id="tila">Järjestelmän tila</h2>
+        <div class="well">
+        <p>Mikäli järjestelmä käyttäjän suorittaman toiminnon seurauksena vie tai tuo tietoja tai dataa selaimen ja järjestelmän välillä pidempään kuin 0,5 sekuntia esitetään toiminto käynnissä –indikaattori.</p>
+        <p>Indikaattori esitetään tilaan johtaneen toiminnon toimintopainikkeen vieressä oikealla puolen. Indikaattoria esitetään kunnes toiminnon seurauksena tapahtuva tietojen tai datan vienti tai tuonti selaimen ja järjestelmän välillä on päättynyt. Käyttäjä voi keskeyttää toiminnon valitsemalla uuden toiminnon tai poistumalla näkymästä.</p>
+        <p>Mikäli käyttäjää halutaan estää tekemästä muita toimintoja tai poistumaan näkymästä toiminnon ollessa käynnissä, esitetään indikaattori keskellä näyttöä himmentäen näytön muut elementit ja poistamalla ne käytöstä toiminnon ajaksi.</p>
+        </div>
+        
+        <h2 id="jarjestelmavirhe">Järjestelmävirhe</h2>
+        <div class="well">
+        <p>Mikäli järjestelmässä tapahtuu käyttäjästä johtumaton virhe esitetään järjestelmävirheilmoitus. Järjestelmän tilan ja virheen laadun mukaisesti valitaan oikean tyyppinen virheilmoitus.</p>
+        <h3>Järjestelmävirhedialogi</h3>
+        <p>Mikäli virhe on sen laatuinen, että käyttäjä voidaan palauttaa näkymään ja tilaan jossa hän oli virheen sattuessa, esitetään järjestelmävirheilmoitus dialogi-ikkunassa. Pyrkimyksenä tällöin on palauttaa käyttäjä siihen näkymään ja siihen tilaan jossa hän oli virheen sattuessa.</p>
+        <p>Erityisen tärkeää on pyrkiä tämänkaltaiseen virheenhallintaan mikäli toiminnon joka veisi käyttäjän eteenpäin navigaatiossa suorittaminen epäonnistuu ilman käyttäjän virhettä ja käyttäjä ei voi tämän vuoksi jatkaa eteenpäin (siirtyä näkymään johon onnistunut toiminto olisi hänet vienyt).</p>
+        <p>Virheilmoituksessa esitetään teksti, joka kuvaa kuvaa virheen laadun tai syyn selkeästi, kuvake ja OK-painike. Mikäli virheen syytä tai laatua ei voida erityisesti määrittää käytetään yleistä tekstiä: “Tapahtui järjestelmävirhe (
+          <virhekoodi>
+          ). Ole hyvä ja yritä uudelleen. Jos ongelma toistuu ota yhteyttä palvelun ylläpitäjään.” Teksti esitetään käyttöliittymän valitulla kielellä.</p>
+        <p>Järjestelmävirheilmoitus poistuu näkyvistä kun käyttäjä on klikannut OK-painiketta. Tällöin palataan takaisin näkymään ja tilaan jossa oltiin virheen tapahtuessa tai käyttäjän suorittaessa toimintoa joka aiheutti virheen. Esimerkiksi jos käyttäjä oli syöttänyt tietoja lomakkeelle niin lomakkeelle palataan niin, että syötetyt tiedot ovat kuten käyttäjä ne oli syöttänyt.</p>
+        <p>Järjestelmävirhedialogi:<br>
+          <img src="img/virhedialogi.png"></p>
+        <h3>Järjestelmävirhenäkymä</h3>
+        <p>Mikäli virhe on sen laatuinen, että käyttäjää ei voida palauttaa näkymään tai tilaan jossa hän oli virheen sattuessa, esitetään järjestelmävirheilmoitus erillisessä näkymässä. Tällöin käyttäjä ohjataan palvelun aloitussivulle linkillä ja annetaan toimintaohjeet kuinka toimia mahdollisten tuhoutuneiden tai kadotettujen tietojen osalta sekä yhteystiedot joihin voi olla yhteydessä tilanteen johdosta. Ilmoitusteksti ja ohjeet esitetään kaikilla käyttöliittymän kielillä.</p>
+        <p>Järjestelmävirhenäkymä esimerkkitekstillä:<br>
+          <img src="img/jarjestelmavirhe_esimerkki.png"></p>
+          </div>
+          
+        <h2 id="yhteysvirhe">Yhteysvirhe</h2>
+        <div class="well">
+        <p>Mikäli selaimen yhteys järjestelmään on katkennut kokonaan tai osittain, ilmoitetaan tästä järjestelmävirheilmoituksella. Ensisijaisesti pyritään käyttämään järjestelmävirhe-dialogia ja palauttamaan käyttäjä näkymään ja tilaan jossa hän oli yhteyden katketessa. Mikäli tämä ei ole mahdollista käytetään järjestelmävirhenäkymää.</p>
+        </div>
+        
+        <h2 id="koulutushaku">Koulutushaun tila</h2>
+        <div class="well">
+        <p>Oppijan palvelussa koulutuksen kuvauksen yhteydessä esitetään koulutuksen haun tila tilanteen mukaan joko “Ei nyt haettavissa” tai “Haku käynnissä” tilaindikaattoreilla. Tilaindikaattorissa voidaan tarpeen mukaan käyttää myös tarkempia hakua yksilöiviä ilmaisuja, kuten ”Yleishaku käynnissä”.</p>
+        </div>
+        
+        <h2 id="tiedon_alkupera">Tiedon alkuperä</h2>
+        <div class="well">
+        <p>Tiedon alkuperä merkitään esitettävän tiedon yhteydessä mikäli tieto on tuotu ulkopuolisesta järjestelmästä tai tietokannasta.</p>
+        </div>
+        
+        <h2 id="tiedon_tila">Tiedon tila</h2>
+        <div class="well">
+        <p>Esitettävän tiedon tila järjestelmässä  ilmoitetaan käyttäen tilatunnusta, viimeisimmän tiedon tallennuksen aikaleimaa sekä virkailijan nimeä.</p>
+        <p>Esimerkki: (Luonnos, tallennettu 1.1.2012 klo 12:47, Pekka Järvinen)</p>
+        </div>
+      </div>
+    </div>
+    <!-- END ROW --> 
+    
+  </div>
+  <!-- END SISÄLTÖOSA span10 --> 
+</div>
+<!-- END container--> 
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script src="js/bootstrap.js"></script>
+</body>
+</html>

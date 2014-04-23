@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virkailija styles</title>
+<title>Virkailijan visuaalinen tyyli</title>
     
 <link href="css/bootstrap-combined.css" rel="stylesheet"  media="all">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" media="all">
@@ -20,7 +20,25 @@ i {
   
 }
     
-    
+ .sidebar-nav-fixed {
+     position:fixed;
+     top:60px;
+     width:16%;
+ }
+
+ @media (max-width: 767px) {
+     .sidebar-nav-fixed {
+         width:auto;
+     }
+ }
+
+ @media (max-width: 979px) {
+     .sidebar-nav-fixed {
+         position:static;
+        width: auto;
+     }
+
+}   
     </style>
 
 </head>
@@ -30,17 +48,22 @@ i {
 <div class="navbar-inner">
     <a class="brand" href="#">Opintopolku.fi</a>
     <ul class="nav">
+    <li><a href="johdanto.html">Johdanto</a></li>
       <li class="active"><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
-      <li><a href="interaktio-ohje.html">Interaktioiden tyyliopas</a></li>
+        <li><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
+        <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
+        <li><a href="tietojen-lisaaminen.html">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li><a href="navigointi.html">Navigointi</a></li>
+        <li><a href="haku.html">Haku</a></li>
+        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja tilaindikaattorit</a></li>
+        <li><a href="sivupohjat.html">Sivupohjat</a></li>
     </ul>
   </div>    
     </div>
-    <div> 
-    <h1>Virkailijan visuaalinen tyyli <small>Bootstrap versio 2.3.1</small></h1>
-</div>
+    
 <div class="row-fluid">
     <div class="span2">
-        <ul class="nav nav-tabs nav-stacked">
+        <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
           <li><a href="#logo">Logo</a></li>
           <li><a href="#varit">Värit</a></li>
           <li><a href="#ylatunniste">Ylätunniste</a></li>
@@ -64,17 +87,21 @@ i {
         </ul>
     </div>
 <div class="span10">
+<h1>Virkailijan visuaalinen tyyli <small>Bootstrap versio 2.3.1</small></h1>
 <p>Versio 0.5 — 22.4.2014 - matti.kilponen@cresense.com</p>    
 <div class="row-fluid">  <!-- ROW -->
 <h1>Esittely</h1>
+<hr>
     <p>Tässä dokumentissa esitellään Oppijan verkkopalvelun ja Virkailijan työpöytäpalvelun visuaaliset elementit.</p>
 <p>Osan tässä dokumentissa esiteltyjen elementtien käyttö edellyttää että käytössä on Bootstrap web-kehitysympäristö tai joku muu Bootstrapin css-kirjastoa käyttävä kehitysympäristö, kuten AngularJS. Jos kuitenkin kehitysypäristönä käytetään jotain muuta ympäristöä tai työkalua, on visuaalinen tyyli mahdollista toistaa rakentamalla css-tyylit siten että ne vastaavat tässä esitettyä. Painikkeet (ja muut elementit) on myös mahdollista toteuttaa graafisina bitmap-elementteinä. Tätä ei voi pitää parhaana mahdollisena ratkaisuna koska niiden ulkoasua ei välttämättä saa täysin vastaamaan css-tekniikalla toteutettuja painikkeita.</p>
 <p>Tässä dokumentissa on esitelty vain ne bootstrapillä toteuttavat elementit jotka ovat tällä hetkellä Virkailija-palvelussa käytössä. Bootstrap css-kirjasto sisältää lukuisia käyttöliittymäelementtejä jotka on mahdollista muuntaa "virkailija-tyyliseksi". Tämä muuntaminen on tehtävä tapauskohtaisesti jos uusia käyttöliittymäelementtejä halutaan ottaa käyttöön.</p>
 <p>Käytännössä virkailija tyylin käyttöönotto tapahtuu siten että perus css-tyylikirjaston lisäksi ladataan css-tyylikirjasto-virkailija.css joka vaihtaa käyttöliittymäelementit virkailija-tyyliin.</p>
 <p>Tämän dokumentin alussa kuvataan myös joitakin yleisiä tyyliseikkoja, joita ei ole toteutettu bootstrapilla. Näitä ovat logo, värit, ylätunniste ja footer.</p>
 <h2>Yleistä oppijan visuaalisesta tyylistä</h2>
+<div class="well">
 <p>Oppijan visuaalisen tyylin perusteet ovat yksinkertaisessa ja selkeässä värimaailmassa. Visuaalisia kolmiulotteisuutta imitoivia efektejä käytetään erittäin hillitysti. Painikkeita ja välilehtiä on hiukan korostettu liukuväreillä, muuten väripinnat ovat aina tasaisia.</p>
 <p>Kulmien pyöristystä käytetään sisältölaatikoissa, testinsyöttökentissä, painikkeissa ja alerteissa. Kulman pyöristysarvona on silloin 3px.</p>
+</div>
 </div>
 
 <div class="row-fluid"> <!-- ROW -->
