@@ -3,84 +3,859 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Virkailija styles</title>
-<style type="text/css">
-</style>
+<title>Virkailijan käyttöliittymän tyyliopas</title>
+<style type="text/css"></style>
 <link href="css/bootstrap-combined.css" rel="stylesheet" type="text/css">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-
 .well {
-  background:white;  
-    }
-    
-</style>    
+	background: white;
+}
+</style>
 </head>
 <body>
-<div class="container-fluid">       <!-- container -->
-<div class="navbar">                <!-- PÄÄNAVI -->
-    <div class="navbar-inner">
-    <a class="brand" href="#">Opintopolku.fi</a>
-    <ul class="nav">
-      <li ><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
-      <li class="active"><a href="interaktio-ohje.html">Interaktioiden tyyliopas</a></li>
-    </ul>
-    </div>    
-</div>                              <!-- END PÄÄNAVI -->
-<div> 
-    <h1>Virkailijan interaktio-ohjeet</h1>
-</div>
-<div class="row-fluid">         <!-- CONTAINER -->
-    <div class="span2">         <!-- SIVUNAVI -->
-        <ul class="nav nav-tabs nav-stacked">
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>    
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#yada">Yada</a></li>
-          <li><a href="#murupolku">Yada</a></li>
-          <li><a href="#muuta">Yada</a></li>
-          <li><a href="#XXX">Yada</a></li>            
-            
-        </ul>
-    </div>                  <!-- END SIVUNAVI -->
-    
-    
-<div class="span10">        <!-- SISÄLTÖOSA span10 -->
-<p>Versio 0.1 — 13.12.2103</p>    
-
-<div class="row-fluid">     <!-- ROW -->
-<h1>Esittely</h1>
-
-</div>                      <!-- END ROW -->
-
-<div class="row-fluid">     <!-- ROW -->
-    <h2 id="yada">Yada <small></small></h2>
-<div class="well">
-    <h5>Yada</h5>
+<div class="container-fluid"> 
+  <!-- container -->
+  <div class="navbar"> <!-- PÄÄNAVI -->
+    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
+      <ul class="nav">
+        <li ><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+        <li class="active"><a href="interaktio-ohje.html">Interaktioiden tyyliopas</a></li>
+      </ul>
     </div>
-</div> 					    <!-- END ROW -->    
+  </div>
+  <!-- END PÄÄNAVI -->
+  <div>
+    <h1>Virkailijan käyttöliittymän tyyliopas</h1>
+  </div>
+  <div class="row-fluid"> 
+    <!-- CONTAINER -->
+    <div class="span2"> <!-- SIVUNAVI -->
+      <ul class="nav nav-tabs nav-stacked">
+        <li><a href="#johdanto">Johdanto</a></li>
+        <li><a href="#yleiset_periaatteet">Käyttöliittymän yleiset suunnitteluperiaatteet</a></li>
+        <li><a href="#vaatimukset">Selain- ja käyttövaatimukset</a></li>
+        <li><a href="#tietojen_esittaminen">Tietojen esittäminen</a></li>
+        <li><a href="#kieliversiot">Kieliversiot</a></li>
+        <li><a href="#terminologia">Terminologia</a></li>
+        <li><a href="#lyhenteet">Lyhenteet</a></li>
+        <li><a href="#nimet">Nimet</a></li>
+        <li><a href="#numeerinen">Numeerinen tieto</a></li>
+        <li><a href="#yhteystiedot">Yhteystiedot</a></li>
+        <li><a href="#jarjestys">Järjestys ja ryhmittely</a></li>
+        <li><a href="#taulukot">Taulukot ja listat</a></li>
+        <li><a href="#toiminnalliset_komponentit">Toiminnalliset komponentit</a></li>
+        <li><a href="#linkit">Linkit</a></li>
+        <li><a href="#painikkeet">Painikkeet</a></li>
+        <li><a href="#valilehtivalikko">Välilehtivalikko (Tab menu)</a></li>
+        <li><a href="#sivutus">Sivutus (Pagination)</a></li>
+        <li><a href="#ohjattu_sivutus">Ohjattu sivutus (Wizard)</a></li>
+        <li><a href="#dialogit">Dialogit</a></li>
+        <li><a href="#kokoontaitettava_lista">Kokoontaitettava lista (Collapsible list)</a></li>
+        <li><a href="#kokoontaitettava_paneeli">Kokoontaitettava paneeli (Collapsible panel)</a></li>
+        <li><a href="#hierarkinen_lista">Hierarkinen lista</a></li>
+        <li><a href="#valintalista">Valintalista</a></li>
+        <li><a href="#aktivointi">Toimintojen aktivointi monivalintana</a></li>
+        <li><a href="#kalenterikontrolli">Kalenterikontrolli</a></li>
+        <li><a href="#valikkokuvake">Valikkokuvake</a></li>
+        <li><a href="#tiedot">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li><a href="#lisaaminen">Tietojen lisääminen (Lomake)</a></li>
+        <li><a href="#muokkaaminen">Tietojen muokkaaminen (Lomake)</a></li>
+        <li><a href="#poistaminen">Tietojen poistaminen</a></li>
+        <li><a href="#navigointi">Navigointi</a></li>
+        <li><a href="#paavalikko">Päävalikko</a></li>
+        <li><a href="#alavalikko">Alavalikko</a></li>
+        <li><a href="#navigaatiopolku">Navigaatiopolku</a></li>
+        <li><a href="#back">Back-painikkeen käyttö</a></li>
+        <li><a href="#haku">Haku</a></li>
+        <li><a href="#organisaatiohaku">Organisaatiohaku</a></li>
+        <li><a href="#ilmoitukset">Ilmoitukset ja tilaindikaattorit</a></li>
+        <li><a href="#neutraali">Neutraali</a></li>
+        <li><a href="#palaute">Palaute</a></li>
+        <li><a href="#virheilmoitus">Virheilmoitus</a></li>
+        <li><a href="#tila">Järjestelmän tila</a></li>
+        <li><a href="#jarjestelmavirhe">Järjestelmävirhe</a></li>
+        <li><a href="#yhteysvirhe">Yhteysvirhe</a></li>
+        <li><a href="#koulutushaku">Koulutushaun tila</a></li>
+        <li><a href="#tiedon_alkupera">Tiedon alkuperä</a></li>
+        <li><a href="#tiedon_tila">Tiedon tila</a></li>
+        <li><a href="#asemointi">Sivujen asemointi</a></li>
+        <li><a href="#sivupohja">Yleinen sivupohja</a></li>
+        <li><a href="#ylatunniste">Ylätunniste</a></li>
+        <li><a href="#navigointipalkki">Navigointipalkki</a></li>
+        <li><a href="#alatunniste1">Alatunniste 1</a></li>
+        <li><a href="#alatunniste2">Alatunniste 2</a></li>
+        <li><a href="#virkailija_sivupohja">Virkailijapalvelun sisältöalueen sivupohjat</a></li>
+        <li><a href="#hakutulosnakyma">Hakutulosnäkymä</a></li>
+        <li><a href="#lomakenakyma">Lomakenäkymä</a></li>
+        <li><a href="#tarkastelunakyma">Tarkastelunäkymä</a></li>
+        <li><a href="#visuaalinen_tyyli">Visuaalinen tyyli ja graafiset elementit</a></li>
+      </ul>
+    </div>
+    <!-- END SIVUNAVI -->
     
-<div class="row-fluid">     <!-- ROW -->
-    <h2 id="yada">Yada <small></small></h2>
-<div style="" class="well">
-    <h5>Yada</h5>
-</div> 					    
-
-</div>                      <!-- END ROW -->
-</div>                      <!-- END SISÄLTÖOSA span10 -->           
-</div>                      <!-- END container-->
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="js/bootstrap.js"></script>    
+    <div class="span10">
+      <p>Versio 0.1 — 22.4.2014 - heli.hintikka@cresense.com</p>
+      <div class="row-fluid"> <!-- ROW -->
+        <h2 id="johdanto">Johdanto</h2>
+        <p>Tämä ohjeisto määrittelee Opintopolku-palvelun käyttöliittymän yhdenmukaisuussuositukset. Ohjeistoa käytetään Opintopolun virkalijapalveluiden ja julkisen palvelun (jäljempänä Oppijan palvelun) käyttöliittymien ylläpidon, käyttöliittymäsuunnittelun, visuaalisen suunnittelun ja käytettävyyssuunnittelun apuna ja ohjeena. Ohjeiston tarkoituksena on varmistaa palvelun yhdenmukainen käyttökokemus ja tehostaa palvelun suunnittelu, kehitys- ja ylläpitotyötä.</p>
+        <p>Tämä ohjeisto ei kuvaa Opintopolku-palveluun sisältyvien palveluiden toimintalogiikkaa tai kokonaisuuksia, ainoastaan komponentit ja käytänteet joita palveluissa tulee käyttää jotta kokonaisuudesta tulee yhdenmukainen. Jokainen palvelu, sen logiikka, kokonaisuus ja käyttötarkoitus kuvataan erikseen palvelukohtaisissa määrityksissä.</p>
+        <p>Tämän ohjeiston suosituksista poikkeaminen tulee perustella ja poikkeusten käytettävyysvaikutukset tulee arvioida.</p>
+        <p>Ohjeistoa tulee kehittää jatkuvasti palvelun elinkaaren aikana jotta se on aina ajantaisainen ja vastaa käyttäjien ja palvelun tarpeisiin.</p>
+        <h3 id="yleiset_periaatteet">Käyttöliittymän yleiset suunnitteluperiaatteet</h3>
+        <p>Opintopolku-palvelun suunnittelussa noudatetaan seuraavia yleisiä suunnitteluperiaatteita:
+        
+        <ul>
+          <li>Käyttöliittymä suunnitellaan WWW-ympäristöön. Järjestelmän tulee olla loppukäyttäjille kokonaisuudessaan selainkäyttöinen ilman selainlaajennusten plug-in) asentamista.</li>
+          <li>Oppijan palvelu suunnitellaan esteettömäksi WCAG A-tason vaatimusten mukaisesti ja hakulomakkeen osalta AA-tason  vaatimusten mukaisesti.
+            <ul>
+              <li>Virkailijapalvelussa javascriptin käyttöä ei ole tarve rajoittaa.</li>
+            </ul>
+          <li>Käyttäjän muistikuorma pyritään minimoimaan.
+            <ul>
+              <li>Esimerkiksi käyttäjän työnkulkuun tarvitsemat ohjeet sijoitetaan suoraan siihen yhteyteen, jossa sitä tietoa tarvitaan.</li>
+            </ul>
+          <li>Käyttöliittymissä käytetään yhdenmukaisia ratkaisuja eri palveluissa samanlaisiin toiminnallisuuksiin. Näin tuetaan käyttöliittymän opittavuutta.</li>
+          <li>Käyttöliittymän suunnittelussa huomioidaan pyrkimys välttää virhetilanteiden syntymistä</li>
+          <li>Käyttäjille annetaan selkeästi tietoa ja palautetta järjestelmän toiminnasta.</li>
+          <li>Pyrkimyksenä on käyttää käyttöliittymässä yleiskieltä, erityisesti Oppijan palvelussa</li>
+          <ul>
+            <li>Viranomaispalvelun luonteen takia hyväksytään myös laki- ja asetusteksti, mutta tällöin asia selitetään auki ohjetekstissä asiayhteydessään.</li>
+          </ul>
+        </ul>
+        </p>
+        <h3 id="vaatimukset">Selain- ja käyttövaatimukset</h3>
+        <p>Käyttöliittymä suunnitellaan ensisijaisesti tietokoneella ja tietokoneen hiirellä käytettäväksi. Käyttöliittymän tulee olla käytettävissä seuraavilla WWW-selaimilla:
+        
+        <ul>
+          <li>Internet Explorer (versio 9 ja uudemmat)</li>
+          <li>Mozilla Firefox (versio 4 ja uudemmat)</li>
+          <li>Opera (versio 11.10 ja uudemmat)</li>
+          <li>Safari (versio 4.1/5.0 ja uudemmat)</li>
+          <li>Google Chrome (versio 11.0 ja uudemmat)</li>
+        </ul>
+        </p>
+        <p>Käyttöliittymän toteutus tulee testata ja sen standardinmukaisuus todentaa selainkohtaisesti.</p>
+        <p>Oppijan palvelun esteettömyysvaatimukset sisältävät määrityksiä käyttöliittymän käyttöön tietokoneen näppäimistöllä. Näiden määritysten ulkopuolella suositellaan seuraavien näppäintoimintojen tukemista sekä virkailijapalveluissa että Oppijan palvelussa:
+        
+        <ul>
+          <li>Tietoja syötettäessä CTRL + S näppäinyhdistelmä tallentaa tiedot kuten Tallenna-painike</li>
+          <li>Tietoja syötettäessä TAB painikkeella siirrytään lomakkeen kentästä toiseen tabulointijärjestyksen mukaisesti</li>
+          <li>Hakukentän ollessa aktiivinen ENTER näppäin käynnistää haun kuten Hae –painike</li>
+          <li>Näkymän sisältäessä välilehtiä CTRL + VASEN/OIKEA nuolinäppäimet siirtävät välilehdeltä toiselle seuraavaan välilehteen vasemmalle tai oikealle</li>
+        </ul>
+        </p>
+        <p> Lisäksi tuetaan yleisiä selainten tukemia näppäinkomentoja niiltä osin kuin ne eivät ole ristiriidassa yllä määritettyjen kanssa. </p>
+        <p>Oppijan palvelu suunnitellaan responsiiviseksi niin, että sen käyttö myös mobiili- ja tablet-laitteilla on miellyttävää ja käytettävää.</p>
+        <p><b>Huom: Tämä tyylioppaan versio ei sisällä responsiivista käyttöliittymää. Se lisätään tyylioppaaseen määritysten valmistuttua.</b></p>
+      </div>
+      <!-- END ROW -->
+      
+      <div class="row-fluid"> 
+        <!-- ROW -->
+        <h2 id="tietojen_esittaminen">Tietojen esittäminen</h2>
+        <p>Tässä kuvattavia yleisiä tietojen esitystapoja käytetään yhdenmukaisesti käyttöliittymän kaikilla sivuilla. Mikäli käyttäjällä on ollut mahdollisuus tietoja järjestelmään tallennettaessa vaikuttaa tietojen muotoiluun tai esitystapaan, noudatetaan aina käyttäjän tallentamaa muotoilua.</p>
+        <h3 id="kieliversiot">Kieliversiot</h3>
+        <p>Palvelu sisältää useita kieliversioita. Käyttöliittymäkielet ovat virkailijapalveluissa suomi ja ruotsi, Oppijan palvelussa suomi (Opintopolku.fi), ruotsi (Studieinfo.fi) ja englanti (Studyinfo.fi).</p>
+        <p>Virkailijapalveluissa käyttöliittymäkieli määräytyy käyttäjän omissa tiedoissa valitun asiointikielien mukaisesti. Palvelun aloitusnäkymässä (kirjautumissivu) jossa käyttäjää ei vielä ole tunnistettu tarjotaan ylätunnisteessa kielivalinta suomi / ruotsi, mikä vaikuttaa ainoastaan kyseiseen näkymään sekä siihen suoraan liitettyihin lisänäkymiin, kuten Rekisteriseloste ja Tietosuojaseloste. Oletusarvoinen kieli aloitusnäkymässä on suomi.</p>
+        <p>Oppijan palvelussa käyttäjä voi tehdä kielivalinnan milloin tahansa palvelun käytön aikana. Kielivalinta muuttaa käyttöliittymän koko sisällön valitulle kielelle, seuraavia poikkeuksia lukuun ottamatta:
+        
+        <ul>
+          <li>Korkoeakouluja lukuunottamatta koulutuksen kuvauksen tekstisisältö ja nimi näytetään aina oletusarvoisesti opetuskielellä. Koulutuskuvauksesta voi katsoa myös muunkieliset kuvaukset mikäli ne ovat olemassa.</li>
+          <li>Korkoeakouluja lukuunottamatta koulutukseen hakeutuminen näytetään sillä kielellä, jolla valintaperusteet on kuvattu, oletusarvoisesti opetuskielellä. Esimerkiksi lukiokoulutuksen ja ammatillisten perustutkintojen opiskelijaksi ottamisen perusteet ovat vain suomeksi ja ruotsiksi (asetusteksti).</li>
+          <li>Korkoeakouluja lukuunottamatta oppilaitoksen kuvaus näytetään samalla kielellä kuin koulutuskuvaus, mikäli organisaation kuvaus on olemassa ko. kielellä. Muussa tapauksessa esitetään käyttöliittymän kielisenä.</li>
+        </ul>
+        </p>
+        <p>Käyttöliittymässä tulee kiinnittää huomiota siihen, että sen kieli pysyy samana, vaikka sisältö olisi monikielistä. Syöttökenttien nimet ovat esimerkiksi suomenkielisessä käyttöliittymässä aina suomeksi, vaikka syötettäisiin ruotsin- tai  englanninkielistä sisältöä.</p>
+        <p>Yksittäiset sisältöelementit joista on useita kieliversioita esitetään käyttäjille vaihtoehtoina jotka merkitään ISO 639 –standardin mukaisilla kielikoodeilla. Kieliversioiden esittämisjärjestys päätetään tarpeen mukaan.</p>
+        <p>Mikäli käyttäjälle tarjotaan yksittäisiä sisältöelementtejä tai käyttöliittymän sivuja joista on vain muu kuin käyttöliittymän kielen mukainen versio, tulee kielen vaihtumisesta esittää aina selkeä maininta.</p>
+        <h3 id="terminologia">Terminologia</h3>
+        <p>Käyttöliittymässä suositellaan käytettävän yleiskieltä ja mahdollisimman yhdenmukaisia termejä sekä virkailijapalvelussa että Oppijan palvelussa. Viranomaispalvelun luonteen vuoksi myös laki- ja asetusteksti hyväksytään, mutta tällöin asia suositellaan selitettäväksi ohjetekstissä asiayhteydessään.</p>
+        <p>Opetus- ja koulutussanaston osalta palvelussa käytetään Oksa-sanastoa: <a href="https://confluence.csc.fi/pages/viewpage.action?pageId=8688189">https://confluence.csc.fi/pages/viewpage.action?pageId=8688189</a></p>
+        <p>Palvelun kehityksessä hyödynnetään palveluun luotua Koodistopalvelua, jotta termit ovat yhtenevät ja samassa muodossa kaikissa alipalveluissa.</p>
+        <p>Käyttöliittymän tekstit tulee aina oikolukea ja tarkistaa niiden oikeakielisyys.</p>
+        <h3 id="lyhenteet">Lyhenteet</h3>
+        <p>Muiden kuin yleisten lyhenteiden käyttöä vältetään. Yleiset lyhenteet joita palvelussa käytetään on listattu alla:
+        
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Käyttöyhteys</th>
+              <th>Käytettävä lyhenne suomeksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kellonaika</td>
+              <td>klo</td>
+            </tr>
+            <tr>
+              <td>Postilokero</td>
+              <td>PL</td>
+            </tr>
+            <tr>
+              <td>Puhelinnumero</td>
+              <td>Puh.</td>
+            </tr>
+            <tr>
+              <td>Faksinumero</td>
+              <td>Fax.</td>
+            </tr>
+            <tr>
+              <td>Sähköpostiosoite</td>
+              <td>Email</td>
+            </tr>
+            <tr>
+              <td>Euro</td>
+              <td>EUR</td>
+            </tr>
+            <tr>
+              <td>Maanantai</td>
+              <td>ma</td>
+            </tr>
+            <tr>
+              <td>Tiistai</td>
+              <td>ti</td>
+            </tr>
+            <tr>
+              <td>Keskiviikko</td>
+              <td>ke</td>
+            </tr>
+            <tr>
+              <td>Torstai</td>
+              <td>to</td>
+            </tr>
+            <tr>
+              <td>Perjantai</td>
+              <td>pe</td>
+            </tr>
+            <tr>
+              <td>Lauantai</td>
+              <td>la</td>
+            </tr>
+            <tr>
+              <td>Sunnuntai</td>
+              <td>su</td>
+            </tr>
+            <tr>
+              <td>Luokka-aste</td>
+              <td>lk</td>
+            </tr>
+          </tbody>
+        </table>
+        </p>
+        <p>Yleisten lyhenteiden erikieliset versiot lisätään tähän määritysten valmistuttua.</p>
+        <h3 id="nimet">Nimet</h3>
+        <p>Nimet esitetään seuraavasti:</p>
+        <ul>
+          <li>Henkilöiden nimet</li>
+          <ul>
+            <li>Mikäli henkilöiden nimet esitetään yhtenäisinä (sukunimi ja etunimet yhdessä), esitetään ne sukunimi ensin jonka jälkeen etunimet järjestyksessä, sukunimen ja ensimmäisen etunimen välissä käytetään erottimena pilkkua.</li>
+            <li>Esimerkki: Meikäläinen, Matti Antero
+          </ul>
+          <li>Oppilaitosten nimet</li>
+          <ul>
+            <li>Oppilaitosten nimet esitetään käyttäen isoa alkukirjainta nimen jokaiselle sanalle. Mikäli oppilaitoksen nimen yhteyteen merkitään luokka-aste käyetään erottimena pilkkua ja välilyöntiä:</li>
+            <li>Esimerkki: Helsingin Suomalainen Yhteiskoulu, 9.lk</li>
+          </ul>
+          <li>Luokka-asteet</li>
+          <ul>
+            <li>Luokka-asteet merkitään käyttäen luokka-asteen numeraalista tunnusta sekä pistettä ja lyhennettä lk.</li>
+            <li>Esimerkki: 9.lk</li>
+          </ul>
+        </ul>
+        <h3 id="numeerinen">Numeerinen tieto</h3>
+        <p>Numeerinen tieto esitetään seuraavasti:</p>
+        <ul>
+          <li>Päivämäärä</li>
+          <ul>
+            <li>Päivämäärät esitetään ilman etunollia</li>
+            <li>Vuosiluvut esitetään neljällä numerolla</li>
+            <li>Erotinmerkkinä käytetään pistettä</li>
+            <li>Esimerkki: 1.1.2014</li>
+          </ul>
+          <li>Kellonaika</li>
+          <ul>
+            <li>Käytetään 24 tunnin kelloa</li>
+            <li>Tunnit esitetään ilman etunollaa</li>
+            <li>Erotinmerkkinä käytetään kaksoispistettä</li>
+            <li>Esimerkki: 16:15 tai 9:15</li>
+          </ul>
+          <li>Lukumäärä</li>
+          <ul>
+            <li>Desimaalierottimena käytetään pilkkua</li>
+            <li>Esimerkki: 1,5</li>
+          </ul>
+          <li>Valuutta</li>
+          <ul>
+            <li>Tuhaterottimena käytetään välilyöntiä</li>
+            <li>Desimaalierottimena käytetään pilkkua</li>
+            <li>Käytetään yleisesti tunnettuja valuuttojen lyhenteitä</li>
+            <li>Esimerkki: 1 000,00 EUR</li>
+          </ul>
+          <li>Puhelinnumero</li>
+          <ul>
+            <li>Katso yhteistietojen esittäminen</li>
+          </ul>
+          <li>Henkilötunnus</li>
+          <ul>
+            <li>Kaikki henkilötunnuksen sisältämät merkit erottimineen kirjoitetaan yhteen ilman välejä</li>
+            <li>Henkilötunnus on aina linkki henkilön tietoihin</li>
+          </ul>
+          <li>Hakemusnumero</li>
+          <ul>
+            <li>Kaikki tunnuksen sisältämät merkit erottimineen kirjoitetaan yhteen ilman välejä</li>
+            <li>Henkilötunnus on aina linkki henkilön tietoihin</li>
+          </ul>
+          <li>Organisaatio- tai oppijanumero</li>
+          <ul>
+            <li>Kaikki numeron sisältämät merkit erottimineen kirjoitetaan yhteen ilman välejä</li>
+            <li>Esim. 1.2.246.562.24.66090832772</li>
+          </ul>
+        </ul>
+        <h3 id="yhteystiedot">Yhteystiedot</h3>
+        <p>Yhteystiedot esitetään seuraavasti:</p>
+        <ul>
+          <li>Sähköpostiosoite</li>
+          <ul>
+            <li>Sähköpostiosoitteet esitetään sellaisenaan ilman otsikkoa tai etuliitettä (label)</li>
+            <li>Kun sähköpostisoitteen ei haluta olevan linkki käytetään (a) merkintää @-merkkinä</li>
+            <ul>
+              <li>Esimerkki: esimerkkiosoite(a)oph.fi. </li>
+            </ul>
+            <li> Kun sähköpostiosoitteen halutaan olevan linkki käytetään @-merkkiä ja tekstilinkin esitysmuotoa. Tällöin sähköpostiosoitteen klikkaaminen aktivoi sähköpostiviestin luomisen valittuun osoitteeseen.</li>
+            <ul>
+              <li>Esimerkki: <a href="mailto:esimerkkiosoite@oph.fi">esimerkkiosoite@oph.fi</a></li>
+            </ul>
+          </ul>
+          <li>Kotimaan puhelinnumero</li>
+          <ul>
+            <li>Kotimaiset puhelinnumerot esitetään erottaen suuntanumerot ja liittymätunnisteet välilyönnillä ja numerot enintään neljän numeron jaksoissa erottaen jaksot välilyönnillä. Puhelinnumeron eteen lisätään tunniste Puh.</li>
+            <li>Esimerkki: Puh. 040 1234 567, Puh. 09 1234 567.</li>
+          </ul>
+          <li>Ulkomaan puhelinnumero</li>
+          <ul>
+            <li>Ulkomaalaiset puhelinnumerot esitetään kuten kotimaiset, mutta niihin lisätään ensimmäiseksi + -merkki ja maatunnus omana jaksonaan ja poistetaan suuntanumerosta/liittymätunnisteesta ensimmäinen 0.</li>
+            <li>Esimerkki: Puh. +358 40 1234 567, Puh. +358 9 1234 567</li>
+          </ul>
+          <li>Faksinumero</li>
+          <ul>
+            <li>Faksinumerot esitetään kuten puhelinnumerot tunnisteella Fax.</li>
+            <li>Esimerkki: Fax. 09 1234 567</li>
+          </ul>
+          <li>Internet-osoite</li>
+          <ul>
+            <li>Internet-osoitteet esitetään muodossa <a href="www.internetosoite.fi">www.internetosoite.fi</a> linkitettynä ko. osoitteeseen.</li>
+          </ul>
+          <li>Jos yhteystiedosta on useita kieliversioita erotetaan ne / merkillä.</li>
+          <ul>
+            <li>Esimerkki: Puh. 040 1234 567 / Tfn. 040 2345 678</li>
+          </ul>
+          <li>Käyntiosoite</li>
+          <ul>
+            <li>Käyntiosoitteet esitetään erottaen katuosoite ja postinumero pilkulla tai rivinvaihdolla</li>
+            <li>Esimerkki: Katuosoite 1 A 2, 00100 Helsinki</li>
+          </ul>
+          <li>Postiosoite</li>
+          <ul>
+            <li>Postiosoitteet esitetään kuten käyntiosoite ellei kysymyksessä ole postilokero-osoite. Postilokero-osoitteet esitetään käyttän PL tunnusta postilokeronumeron edessä. Postilokeronumer erotetaan postinumerosta pilkulla tai rivinvaihdolla</li>
+            <li>Esimerkki: PL 123, 00100 HELSINKI</li>
+          </ul>
+          <li>Postiosoitteet ja käyntiosoitteet esitetään erikseen ja nimetään tarvittaessa selkeästi</li>
+        </ul>
+        <h3 id="jarjestys">Järjestys ja ryhmittely</h3>
+        <p>Tiedot esitetään pääsääntöisesti yhdellä sivulla ja ryhmitellään sopiviin asiakokonaisuuksiin jotka otsikoidaan kuvaavasti. Olennaisimmat tiedot pyritään aina esittämään ensin. Tekstimuotoinen tieto tasataan oletusarvoisesti vasemmalle ja otsikot erotetaan muusta sisällöstä.</p>
+        <p>Tietoa voidaan jäsentää sekä numeroimattomiin että numeroituihin listoihin, sekä taulukoihin (kts. Taulukot).</p>
+        <p>Mikäli esitettäviä tietoja on runsaasti voidaan tiedot jakaa usealle sivulle käyttäen joko
+        
+        <ul>
+          <li>Välilehtiä (tab)</li>
+          <li>Sivutusta (pagination)</li>
+          <li>Ohjattua sivutusta (wizard)</li>
+        </ul>
+        </p>
+        <p>Ensisijaisesti tulee käyttää välilehtiä. Välilehtien käytön edellytyksenä on, että tieto voidaan jakaa asiakokonaisuuksiin jotka voidaan selkeästi nimetä ja erottaa toisistaan. Kullekin välilehdelle tulee antaa otsikko joka kuvaa sillä esitettävää asiakokonaisuutta.</p>
+        <p>Mikäli välilehtiä ei voida käyttää käytetään sivutusta. Sivutusta käytettäessä suositellaan, että käyttäjällä on mahdollisuus vaikuttaa tiedon esitysjärjestykseen sekä yhdellä sivulla esitettävän tiedon määrään, ja tätä kautta sivujen lukumäärään.</p>
+        <p>Ohjattua sivutusta käytetään ainoastaan kun halutaan ohjata käyttäjä käymään läpi tai syöttämään tietoja määrätyssä järjestyksessä.</p>
+        <h3 id="taulukot">Taulukot ja listat</h3>
+        <p>Taulukoita käytetään kun tietoa tulee jäsentää yksinkertaista tekstiä tai listaa enemmän. Taulukolla ei ole välttämätöntä olla otsikkoa, mutta taulukon sarakkeilla tulee olla sarakeotsikot. Sarakkeiden tai rivien lukumäärää ei ole rajattu.</p>
+        <p>Taulukon soluissa voidaan vapaasti käyttää tekstiä, kuvia, kuvakkeita, numeraalista tietoa, syöttökenttiä, linkkejä, kontrolleja ja toimintoja. Taulukon rivit erotetaan toisistaan raidoituksella (kts. Visuaalinen tyyli) ja taulukon yhteydessä käytetään hover-toimintoa joka korostaa sen taulukon rivin jonka yllä hiiren kursori kulloinkin on.</p>
+        <p>Käyttäjä voi järjestää taulukon kunkin sarakeotsikon mukaan joko nousevaan tai laskevaan järjstykseen. Taulukko on aina järjestetty jonkin sarakeotsikon mukaan, oletusarvoisesti ensimmäinen vasemmalta. Taulukon järjestävä sarake indikoidaan nuoli-ikonilla ja nuolen suunta osoittaa järjestyksen suunnan.</p>
+        <p>Listalla tulee olla otsikko. Seuraavien listatyyppien käyttöä suositellaan:
+        
+        <ul>
+          <li>Numeroimaton lista, jossa luettelomerkkinä käytetään palloa (bullet point)</li>
+          <li>Numeroitu lista jossa luettelomerkkinä käytetään järjestysnumeroa</li>
+          <li>Linkkilista jossa luettelomerkkinä käytetään >> -tunnistetta linkkien edessä</li>
+          <ul>
+            <li>Linkkilistassa linkit ovat valittavissa ja käyttäytyvät kuten linkeille on määritetty</li>
+          </ul>
+          <li>Kuvakkeellinen lista jossa luettelomerkkinä käytetään graafista kuvaketta</li>
+          <ul>
+            <li>Kuvakkeellisessa listassa merkinnät voivat olla valittavissa tai kuvake voi toimia valikkona</li>
+          </ul>
+          <li>Toiminnalliset listat joissa käyttäjä voi tehdä valintoja.</li>
+          <ul>
+            <li>Katso lisää: Toiminnalliset komponentit</li>
+          </ul>
+        </ul>
+      </div>
+      <div class="row-fluid">
+        <h2 id="toiminnalliset_komponentit">Toiminnalliset komponentit</h2>
+        <p>Tässä kuvataan käyttöliittymän toiminnalliset komponentit joiden avulla käyttäjä voi suorittaa palvelun toimintoja. Niiltä osin kuin ne eivät ole ristiriidassa tässä määritettävien komponenttien kanssa selaimen toiminnallisuuksia ei poisteta käytöstä vaan tuetaan näiden lisäksi.</p>
+        <h3 id="linkit">Linkit</h3>
+        <p>Linkkeja käytetään siirtymiseen eri sivujen ja näyttöjen välillä. Linkkejä voidaan käyttää myös painikkeiden tapaan toiminnoissa jotka eivät vaikuta järjestelmän tilaan, vaan esimerkiksi kopioivat syöttökentän lomakkeella.</p>
+        <p>Linkit esitetään alleviivattuina. Tekstin seassa olevat linkit esitetään selkokielisenä tekstinä niin, että linkin kohde käy ilmi linkin tekstistä. Esitettäessä linkkejä listoissa, internet-osoitteina tai muissa vastaavissa tapauksissa voidaan linkit esittää URL-osoitteina. Tällöinkin ensisijaisesti suositellaan käytettävän selkokielisiä linkin kohteen esitteleviä tekstejä, ja tarvittaessa niiden yhteyteen voidaan lisätä URL-osoite suluissa mikäli se katsotaan tarpeelliseksi.</p>
+        <p>Linkeillä käytetään neljää tilaa, joille kullekin on oma visuaalinen määritys (kts. Visuaalinen tyyli):
+        <ul>
+          <li>Linkki on Normaali-tilassa (Idle) aina kun se ei ole jossain muussa tilassa. Linkki on oletusarvoisesti Normaali-tilassa.</li>
+          <li>Linkki on Hover-tilassa kun hiiren kursori on sen päällä</li>
+          <li>Linkki on Active-tilassa kun hiiren painike on alaspainettuna linkin kohdalla. Tällöin linkki tulee valituksi.</li>
+          <li>Linkki on Visited-tilassa sen jälkeen kun se on valittu ja kunnes se poistuu selainhistoriasta, jolloin linkki palautuu Normaali-tilaan.</li>
+        </ul>
+        </p>
+        <p>Linkit jotka johtavat sivuille palvelun sisällä avataan samaan selainikkunaan. Linkit jotka johtavat ulos Opintopolku-palvelusta avataan uuteen selainikkunaan uutena selaimen välilehtenä.
+        <ul>
+          <li>Kun linkki johtaa ulos Opintopolku-palvelusta merkitään se kuvakkeella joka sijoitetaan linkkitekstin yhteyteen sen vasemmalle puolen (kts. Visuaalinen tyyli)</li>
+          <li>Kun linkki sijaitsee linkkilistassa käytetään listan erottimena >> -merkintää</li>
+          <li>Kun linkki johtaa ladattavaan tiedostoon merkitään tiedostotyypin tunniste suluissa linkkitekstin yhteyteen sen oikealle puolen välilyönnillä erotettuna</li>
+          <li>Kuvia jotka sisältävät linkin ei korosteta visuaalisesti</li>
+        </ul>
+        </p>
+        <p>Selain- ja käyttöjärjestelmäkohtaisesti tuetaan hiiren kursorin muodon muuttumista vietäessä kursori linkin ylle. Tämä koskee myös kuvia joissa on linkki.</p>
+        <h3 id="painikkeet">Painikkeet</h3>
+        <p>Painikkeita käytetään kun käyttäjälle mahdollistetaan suoritettavaksi toimintoja jotka vaikuttavat järjestelmän tilaan.</p>
+        <p>Painikkeet sijoitetaan sivupohjien mukaisesti muusta sisällöstä erilleen, yleensä joko sivun tai dialogi-ikkunan ylä- tai alalaitaan. Alueelle jolle painikkeet sijoitetaan ei sijoiteta muuta tietoa tai sisältöä. Painikkeiden järjestyksen tulee olla sama kaikilla sivuilla, sivupohjien määritysten mukaan. Periaatteena on, että suorittava toiminto edeltää ei-suorittavaa (lukusuunta oikealta vasemmalle tai ylhäältä alas); Kyllä edeltää Ei:tä, Tallenna edeltää Peruutusta. Tätä periaatetta noudatetaan mikäli sivu ei noudata sivupohjaa tai sivulle ei ole sivupohjaa.</p>
+        <p>Sivun ensisijainen toiminto näytetään keltaisena painikkeena. Sivulla suositellaan olevan vain yksi ensisijainen toiminto. Mikäli sivulla on useita samanarvoisia ensisijaisia toimintoja voi keltaisia painikkeita olla tarvittaessa useita, ei kuitenkaan koskaan kolmea enempää. Mikäli sivulla tai dialogissa on vain yksi painike, on se aina ensisijainen.</p>
+        <p>Mikäli sivulla on haku-toiminto, suositellaan Hae-painikkeen olevan ensisijainen. Lomakkeella Tallenna-painikkeen suositellaan olevan ensisijainen. Ohjatussa sivutuksessa Seuraava-painikkeen suositellaan olevan ensisijainen.</p>
+        <p>Painikkeita on kolmea tyyppiä:
+        <ul>
+          <li>Peruspainike, jota käytetään oletusarvoisesti</li>
+          <li>Kuvakkeellinen painike, jota käytetään erikseen määritellyissä tapauksissa</li>
+          <li>Kuvakepainike, jota käytetään kun painike tulee sijoittaa tietosisällön yhteyteen</li>
+        </ul>
+        </p>
+        <h4>Peruspainike</h4>
+        <p>Peruspainike sisältää tekstin joka kuvaa painikkeen toiminnon verbinä joka kirjoitetaan isolla alkukirjaimella. Poikkeuksena ovat monivaiheiset toiminnot, kuten ohjattu sivutus (wizard), joissa käytetään substantiivejä painikkeiden nimeämisessä. Teksti tasataan painikkeen sisällä keskelle.</p>
+        <p>Peruspainikkeesta on käytettävissä kaksi kokoa: Normaali ja Suuri. Normaali on ensisijainen ja oletusarvoinen painikkeen koko. Suurta painiketta voi käyttää näkymissä, joissa on vain vähän toimintoja ja normaali painike näyttäisi suhteettoman pieneltä muuten tyhjällä sivulla. Esimerkiksi jos näkymässä on vain yksi hakukenttä ja painike (hakukentän on kuitenkin silloin oltava suhteessa painikkeen kokoon).</p>
+        <h4>Kuvakkeellinen painike</h4>
+        <p>Painike kuvakkeella sisältää tekstin samalla tavalla kuin peruspainike ja sen lisäksi kuvakkeen painikkeen sisällä tekstin oikealla puolen. Teksti ja kuvake tasataan ryhmänä painikkeen sisällä keskelle.</p>
+        <p>Kuvakkeellista painiketta käytetään seuraaville toiminnoille:
+        <ul>
+          <li>Lisäys: Lisäyksen kohde voi vaihdella ja ilmaistaan tekstillä. Tarkoituksena on, että kun tehdään lisäyksiä järjestelmään käytetään kuvakkeellista lisää –painiketta.</li>
+          <li>Eteneminen: Eteneminen voi olla joko eteenpäin tai taaksepäin ja painike voidaan nimetä eri tavoin, kuten Takaisin / Jatka tai Edellinen / Seuraava. Tarkoituksena on, että kun edetään takaisin tai seuraavaan käytetään kuvakkeellista etenemis –painiketta.</li>
+          <li>Sähköposti: Käytetään kun lähetetään sähköpostia</li>
+          <li>Hae: Käytetään kun aktivoidaan haku järjestelmään</li>
+          <li>Lataa: Käytetään kun ladataan tietoja tai tiedostoja järjestelmään</li>
+          <li>Tulosta: Käytetään kun järjestelmän tietoja tulostetaan</li>
+          <li>Tallenna: Käyetään kun järjestelmään tallennetaan tietoja</li>
+          <li>Muokkaa: Käytetään kun järjestelmään tallennettuja tietoja avataan muokattavaksi</li>
+          <li>Poista: Käytetään kun järjestelmään tallennettuja tietoja poistetaan</li>
+        </ul>
+        Kuvakkeellinen painike käyttäytyy kuten peruspainike, myös värien osalta.
+        </p>
+        <h4>Kuvakepainike</h4>
+        <p>Kuvakepainike on erityistapaus jota käytetään ainoastaan kun painike on välttämätöntä sijoittaa tietosisällön yhteyteen. Kuvakepainikkeessa on ainoastaan kuvake, ja se voidaan sijoittaa taulukon soluun, lomakkeelle tai vastaavaan tilanteeseen.</p>
+        <p>Kuvaketta voidaan käyttää seuraaville toiminnoille:
+        <ul>
+          <li>Ohje: Kuvake joka avaa lomakkeella joko asiakohtaisen tai lomakekohtaisen ohjeen</li>
+          <li>Kalenteri: Kuvake joka avaa kalenteri-kontrollin tiedonsyötön yhteydessä</li>
+          <li>Poista: Käytetään kun järjestelmään tallennettuja tietoja poistetaan</li>
+          <li>Lisää: Käytetään kun järjestelmään tehdään lisäyksiä tai tiedonsyötössä tehdään lomakkeelle lisäyksiä</li>
+          <li>Valikko: Kuvake joka avaa valikon jonka avulla listassa tai taulukossa olevia tietoja voi käsitellä</li>
+        </ul>
+        Kuvakkeiden väri voi vaihdella tapauskohtaisesti.
+        </p>
+        <h3 id="valilehtivalikko">Välilehtivalikko (Tab menu)</h3>
+        <p>Välilehtien avulla käyttäjä voi siirtyä eri välilehdille ryhmitellyn sisällön välillä sekä tietoja tarkasteltaessa että tietoja syötettäessä. Välilehtivalikolle ei ole sivulla määrättyä paikkaa vaan se voidaan sijoittaa vapaasti ja halutussa koossa.</p>
+        <p>Suositeltavaa on, että yhdellä sivulla on vain yksi välilehtivalikko. Välilehtivalikon ensimmäinen valinta vasemmalta lukien on oletusarvoisesti valittuna. Valittuna oleva välilehti on visuaalisesti korostettu ja sen sisältämä sisältö on esillä. Käyttäjä voi vaihtaa valintaa valitsemalla toisen välilehden. Valintojen järjestystä ei ole määritetty tai rajoitettu. Välilehtien määrää valikossa ei ole rajoitettu.</p>
+        <p>Kullakin välilehdellä on otsikko joka esitetään välilehden sisällä. Viemällä hiiren kursorin välilehden päälle joka ei ole valittuna, korostetaan välilehti visuaalisesti ja alleviivataan sen otsikko, osoituksena käyttäjälle, että välilehti on valittavissa.</p>
+        <h3 id="sivutus">Sivutus (Pagination)</h3>
+        <p>Sivutuksen avulla käyttäjä voi selata tietoa näytöittäin kun se on järjestetty usealle sivulle. Sivutuksen tyypillinen käyttötapaus on hakutulosten esittäminen, jolloin tulosjoukot voivat olla suuria eikä niitä voida ryhmitellä välilehdille.</p>
+        <p>Sivutuksen ensimmäinen sivu on oletusarvoisesti valittuna ja esillä. Käyttäjä voi vaihtaa sivua sekä kontrolloida sivutuksen muodostamista erityisellä sivutus-kontrollilla. Sivutus-kontrolli suositellaan asetettavaksi sivutetun sisällön yhteyteen sisällön ylä- ja alapuolelle, tai mikäli tarkoituksenmukaista niin ainoastaan sisällön alapuolelle.</p>
+        <p>Sivutus-kontrolli muodostuu seuraavista elementeistä järjestyksessä vasemmalta oikealle:
+        <ul>
+          <li>Sivutetun sisällön määräindikaattori: Esitetään numeraalinen tieto sivutetun sisällön määrästä tekstitunnistella, esimerkiksi: 1000 hakutulosta.</li>
+          <li>Siirry edelliselle sivulle –painike: Painikkeen avulla käyttäjä voi siirtyä edelliselle sivulle</li>
+          <li>Siirry sivulle –painike: Sivujen lukumäärä ilmaistaan numeroituina painikkeina joiden avulla käyttäjä voi siirtyä sivutuksessa haluamalleen sivulle. Painikkeita muodostetaan yhtä monta kuin sivutuksessa on kulloinkin sivuja ja ne numeroidaan 1:stä alkaen vasemmalta oikealle. Sivu jolla kulloinkin ollaan korostetaan visuaalisesti. Painikkeet esitetään seuraavasti:</li>
+          <ul>
+            <li>Mikäli sivuja on enintään 8, esitetään kaikki painikkeet vierekkäin</li>
+            <li>Mikäli sivuja on enemmän kuin 8, esitetään oletusarvoisesti 5 ensimmäistä painiketta ja 2 viimeistä painiketta ja niiden välissä … -indikaattori joka ilmaisee välissä olevia sivuja. Kun käyttäjä sivujen välillä liikkuessaan siirtyy 5:ttä sivua pidemmälle esitetään esillä olevan sivun lisäksi sen vasemmalla puolen 4 edellistä sivua ja … -indikaattorin jälkeen oikealla puolen 2 viimeistä sivua (esimerkiksi jos käyttäjä on sivulla 12, esitetään sen vasemmalla puolella sivut 8, 9, 10, 11). Kun käyttäjä sivujen välillä liikkuessaan siirtyy sivulle joka on enintään 3:n sivun päässä viimeisestä sivusta korvataan … -indikaattori painikkeella (esimerkiksi jos sivuja on 20 ja käyttäjä siirtyy sivulle 17, esitetään sivut 18, 19,20 sivun oikealla puolen sen sijasta että sivun 18 tilalla olisi …-indikaattori).</li>
+          </ul>
+          <li>Siirry seuraavalle sivulle –painike: Painikkeen avulla käyttäjä voi siirtyä seuraavalle sivulle</li>
+          <li>Sivujen määrän valikko: Alasvetovalikko jonka avulla käyttäjä voi valita yhdellä sivulla esitettävän sisällön määrän. Nimiönä “Näytä”. Alasvetovalikon sisällöksi suositellaan vakiomuotoisesti 10, 50, 100, 200, 500.</li>
+          <li>Sisällön järjestys valikko: Alasvetovalikko jonka avulla käyttäjä voi järjestää (sort) sisällön eri muuttjien mukaan joko nousevaan tai laskevaan järjestykseen. Muuttujia voivat olla esimerkiksi aakkosjärjestys, aikajärjestys tai muut vastaavat esitettävää sisältöä järjestävät muuttujat.</li>
+        </ul>
+        </p>
+        <p>Sivutus-kontrolli: <br>
+          <img src="img/pagination_control.png"> </p>
+        <p>Mikäli sivutettua sisältöä ei voi tarkoituksenmukaisesti jakaa määräyksiköihin, esimerkiksi jos kysmyksessä on usealle sivulle jakaantuva tekstiartikkeli tulosjoukon sijasta, käytetään kevyempää sivutus-kontrollia, jossa ei ole määräindikaattoria, sivujen määrän valikkoa eikä sisällön järjestyksen valikkoa. Muilta osin sivutus-kontrolli toimii samoin kuin yllä kuvattu: <br>
+          <img src="img/pagination_light.png"> </p>
+        <h3 id="ohjattu_sivutus">Ohjattu sivutus (Wizard)</h3>
+        <p>Ohjattua sivutusta käytetään ainoastaan kun halutaan ohjata käyttäjä käymään läpi tai syöttämään tietoja määrätyssä järjestyksessä tai halutaan ohjata käyttäjä monivaiheisen toiminnon läpi.</p>
+        <p>Ohjatussa sivutuksessa indikoidaan sen sisältämien sivujen lukumäärä sekä erotetaan visuaalisesti se sivu jossa käyttäjä on, ne sivut joilla käyttäjä on jo ollut ja ne sivut joilla käyttäjä ei vielä ole ollut. Käyttäjä voi liikkua sivuilla eteen- ja taaksepäin yksi sivu kerrallaan. Liikkuminen tapahtuu etenemispainikkeilla, jotka nimetään Edellinen / Seuraava.</p>
+        <p>Ensimmäisessä näkymässä Edellinen-painike nimetään “Peruuta”, jonka avulla käyttäjä voi peruuttaa pois ohjatusta sivutuksesta takaisin näkymään josta hän sen aktivoi.</p>
+        <p>Viimeisessä näkymässä Seuraava-painike nimetään “Valmis”, jonka avulla käyttäjä voi päättää ohjatun sivutuksen ja palata takaisin näkymään jos se aktivoitiin. Mahdolliset syötetyt tiedot ja tehdyt valinnat tallennetaan.</p>
+        <p>Sivuille voidaan asettaa pakollisia toimintoja, kuten valintoja tai tiedon syöttöä, jolloin seuraavalle sivulle eteneminen ei ole mahdollista ennenkuin pakolliset toiminnot on suoritettu. Syötettäessä tietoa tarkistetaan tietojen oikeellisuus ja pakollisuus siirryttäessä sivulta toiselle. Mikäli pakollisia tietoja puuttuu tai tiedot ovat virheellisiä pysytään sivulla ja ilmoitetaan virheilmoituksella tehtävistä toimenpiteistä jotka edellytetään ennen jatkamista seuraavalle sivulle.</p>
+        <p>Edellisillä sivuilla tehdyt valinnat tai tiedonsyötöt voivat vaikuttaa seuraavien sivujen sisältöön.</p>
+        <h3 id="dialogit">Dialogit</h3>
+        <p>Dialogit ovat ikkunoita jotka avataan varsinaisen näkymän päälle kun halutaan varmistaa käyttäjän tekemä valinta tai toiminto, tai kun käyttäjältä pyydetään lisätietoja tai valintoja toiminnon suorittamisen tai tiedonsyötön yhteydessä. Dynaamisten lomakkeiden mahdollisuuksien myötä tarve käyttää dialogeja tiedonsyötön yhteydessä vähenee ja onkin suositeltavaa pyrkiä tältä osin suunnittelemaan toiminnot suoraan lomakkeille dialogien sijaan.</p>
+        <p>Dialogi-ikkunat suljetaan vain käyttäjän toimesta.</p>
+        <p>Käyttöliittymässä suositellaan käytettävän pääsääntöisesti kahdenlaisia dialogeja, jotka valitaan käyttötarkoituksen mukaan.</p>
+        <h4>Valintadialogi</h4>
+        <p>Kun käyttäjää pyydetään tekemään valinta eri vaihtoehtojen välillä toiminnon yhteydessä tai tiedon syötön yhteydessä käytetään valintadialogia. Dialogi avataan kun käyttäjä aktivoi toiminnon ja dialogissa tehdyt valinnat vaikuttavat toimintoon, tai vastaavasti dialogi avataan syöttölomakkeelta ja dialogissa tehdyt valinnat siirtyvät syöttölomakkeelle.</p>
+        <p>Dialogissa voidaan käyttää erilaisia toiminnallisia komponentteja valintojen esittämiseksi ja tekemiseksi. Dialogi sisältää Peruuta ja Hyväksyntä –painikkeet. Hyväksyntä-painike voidaan nimetä tarkoituksenmukaisesti joko toiminnon mukaan (esimerkiksi Lähetä, Tulosta) tai valinnan mukaan (esimerkiksi Valmis).</p>
+        <p>Kun dialogi peruutetaan toiminnon yhteydessä peruutetaan myös toiminto ja palataan näkymään josta dialogi aktivoitiin. Kun dialogi peruutetaan tiedon syötön yhteydessä palataan takaisin näkymään josta dialogi aktivoitiin ilman valintaa.</p>
+        <p>Kun dialogi hyväksytään toiminnon yhteydessä suoritetaan toiminto dialogissa tehtyjen valintojen mukaisesti ja edetään toimintokohtaiseen näkymään. Kun dialogi hyväksytään tiedon syötöän yhteydessä palataan lomakkeelle josta dialogi aktivoitiin ja dialogissa tehdyt valinnat siirtyvät lomakkeelle tai vaikuttavat lomakkeeseen.</p>
+        <h4>Varmistusdialogi</h4>
+        <p>Kun käyttäjän aktivoima toiminto halutaan varmistaa käytetään varmistus-dialogia jossa käyttäjän tekemä toiminto kuvataan ja pyydetään vahvistamaan. Tyypillinen esimerkki varmistusta vaatimasta toiminnosta on tietojen poistaminen, jolloin käyttäjää pyydetään vahvistamaan poisto ennen sen suorittamista.</p>
+        <p>Dialogi sisältää painikkeet hylkäävään ja hyväksyvään vastaukseen, jotka nimetään kysymyksen- ja tarkoituksenmukaisesti, esimerkiksi Ei / KYLLÄ tai PERUUTA / OK. Painikkeiden järjestyksessä noudatetaan painikkeille määritettyä järjestystä (kts. Painikkeet).</p>
+        <p>Dialogista voi poistua vain vastaamalla joko hylkäävästi tai hyväksyvästi. Hylkäävä vastaus peruuttaa toiminnon, hyväksyvä vastaus suorittaa sen.</p>
+        <h3 id="kokoontaitettava_lista">Kokoontaitettava lista (Collapsible list)</h3>
+        <p>Kokoontaitettavaa listaa suositellaan käytettäväksi kun listassa on paljon sisältöä ja se voidaan ryhmitellä asiakokonaisuuksittain. Asiakokonaisuudet esitetään otsikoina joita käyttävä voi avata ja sulkea. Kun asiakokonaisuus on suljettu esitetään siitä ainoastaan otsikko. Kun asiakokonaisuus on avattu esitetään siitä otsikon lisäksi siihen kuuluvat listamerkinnät.</p>
+        <p>Asiakokonaisuuksien määrää ei ole rajoitettu, eikä lisämerkintöjen määrää per asiakokonaisuus. Yhtäaikaa avoinna olevien asiakokonaisuuksien määrää ei ole rajoitettu. Oletusarvoisesti kaikki asiakokonaisuudet ovat suljettu.</p>
+        <p>Vaihtoehtoisesti voidaan oletusarvoisesti avata ensimmäinen asiakaskokonaisuus, mutta tällöin on varmistettava, että kaikki asiakokonaisuudet on käyttäjän nähtävissä ensisilmäyksellä ilman sivuvieritystä. Tämän ratkaisun käyttö riippuu siis asiakokonaisuuksien määrästä listassa sekä ensimmäisen asiakokonaisuuden sisältämien listamerkintöjen määrästä.</p>
+        <p>Vietäessä hiiren kursori otsikon tai listamerkinnän päälle korostetaan se visuaalisesti.
+          Otsikon yhteydessä esitetään kuvake joka ilmaisee asiakokonaisuuden tilaa (avattu / suljettu). Listamerkintäjen yhteydessä voidaan myös tarvittaessa esittää kuvakkeet.</p>
+        <p>Kokoontaitettavaan listaan voidaan yhdistää muita komponentteja kuten yksi- ja monivalinta. Kun kokoontaitettavaa listaa käytetään yksivalintalistana siinä ei käytetä valintanappeja (radio button), monivalinnassa valintaruutuja (checkbox) käytetään.</p>
+        <h3 id="kokoontaitettava_paneeli">Kokoontaitettava paneeli (Collapsible panel)</h3>
+        <p>Kokoontaitettava paneeli käyttäytyy kuten kokoontaitettava lista, mutta se voi sisältää listamerkintöjen sijasta laajemmin ja vapaammin erilaista sisältöä, kuten taulukoita, tietojen esitystä, toiminnallisia komponentteja, yms.</p>
+        <p>Kokoontaitettavaa paneelia suositellaan käytettäväksi kun tarkastelunäkymässä halutaan jäsentää esitettävää tietoa.</p>
+        <p>Asiakokonaisuudet esitetään paneeleina joilla on otsikot. Paneelin alueella voi olla erilaista sisältöä. Käyttäjä voi avata ja sulkea paneeleja samaan tapaan kuin kokoontaitettavan listan asiakokonaisuuksia.</p>
+        <p>Asiakokonaisuuksien määrää ei ole rajoitettu, eikä sisällön määrää per asiakokonaisuus. Yhtäaikaa avoinna olevien asiakokonaisuuksien määrää ei ole rajoitettu. Oletusarvoisesti ensimmäinen asiakokonaisuus on avoinna, muut suljettuina.</p>
+        <h3 id="hierarkinen_lista">Hierarkinen lista</h3>
+        <p>Hierarkista listaa suositellaan käytettäväksi kun listan asiakokonaisuudet ja listamerkinnät on järjestetty hierarkiseen rakenteeseen. Hierarkinen lista käyttäytyy ja toimii kuten kokoontaitettava lista, kuitenkin niin että se huomioi listan hierarkisuuden jossa voi olla sisäkkäisiä hierakria tasoja.</p>
+        <p>Hierarkiatasot nimetään otsikoin. Kukin hierarkiataso voi sisältää listamerkintöjä ja/tai alempia hierarkiatasoja. Alemmat hierarkiatasot ja niillä olevat listamerkinnät sisennetään edelliseen hierarkiatasoon nähden. Hierarkiatasojen lukumäärää ei ole rajoitettu, mutta käyttöliittymässä ei suositella käytettävän syvempiä kuin kolmen tason hierarkioita listoissa.</p>
+        <p>Jokainen hierarkiataso avataan erikseen. Kun käyttäjä avaa hierarkiatason avautuu sen seuraavalle alemmalle tasolle määritetyt listamerkinnät ja/tai hierarkiatasot (otsikot). </p>
+        <h3 id="valintalista">Valintalista</h3>
+        <p>Valintalistaa käytetään kun käyttäjälle esitetään vaihtoehtoisia arvoja valittavaksi. Valintalistaa käytetään tiedon syötössä jolloin valitut arvot tallennetaan järjestelmään sekä muuttujien valinnassa esimerkiksi hakuehtojen tai toimintovaihtoehtojen yhteydessä. Valintalistalla tulee olla otsikko joka kuvaa käyttäjälle tehtävän valinnan.</p>
+        <p>Valintalista voi olla joko avattava tai avonainen. Avattavaa valintalistaa käytetään kun halutaan säästää tilaa näkymässä. Avonaista valintalistaa käytetään kun valittavia arvoja on rajallinen määrä ja ne mahtuvat kaikki esille.</p>
+        <p>Valintalista voi olla joko yksi- tai monivalintainen. Yksivalintaisessa valintalistassa käyttäjä voi valita vain yhden arvon. Mikäli käyttäjä vaihtaa valintaa siirtyy valinta edelliseltä arvolta uudelle. Monivalintaisessa valintalistassa käyttäjä voi valita useita arvoja. </p>
+        <h4>Alasvetovalikko (Combo box, drop down menu)</h4>
+        <p>Alasvetovalikkoa suositellaan käytettäväksi avattavana yksivalintalistana.</p>
+        <p>Listan ollessa suljettuna siinä on näkyvillä arvo jonka käyttäjä on valinnut. Listan ollessa avattuna käyttäjän valitsema arvo on korostettu. Käyttäjä voi valita arvon listasta, tai kirjoittaa sen, jolloin valintalista suodattuu syötettyjen merkkien mukaisesti. Vain listassa määritetyt arvot hyväksytään. Listan sisältö järjestetään mielekkäästi käyttötarkoituksen mukaan, esimerkiksi aakkosjärjestykseen.</p>
+        <h4>Yksivalinta</h4>
+        <p>Avonaisessa yksivalintalistassa on esillä kaikki listan arvot. Kukin arvo on merkitty valintanapilla (radio button). Käyttäjä voi valita listasta yhden arvon. Valinta indikoidaan täytetyllä valintanapilla.</p>
+        <p>Vaihtoehtoisesti yksivalintalistana voidaan käyttää yksinkertaista listaa tai kuvakkeellista listaa jossa valittu arvo korostetaan visuaalisesti.</p>
+        <p>Valinta valintanappien tai muun visuaalisen valinnan korostamisen välillä suositellaan tehtäväksi sivun muun sisällön perusteella huomioiden se mikä palvelee käyttötarkoitusta parhaiten.</p>
+        <p>Valintanappeja voi käyttää myös yksittäin osana taulukko tai muuta komponenttia.</p>
+        <h4>Monivalinta</h4>
+        <p>Avonaisessa monivalintalistassa on esillä kaikki listan arvot. Kukin arvo on merkitty valintaruudulla (checkbox). Käyttäjä voi valita listasta yhden tai useamman arvon. Listan yhteydessä esitetään Valitse kaikki –valintaruutu. Mikäli käyttäjä valitsee sen, valitaan kaikki listan arvot kerralla. Tehdyt valinnat indikoidaan täytetyllä valintaruudulla.</p>
+        <p>Mikäli monivalintalistassa on runsaasti arvoja eikä niitä voida esittää kaikkia kerralla käytetään kokoontaitettavaa listaa johon lisätään valintaruudut yllä määritellysti. Valitut arvot esitetään täytettyjen valintaruutujen lisäksi monivalintalistan oikealla puolella listassa. Valitun arvon edessä näytetään punainen rasti, josta valitun arvon voi myös poistaa. Jos valittuja arvoja on useita, ne esitetään allekkain tai vierekkäin siten, että rastit kohdistuvat pystysuunnassa samaan sarakkeeseen tai vaakasuunnassa samalle riville.</p>
+        <p>Jos monivalintalistassa on todella runsaasti arvoja ja niiden esittäminen kokoontaitettavana listana on epäkäytännöllistä, käytetään valintaan hakukenttää. Käyttäjä syöttää hakusanan hakukenttään ja järjestelmä hakee vaihtoehdoista syötettyä hakusanaa vastaavat vaihtoehdot. Valitut arvot esitetään oikealla puolella listassa kuten edellä.</p>
+        <p>Valintaruutuja voi käyttää myös yksittäin osana taulukko tai muuta komponenttia.</p>
+        <h3 id="aktivointi">Toimintojen aktivointi monivalintana</h3>
+        <p>Käyttäjä voi valita listasta useita tietoja ja sen jälkeen valita niille yhteisesti toiminnon, esimerkiksi Poista tai Muokkaa. Valinta tai monivalinta voi olla edellytyksenä joidenkin toimintopainikkeiden aktivoitumiselle.</p>
+        <h3 id="kalenterikontrolli">Kalenterikontrolli</h3>
+        <p>Päivämäärien syötössä käytetään kalenterikontrollia tekstisyötön lisäksi. Kalenterikontrolli käynnistetään syöttökentän yhteydessä olevasta painikkeesta ja sen avulla valitaan päivämäärä. Kontrolli sijoitetaan ensisijaisesti syöttökentän sisälle, ja toissijaisesti mikäli tama ei ole mahdollista kentän välittömään yhteyteen oikealle puolelle. Kalenteri avaa kuukausinäkymän, jossa voi selata kuukausia ja valita halutun päivämäärän. Kalenterikontrollissa ei ole kellonajan valintaa.</p>
+        <h3 id="valikkokuvake">Valikkokuvake</h3>
+        <p>Valikkokuvake voidaan lisätä taulukoihin ja listoihin riveittäin. Se sijoitetaan aina rivin alkuun vasemmalle puolen ennen tekstiä. Valikokuvake avaa valittaessa valikon josta voidaan valita toimintoja suoritettavaksi kyseiselle tiedolle.</p>
+      </div>
+      <div class="row-fluid">
+        <h2 id="tiedot">Tietojen lisääminen, muokkaaminen ja poistaminen</h2>
+        <p>Tässä kuvataan käyttöliittymä tietojen lisäämiseksi järjestelmään ja tallennettujen tietojen muokkaamiseen sekä poistamiseen.</p>
+        <h3 id="lisaaminen">Tietojen lisääminen (Lomake)</h3>
+        <p>Kun tietoa lisätään järjestelmään tarjotaan käyttäjälle täytettäväksi tyhjä lomake mahdollisine oletusarvoineen. Lomakkeet voivat sisältää vapaasti syöttökenttiä, toiminnallisia komponentteja sekä muita tietoja. Lomakkeilla käyttäjälle tarjotaan oletusarvo aina kun sellainen on tiedossa.</p>
+        <p>Lomakkeiden tiedot ryhmitellään sopiviin asiakokonaisuuksiin ja asiakokonaisuudet otsikoidaan kuvaavasti. Pitkät lomakkeet jaetaan välilehdille. Tällöin ensimmäisellä välilehdellä esitetään kaikki pakolliset tiedot sekä perustiedot ja jälkimmäisillä välilehdillä muut tiedot ryhmiteltynä sopiviin asiakokonaisuuksiin. Eri koulutusasteita koskevissa vastaavissa näkymissä pyritään käyttämään mahdollisimman pitkälle yhdenmukaista nimeämiskäytäntöä.</p>
+        <p>Mikäli käyttäjähalutaan ohjata syöttämään lomakkeen tiedot määrätyssä järjestyksessä tai lomake on monivaiheinen jossa edelliset vaiheet vaikuttavat seuraaviin, käytetään ohjattua sivutusta (wizard).</p>
+        <p>Lomakkeen tiedot tallennetaan kun käyttäjä aktivoi Tallenna-toiminnon. Mikäli käyttäjä poistuu lomakkeelta ilman tallennusta tai niin, että tallentamattomia tietoja on, varmistetaan käyttäjältä halutaanko tiedot tallentaa.</p>
+        <p>Kaikki käyttäjän syöttämä tieto tarkistetaan, jotta voidaan varmistua pakollisten tietojen syöttämisestä sekä tiedon oikeellisuudesta. Tarkistus tehdään käyttäjän aktivoidessa Tallenna-toiminnon selaimessa ennen tallennusta järjestelmään. Virheellistä tietoa ei tallenneta.</p>
+        <p>Mikäli tallennuksen yhteydessä havaitaan virheitä tai pakollisten tietojen puuttumista esitetään virheilmoitus, jossa ilmoitetaan “Lomakkeen tiedoissa on virheitä tai puutteita. Ole hyvä ja tarkista lomakkeen tiedot:
+          <kaikkien niiden kenttien nimiö joissa virheitä esiintyy, pilkulla erotettuna mikäli useita>
+          .” Tämän lisäksi kunkin kentän yhteydessä jossa virhe tai puute esiintyy esitetään kenttäkohtainen virheilmoitus jossa käyttäjälle kerrotaan mikä syötteessä on vialla ja kuinka se tulee korjata. Kts. Ilmoitukset. Käyttäjälle tarjotaan kaikki hänen syöttämänsä tiedot muokattaviksi.</p>
+        <p>Onnistuneen tallennuksen jälkeen käyttäjä saa palautteen tallennuksesta ilmoituksena. Lomakkeen tila pysyy muuten samana ja käyttäjä pysyy lomakenäkymässä tallennuksen jälkeen. Jatka-painikkeella käyttäjä siirtyy tarkastelunäkymään, jossa hän näkee tallentamansa tiedot tekstimuodossa.</p>
+        <p>Järjestelmä huolehtii tietojen yhtenäisistä tallennusmuodoista.</p>
+        <h4>Syöttökentät</h4>
+        <p>Syöttökentät nimetään kuvaavasti. Lomakkeissa käytetään keskitettyä tyyliä, jossa nimiöt tasataan oikeaan ja syöttökentät vasempaan. Syöttökenttien leveyden tulee olla yhdenmukainen ellei ole erikseen perusteltua esittää eri levyisiä syöttökenttiä.</p>
+        <p>Syöttökenttiin syötettävä teksti tasataan vasemmalle, poislukien numeroarvot; Syötettäessä pelkkiä numeroarvoja tasataan ne oikealle. Syöttökenttien koon tulee indikoida syötettävän tekstin määrää seuraavasti:
+        <ul>
+          <li>Lyhyt kenttä tekstille jonka enimmäispituus on 10 merkkiä, esimerkiksi yleisesti numeraalinen tieto</li>
+          <li>Normaali kenttä tekstille jonka enimmäispituus on yksi rivi tekstiä, esimerkiksi katuosoite, kaupunki, puhelinnumero, nimi, linkki, yms.</li>
+          <li>Monirivinen kenttä tekstille jonka enimmäispituutta ei tiedetä tai jonka tiedetään olevan useita rivejä pitkä. Mikäli tekstin pituus syötettäessä on enemmän kuin mitä kenttään mahtuu kasvaa kentän koko syötettävän tiedon mukaan.</li>
+          <li>Laaja kenttä tekstille jonka tiedetään olevan hyvin pitkä, esimerkiksi tuhansia merkkejä sisältävä kuvausteksti. Mikäli tekstin pituus syötettäessä on enemmän kuin mitä kenttään mahtuu kasvaa kentän koko syötettävän tiedon mukaan.</li>
+        </ul>
+        </p>
+        <p>Tarpeen mukaan syöttökenttiä voidaan sijoittaa lomakkeella vierekkäin tai taulukoihin. Mikäli kenttien välillä on jatkuvuussuhde, esimerkiksi edellisen kentän valintalista määrittelee mitä seuraavaan kenttään voidaan valita tai syöttää, tulee kentät pyrkiä sijoittamaan vierekkäin.
+        <ul>
+          <li>Esimerkki: Käytetään mm. Hakukausi ja -vuosi ja Koulutuksen aloituskausi ja -vuosi kentissä. Tällöin hakukausi on valintalista ja vuosi syöttökenttä.</li>
+          <li>Esimerkki: Käytetään kun syötetään osoitteita (valintakokeiden ja liitteiden yhteydessä). Osoitekenttä, postinumero ja postitoimipaikka ovat vierekkäin.</li>
+          <li>Esimerkki: Käytetään kun syötetään monta samaa arvoa, esim. koulutuksen alkamispäivät, kun on monta jaksoa. 6 kenttää on vierekkäin ja kenttien alapuolella ohjetekstit “jakson 1 alk. pvm” , “jakso 2 alk. pvm”…</li>
+        </ul>
+        </p>
+        <p>Tietojen syötössä hyväksytään aina esitystavan mukainen muotoilu (katso tiedon esitystavat). Mikäli syötettävältä tiedolta vaaditaan määrättyä mittayksikköä tai muuta määrettä, lisätään tunniste syöttökentän viereen oikealle puolelle, esimerkiksi mittayksiköt tai kappalemäärä (kpl). </p>
+        <h4>Tietojen pakollisuus</h4>
+        <p>Pakolliset tiedot ja kentät merkitään tähdellä (*) syöttökentän nimen jälkeen. Selite tähti-merkin käyttöön esitetään lomakkeen yläosassa.</p>
+        <p>Oppijan palvelussa tietojen pakollisuutta korostetaan edelleen lisäämällä suluissa “pakollinen” teksti kentän nimiön tai kysymyksen perään?</p>
+        <h4>Kenttäkohtaiset ohjeet</h4>
+        <p>Kun syötettävältä tiedolta vaaditaan tiettyä sisältöä, muotoilua tai järjestystä tai syötteellä on maksimipituus, annetaan muotoilusta aina ohje ja esimerkki syöttökentän yhteydessä kentän alapuolella. Esimerkiksi ”Kentän maksimipituus on 1500 merkkiä.”  Mikäli kenttä on korkea, tulee ohjeteksti sijoittaa kentän yläpuolelle.</p>
+        <p>Ohjeiden määrittämistä suositellaan sillä niiden avulla edistetään tietojen yhdenmukaisuutta ja oikeellisuutta. Samaa tietoa voidaan tarkastella ja päivittää eri henkilöiden toimesta ja ohje kertoo tällöin alkuperäisen ajatuksen siitä mitä ja miten tietoa on tarkoitus tallentaa.</p>
+        <h4>Täyttöohje</h4>
+        <p>Käyttöliittymässä suositellaan ensisijaisesti ohjeistamaan käyttäjää kenttäkohtaisilla ohjeilla, mutta tarvittaessa voidaan käyttää myös lomake- tai asiakokonaisuuskohtaisia ohjeita. Tällainen kenttäkohtaisia ohjeita kattavampi täyttöohje tarjotaan kysymysmerkki-kuvakkeesta. Kuvake sijoitetaan lomakkeen oikeaan ylälaitaan tai asiakokonaisuuden kohdalle oikeaan laitaan. Se avaa uuden ikkunan poikkeuksellisesti uuteen selainikkunaan, joka sisältää koko lomakkeen tai ko asiakokonaisuuden syöttökenttien täyttöohjeet.</p>
+        <h4>Tuettu tietojen syöttö</h4>
+        <p>Käyttäjää tulee tukea numerosarjojen ja vastaavien tietojen syötössä aina kun se on mahdollista. Esimerkiksi postinumeroa ei tulisi pakottaa syöttämään itse, vaan käyttäjä voisi syöttää katuosoitteen ja paikkakunnan ja järjestelmä hakee postinumeron. Sama organisaatiokoodien ja koulutuskoodien hakemisessa, käyttäjälle tulee tarjota hakutoiminto tueksi.</p>
+        <h4>Tabulointijärjestys</h4>
+        <p>Lomakkeiden kenttien välillä tulee voida liikkua käyttäen siirtymiseen tabulaattoria näppäimistöltä. Tabulointijärjestyksen tulee olla sama kuin lomakekenttien järjestys näytöllä järjestyksessä ylhäältä alas ja vasemmalta oikealle.</p>
+        <h4>Yhdistetyt syöttökentät</h4>
+        <p>Lomakkeen syöttökenttiä voidaan yhdistellä dynaamisesti jolloin käyttäjän valinta vaikuttaa kenttien pakollisuuteen ja/tai syöttökenttien määrään. Esimerkiksi käyttäjältä voidaan ensin valintanapilla kysyä vaihtoehtoa jonka jälkeen kullekin vaihtoehdolle esitetään omat syöttökentät ja pakollisuudet. Tällöin toisten vaihtoehtojen pakollisuudet eivät aiheuta virheilmoitusta.</p>
+        <h4>Välilehtikontrolli kieliversioiden syöttämisessä</h4>
+        <p>Välilehtiä käytetään kieliversioiden syöttämisessä silloin, kun samaa sisältöä syötetään useilla kielillä. Tällöin välilehdet nimetään kielten mukaan, esim. suomi, ruotsi ja englanti. Tyhjällä lomakkeella näytetään aina vähintään käyttöliittymäkielen mukainen välilehti ja syöttökentät.</p>
+        <p>Jos virkailijalle tarjotaan mahdollisuus lisätä uusia kieliä, äärioikealla oleva välilehti merkitään plusmerkillä (+). Plusmerkki-välilehdellä esitetään yläosassa valintalista kielen valintaan. Valinnan jälkeen fokus siirtyy kielen mukaiselle välilehdelle ja välilehdellä näytetään syöttökentät.</p>
+        <p>Kielivälilehdillä esitetään aina samat syöttökentät kaikilla valituilla kielillä. Käytetty aiemmin tällä tavoin kaikkialla. Virkailija tietää tarkastelemansa välilehden perusteella, mitkä tiedot syötetään jokaisella kielellä.</p>
+        <p>Mikäli kieliversioita tulee syöttää käytetään välilehtikontrollia vaikka lomake olisi muutenkin jo jaettu välilehtiin. Kieliversioiden välilehtikontrolli toistetaan kaikilla välilehdillä joilla on tietoja joista kieliversiot tarvitaan.</p>
+        <h4>Lisää syöttökenttä</h4>
+        <p>Käyttäjä voi lisätä samalle nimiölle uuden syöttökentän kun on tarpeellista tallentaa useita kirjauksia samasta tiedosta, esimerkiksi useita puhelinnumeroita. Tällöin syöttökentän vieressä oikealla puolen esitetään linkki, jossa teksti Lisää
+          <lisättävän_tiedon_määre>
+          , esimerkiksi: Lisää puhelinnumero. Kun käyttäjä valitsee linkin lisätään samalle nimiölle uusi syöttökenttä.</p>
+        <h4>Lisää kohde</h4>
+        <p>Toisinaan on tarpeellista mahdollistaa käyttäjälle laajempien kokonaisuuksien lisääminen, kuten esimerkiksi uuden valintakokeen lisääminen kaikkine kenttinen mitä sen yhteyteen kuuluu. Vaikka nämä ratkaisut ovat hyvin tapauskohtaisia, noudatetaan niissä seuraavia ohjeita:
+        <ul>
+          <li>Lisäämiseen käytetään Lisää-painiketta joka nimetään asianmukaisesti</li>
+          <li>Käytetään välilehtikontrollia kuten kieliversioita lisättäessä. Välilehdet nimetään automaattisesti tarkoituksenmukaisesti.</li>
+        </ul>
+        </p>
+        <h3 id="muokkaaminen">Tietojen muokkaaminen (Lomake)</h3>
+        <p>Kun tallennettua tietoa muokataan tarjotaan käyttäjälle sama lomake tallennetuilla tiedoilla. Lomake käyttäytyy kuten yllä on määritetty.
+          Tarkastelunäkymästä voidaan avata muokkaustila suoraan tiettyyn välilehteen asiakokonaisuuksittain. </p>
+        <h3 id="poistaminen">Tietojen poistaminen</h3>
+        <p>Yksittäisiä tietoja voidaan poistaa tietojen muokkaamisen yhteydessä lomakkeella tyhjentämällä syöttökenttiä ja tallentamalla lomake uudestaan. Vastaavalla tavalla voidaan poista valintalistojen valintoja, kieliversioita, ajankohtia, tai muita tietoja. Lomakkeella tapahtuvaa tietojen poistamista ei varmisteta erikseen vaan se tapahtuu tallennuksen yhteydessä tapahtuvan syötteiden tarkistuksen muodossa ainoastaan.</p>
+        <p>Kun poistetaan kokonaisia tieto-objekteja, kuten koulutus tai organisaatio, tehdään poistaminen tarkastelu- tai hakutulosnäkymässä joko yksittäisenä valintana valikkokuvakkeella tai Poista-painikkeella yksitellen tai monivalintaa käyttäen. Tällöin tietojen poistaminen vahvistetaan varmistus-dialogilla.</p>
+        <p>Käyttöoikeuksilla voidaan rajoittaa poisto-toimintoa käyttäjäkohtaisesti.</p>
+      </div>
+      <div class="row-fluid">
+        <h2 id="navigointi">Navigointi</h2>
+        <p>Palvelussa navigointiin käytetään seuraavia elementtejä.</p>
+        <h3 id="paavalikko">Päävalikko</h3>
+        <p>Päävalikko sijoitetaan navigointipalkkiin ylätunnisteen alle. Oletusarvoisesti siinä on esillä sivurakenteen ensimmäisen tason valinnat, jotka toimivat linkkeinä käyttöliittymän pääsivuille. Valitsemalla näitä linkkejä käyttäjä siirtyy sivulta toiselle.</p>
+        <p>Vietäessä hiiren kursori valinta-alueen ylle korostetaan valinta-alue ja avataan pudotusvalikko, joka sisältää ensimmäiselle tasolle alisteisena sivurakenteen toisen tason valinnat. Pudotusvalikko pidetään auki kunnes kursori siirretään pois valinta-alueen tai pudotusvalikon päältä. Siirrettäessä kursoria pudotusvalikon yllä korostetaan valinta-alue jonka yllä kursori kulloinkin on. Klikattaessa päävalikon valintaa tai pudotusvalikon valintaa siirrytään valintaan linkitetylle sivulle, ja valittu päävalikon valinta esitetään korostettuna.</p>
+        <p>Päävalikossa korostetaan aina se valinta, johon kuuluvalla sivulla (sivurakenne) kulloinkin ollaan (poikkeuksena etusivu). Päävalikon alavalikossa (pudostusvalikko) korostetaan aina se valinta johon kuuluvalla sivulla (sivurakenne) tai johon linkitetyllä sivulla ollaan.</p>
+        <h3 id="alavalikko">Alavalikko</h3>
+        <p>Alavalikkoa käytetään kun halutaan mahdollistaa navigointi päävalikosta valitun aiheen sisällä myös päävalikkoa käyttämättä.</p>
+        <p>Alavalikossa esitetään sivurakenteen toisen ja sitä syvempien tasojen navigointi alisteisena päävalikossa tehdylle ensimmäisen tason valinnalle. Alavalikossa käytetään hierarkista listakomponenttia. Alavalikko esitetään puurakenteena jossa ylimmäisenä on päävalikosta valittu tietorakenteen ensimmäisen tason valinta, sen alla sisennetysti sille alisteiset tietorakenteen toisen tason sisällöt sekä niille alisteisesti ja sisennetysti mahdolliset syvemmät tietorakenteen tasot.</p>
+        <p>Oletusarvoisesti kaikki tasot ovat puurakenteessa auki. Käyttäjä voi avata ja sulkea puurakenteen tasoja alatasoja sisältävien tasojen vieressä (vasemmalla puolen) sijaitsevista nuolista, jotka käännetään alaspäin kun taso on auki ja oikealle kun taso on kiinni. Tasot jotka sisältävät alatasoja esitetään lihavoidulla fontilla.</p>
+        <p>Puurakenteesta korostetaan se käyttöliittymän sivu jolla sillä hetkellä ollaan, sekä se valinta-alue jonka yllä kursori kulloinkin on. Klikkaamalla valinta-aluetta siirrytään siihen linkitetylle sivulle.</p>
+        <h3 id="navigaatiopolku">Navigaatiopolku</h3>
+        <p>Navigaatiopolku sijoitetaan sivulle sivupohjien mukaan. Navigaatiopolku esittää aina navigaatiorakenteen (sivurakenne) esillä olevasta sivusta ylöspäin. Se sisältää:
+        <ul>
+          <li>Vasemmalla ensimmäisenä Koti-ikonin, joka toimii linkkinä palvelun etusivulle</li>
+          <li>Oikealla viimeisenä esillä olevan sivun otsikon (tämä ei ole linkki)</li>
+          <li>Koti-ikonin ja esillä olevan sivun otsikon välissä kaikkien niiden tasojen otsikot joiden kautta esillä olevalle sivulle tietorakenteessa päädytään erotettuna > merkillä. Otsikot ovat linkkejä kunkin tason etusivulle eli otsikkoon linkitetylle sivulle.</li>
+        </ul>
+        </p>
+        <p>Oppijan palvelun hakutuloksessa ensimmäinen taso koti-ikonin jälkeen on aina “Hakutulokset” ja sen jälkeen tietorakenteena käytetään valitun koulutuksen koulutusrakennetta.</p>
+        <h3 id="back">Back-painikkeen käyttö</h3>
+        <p>Selaimen back-painikkeen käyttöä ei suositella käyttöliittymässä. Jotta tietojen syötössä vältetään virheitä estetään lomakkeille ja dialogeihin pääsy selaimen back-painikkeella. Selaimen back-painikkeella voidaan selata tarkastelunäkymien ja hakutulosnäkymien historiaa.</p>
+      </div>
+      <div class="row-fluid">
+        <h2 id="haku">Haku</h2>
+        <p>Käyttöliittymässä voi hakea järjestelmään tallennettua tietoa.</p>
+        <p>Yksinkertaisimmillaan hakuun käytetään hakukenttää ja Hae-painiketta. Hae-painike sijoitetaan hakukentän välittömään yhteyteen sen oikealle puolen. Hakukenttää ei merkitä kuvakkeella, koska Hae-painike on kuvakkeellinen. Hakukentällä kuuluu olla otsikko tai nimiö joka ilmaisee haun sisällön (mitä haku koskee).</p>
+        <p>Hae-painike on oletusarvoinen toiminto sivulla. Hae-painike on aina väriltään keltainen kuvakkeellinen painike. Hakukenttään käyttäjä voi syöttää tekstin jolla haku suoritetaan. Hae-painikkeen valinta käynnistää haun. Kun hakukenttä on aktiivinen voidaan haku käynnistää myös ENTER-painikkeella näppäimistöltä.</p>
+        <p>Haku tukee Voikko kielityökalua (<a href="http://voikko.puimula.org/">http://voikko.puimula.org/</a>), jonka avulla hakusanat käsitellään pyrkien palauttamaan ne perusmuotoonsa. Oletusarvoisesti hakukenttään syötetyt useat hakusanat käsitellään hakufraasina. Boolean operaattoreita ei tueta.</p>
+        <p>Hae-painikkeen vieressä vasemmalla on aina Tyhjennä-painike, joka tyhjentää hakukentän ja mahdollisesti samalla sivulla olevien muiden hakuehtojen sisällön oletusarvoiseen tilaan.</p>
+        <p>Hakukenttään voidaan sijoittaa ohjetekstiä tai oletusarvo. Nämä poistuvat näkyvistä kun käyttäjä aktivoi hakukentän. Tyhjennä-painikkeen aktivointi tyhjentää hakukentän aina oletusarvoiseen tilaan sisältäen mahdollisen ohjetekstin tai oletusarvon.</p>
+        <p>Hakukentän yhteyteen tai sen sijasta voidaan käyttää vapaasti toiminnallisia komponentteja joilla voidaan valita käytettäviä hakuehtoja.</p>
+        <p>Hakutulokset suositellaan tulostettavaksi samalle sivulle jolta haku on käynnistetty. Poikkeuksia tähän ohjeeseen voidaan tehdä perustellusti. Hakutulokset voidaan esittää taulukossa tai listana, hyödyntäen toiminnallisia komponentteja. Hakutulosten määrästä ja laadusta riippuen ne voidaan järjestää välilehtiin ja/tai usealle sivulle sivutusta käyttäen.</p>
+        <p>Hakutuloksia voidaan rajata edelleen käyttäen toiminnallisia komponentteja hakuehtojen valitsemiseen.</p>
+        <p>Hakutuloksista voidaan tehdä valintoja tietojen tarkasteluun, muokkaamiseen tai poistamiseen.</p>
+        <h3 id="organisaatiohaku">Organisaatiohaku</h3>
+        <p>Organisaatiohakua käytetään organisaatiorajauksen tekemiseen Koulutusten ja hakukohteiden ylläpito sekä Hakemusten käsittelyn palveluissa. Organisaatiohaku on oma elementti, joka sijoitetaan näkymän vasempaan laitaan.</p>
+        <p>Organisaatiohaun sivussa on liukusäädin, josta organisaatiohaun saa siirrettyä sivuun vasemmalle ja organisaatiohaulta vapautuu tilaa muulle sisällölle. Organisaatiohaun avulla valitaan organisaatio, johon muut näkymän haut rajataan.</p>
+        <p>Organisaatiohaku koostuu vapaasanahaku-kentästä, kahdesta valintalistasta, Tyhjennä- ja Hae-painikkeista sekä hierarkkista organisaatiorakennetta kuvaavasta puurakenteesta. Oletuksena puurakennetta on piilossa kunnes käyttäjä tekee haun. Haku palauttaa hakuehtoja vastaavien puiden juuret listana. Käyttäjän valitetessa organisaation, organisaatiorajaus aktivoituu ja muun näkymän haku suoritetaan sen hetkisillä hakuehdoilla. Käyttäjä voi vaihtaa organisaatiota ja haku suoritetaan ilman erillistä Hae-painikkeen painamista.</p>
+      </div>
+      <div class="row-fluid">
+        <h2 id="ilmoitukset">Ilmoitukset ja tilaindikaattorit</h2>
+        <p>Käyttöliittymässä käytetään useita erilaisia ilmoitustyyppejä, jotka on määritelty tässä. Ilmoitukset parantavat käyttöliittymän opittavuutta sekä järjestelmän tilan kommunikointia käyttäjälle ja niitä tulee käyttää systemaattisesti tässä määritettävien ohjeiden mukaisesti.</p>
+        <p>Ilmoitukset esitetään sivun ylälaidassa 70% näytön leveydeltä niin, että ne ovat aina näkyvissä ilmestyessään riippumatta käyttäjän sijainnista sivulla. Ensisijaisesti käytetään kuvakkeellista ilmoitusta. Mikäli tilanpuutteen tai muun perustellun syyn vuoksi on tarpeen käyttää kuvakkeetonta ilmoitusta voidaan niin tehdä.</p>
+        <p>Mikäli ilmoitus annetaan dialogissa esitetään se dialogi-ikkunan leveydeltä.</p>
+        <h3 id="neutraali">Neutraali</h3>
+        <p>Neutraalia ilmoitusta käytetään kun käyttäjälle halutaan viestiä yleistä tai ohjaavaa informaatiota mikä ei liity suoranaisesti vahvistavaan palautteeseen tehdystä toiminnosta tai virheeseen. Neutraalia ilmoitusta käytetään esimerkiksi ohjaamaan käyttäjää haun käytössä kun haku ei palauta yhtään osumaa tai Virkailijan palvelussa lomakenäkymissä kokoamaan edellisissä näkymissä tehtyjä valintoja.</p>
+        <p>Neutraali ilmoitus on aina väriltään sininen.</p>
+        <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa.</p>
+        <p>Kuvakkeeton nautraali-ilmoitus:<br>
+          <img src="img/kuvakkeeton_neutraali.png"></p>
+        <p>Kuvakkeellinen neutraali-ilmoituksesta:<br>
+          <img src="img/kuvakkeellinen_neutraali.png"></p>
+        <h3 id="palaute">Palaute</h3>
+        <p>Palauteilmoitusta käytetään kun käyttäjälle halutaan vahvistaa, että toiminto on toteutettu onnistuneesti, yleensä Lähettäminen tai Tallentaminen. Ilmoitus esitetään välittömästi toiminnon onnistuneen toteutumisen jälkeen.</p>
+        <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa. Esimerkiksi Virkailijan palvelun lomakenäkymässä onnistuneen tallennuksen palaute poistuu näkyvistä kun käyttäjä muokkaa lomaketta edelleen.</p>
+        <p>Palauteilmoitus on aina väriltään vihreä.</p>
+        <p>Kuvakkeeton palauteilmoitus:<br>
+          <img src="img/kuvakkeeton_palaute.png"></p>
+        <p>Kuvakkeellinen palauteilmoitus:<br>
+          <img src="img/kuvakkeellinen_palaute.png"></p>
+        <h3 id="virheilmoitus">Virheilmoitus</h3>
+        Virheilmoitus esitetään kun järjestelmän toiminta epäonnistuu käyttäjästä johtuen. Tällöin käyttäjälle annetaan mahdollisuus korjata virhe pysymällä siinä näytössä jossa virhe tapahtui ja kertomalla siitä käyttäjälle virheilmoituksella. Virheilmoituksen tulee kertoa valitulla käyttöliittymän kielellä selkeästi minkälainen virhe on tapahtunut, mistä virhe johtuu ja kuinka käyttäjän tulee toimia virheen korjaamiseksi.
+        <p></p>
+        <p>Virheilmoitus esitetään välittömästi toiminnon virheellisen tai epäonnistuneen toteutumisen jälkeen</p>
+        <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä, tai, mikäli mahdollista, kunnes voidaan todeta, että käyttäjä on korjannut virheet tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa.</p>
+        <p>Virheilmoitus on aina väriltään keltainen.</p>
+        <p>Kuvakkeeton virheilmoitus:<br>
+          <img src="img/kuvakkeeton_virhe.png"></p>
+        <p>Kuvakkeellinen virheilmoitus:<br>
+          <img src="img/kuvakkeellinen_virhe.png"></p>
+        <h4>Kenttäkohtainen virheilmoitus</h4>
+        <p>Mikäli virhe koskee lomakkeen syöttökenttää, esitetään yleisen virheilmoituksen lisäksi kenttäkohtainen virheilmoitus jokaisen kentän yhteydessä jossa virhe esiintyy. Kenttäkohtainen virheilmoitus esitetään kuvakkeellisella virheilmoituksella ko. kentän alapuolella, ennen mahdollista kenttäkohtaista syöttöohjetta, ja se sisältää virheen syyn ko. kenttää koskien. Kenttäkohtainen virheilmoitus käyttäytyy kuten yleinen virheilmoitus.</p>
+        <p>Kenttäkohtainen virheilmoitus:<br>
+          <img src="img/kenttakohtainen_virhe.png"></p>
+        <h3 id="tila">Järjestelmän tila</h3>
+        <p>Mikäli järjestelmä käyttäjän suorittaman toiminnon seurauksena vie tai tuo tietoja tai dataa selaimen ja järjestelmän välillä pidempään kuin 0,5 sekuntia esitetään toiminto käynnissä –indikaattori.</p>
+        <p>Indikaattori esitetään tilaan johtaneen toiminnon toimintopainikkeen vieressä oikealla puolen. Indikaattoria esitetään kunnes toiminnon seurauksena tapahtuva tietojen tai datan vienti tai tuonti selaimen ja järjestelmän välillä on päättynyt. Käyttäjä voi keskeyttää toiminnon valitsemalla uuden toiminnon tai poistumalla näkymästä.</p>
+        <p>Mikäli käyttäjää halutaan estää tekemästä muita toimintoja tai poistumaan näkymästä toiminnon ollessa käynnissä, esitetään indikaattori keskellä näyttöä himmentäen näytön muut elementit ja poistamalla ne käytöstä toiminnon ajaksi.</p>
+        <h3 id="jarjestelmavirhe">Järjestelmävirhe</h3>
+        <p>Mikäli järjestelmässä tapahtuu käyttäjästä johtumaton virhe esitetään järjestelmävirheilmoitus. Järjestelmän tilan ja virheen laadun mukaisesti valitaan oikean tyyppinen virheilmoitus.</p>
+        <h4>Järjestelmävirhedialogi</h4>
+        <p>Mikäli virhe on sen laatuinen, että käyttäjä voidaan palauttaa näkymään ja tilaan jossa hän oli virheen sattuessa, esitetään järjestelmävirheilmoitus dialogi-ikkunassa. Pyrkimyksenä tällöin on palauttaa käyttäjä siihen näkymään ja siihen tilaan jossa hän oli virheen sattuessa.</p>
+        <p>Erityisen tärkeää on pyrkiä tämänkaltaiseen virheenhallintaan mikäli toiminnon joka veisi käyttäjän eteenpäin navigaatiossa suorittaminen epäonnistuu ilman käyttäjän virhettä ja käyttäjä ei voi tämän vuoksi jatkaa eteenpäin (siirtyä näkymään johon onnistunut toiminto olisi hänet vienyt).</p>
+        <p>Virheilmoituksessa esitetään teksti, joka kuvaa kuvaa virheen laadun tai syyn selkeästi, kuvake ja OK-painike. Mikäli virheen syytä tai laatua ei voida erityisesti määrittää käytetään yleistä tekstiä: “Tapahtui järjestelmävirhe (
+          <virhekoodi>
+          ). Ole hyvä ja yritä uudelleen. Jos ongelma toistuu ota yhteyttä palvelun ylläpitäjään.” Teksti esitetään käyttöliittymän valitulla kielellä.</p>
+        <p>Järjestelmävirheilmoitus poistuu näkyvistä kun käyttäjä on klikannut OK-painiketta. Tällöin palataan takaisin näkymään ja tilaan jossa oltiin virheen tapahtuessa tai käyttäjän suorittaessa toimintoa joka aiheutti virheen. Esimerkiksi jos käyttäjä oli syöttänyt tietoja lomakkeelle niin lomakkeelle palataan niin, että syötetyt tiedot ovat kuten käyttäjä ne oli syöttänyt.</p>
+        <p>Järjestelmävirhedialogi:<br>
+          <img src="img/virhedialogi.png"></p>
+        <h4>Järjestelmävirhenäkymä</h4>
+        <p>Mikäli virhe on sen laatuinen, että käyttäjää ei voida palauttaa näkymään tai tilaan jossa hän oli virheen sattuessa, esitetään järjestelmävirheilmoitus erillisessä näkymässä. Tällöin käyttäjä ohjataan palvelun aloitussivulle linkillä ja annetaan toimintaohjeet kuinka toimia mahdollisten tuhoutuneiden tai kadotettujen tietojen osalta sekä yhteystiedot joihin voi olla yhteydessä tilanteen johdosta. Ilmoitusteksti ja ohjeet esitetään kaikilla käyttöliittymän kielillä.</p>
+        <p>Järjestelmävirhenäkymä esimerkkitekstillä:<br>
+          <img src="img/jarjestelmavirhe_esimerkki.png"></p>
+        <h3 id="yhteysvirhe">Yhteysvirhe</h3>
+        <p>Mikäli selaimen yhteys järjestelmään on katkennut kokonaan tai osittain, ilmoitetaan tästä järjestelmävirheilmoituksella. Ensisijaisesti pyritään käyttämään järjestelmävirhe-dialogia ja palauttamaan käyttäjä näkymään ja tilaan jossa hän oli yhteyden katketessa. Mikäli tämä ei ole mahdollista käytetään järjestelmävirhenäkymää.</p>
+        <h3 id="koulutushaku">Koulutushaun tila</h3>
+        <p>Oppijan palvelussa koulutuksen kuvauksen yhteydessä esitetään koulutuksen haun tila tilanteen mukaan joko “Ei nyt haettavissa” tai “Haku käynnissä” tilaindikaattoreilla. Tilaindikaattorissa voidaan tarpeen mukaan käyttää myös tarkempia hakua yksilöiviä ilmaisuja, kuten ”Yleishaku käynnissä”.</p>
+        <h3 id="tiedon_alkupera">Tiedon alkuperä</h3>
+        <p>Tiedon alkuperä merkitään esitettävän tiedon yhteydessä mikäli tieto on tuotu ulkopuolisesta järjestelmästä tai tietokannasta.</p>
+        <h3 id="tiedon_tila">Tiedon tila</h3>
+        <p>Esitettävän tiedon tila järjestelmässä  ilmoitetaan käyttäen tilatunnusta, viimeisimmän tiedon tallennuksen aikaleimaa sekä virkailijan nimeä.</p>
+        <p>Esimerkki: (Luonnos, tallennettu 1.1.2012 klo 12:47, Pekka Järvinen)</p>
+      </div>
+      <div class="row-fluid">
+        <h2 id="asemointi">Sivujen asemointi</h2>
+        <p>Käyttöliittymän sivujen asemoinnissa noudatetaan 16 kolumnin grid-mallia. Sivujen vaakasuuntainen asemointi on optimoitu 960 px näyttöleveydelle. Vasemmalle ennen ensimmäistä kolumnia jätetään 10px marginaali, ja oikealle viimeisen kolumnin jälkeen samoin. Yhden kolumnin leveys on 40px ja kolumnien väliin jätetään 20px marginaali. Skaalaaminen muihin sivuleveyksiin toimii suhteellisten mittojen kautta: Yhden kolumnin leveys on 4.25% ja kolumnien välinen marginaali 2.0% sivuleveydestä.</p>
+        <h3 id="sivupohja">Yleinen sivupohja</h3>
+        <p>Kaikki käyttöliittymän sivut noudattavat yleistä sivupohjaa. Se sisältää ylhäältä alaspäin lueteltuna seuraavat elementit:
+        <ul>
+          <li>Ylätunniste</li>
+          <li>Navigointipalkki</li>
+          <li>Sisältöalue</li>
+          <li>Alatunniste 1</li>
+          <li>Alatunniste 2</li>
+        </ul>
+        </p>
+        <p>Alatunniste 1 on käytössä ainoastaan Oppijan palvelussa.</p>
+        <p>Poikkeuksen yleiseen sivupohjaan tekee virkailijapalvelun aloitussivu, jossa navigointipalkkia ei näytetä, koska virkailijapalvelun navigaatio on käytettävissä vasta sisäänkirjautumisen jälkeen.</p>
+        <p>Sisältöalueella käytetään erilaisia sivupohjia näkymän käyttötarkoituksen mukaan. Katso: Sivupohjat. Näkymä voidaan sisältöalueen osalta tarvittaessa rakentaa myös vapaasti käyttäen grid-mallia vaikka suositeltavaa onkin käyttää määritettyjä sivupohjia.</p>
+        <p>Yleisen sivupohjan asemointimääritykset ovat seuraavat:
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Elementin nimi</th>
+              <th>Leveys kolumneissa</th>
+              <th>Leveys pikseleissä</th>
+              <th>Leveys prosenteissa sivun koko leveydestä</th>
+              <th>Korkeus pikseleissä</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Ylätunniste</strong></td>
+              <td>16</td>
+              <td>960 px</td>
+              <td>100%</td>
+              <td>96 px</td>
+            </tr>
+            <tr>
+              <td><strong>Navigointipalkki</strong></td>
+              <td>16</td>
+              <td>960 px</td>
+              <td>100%</td>
+              <td>36 px</td>
+            </tr>
+            <tr>
+              <td><strong>Alatunniste 1</strong></td>
+              <td>16</td>
+              <td>960 px</td>
+              <td>100%</td>
+              <td>joustava</td>
+            </tr>
+            <tr>
+              <td><strong>Alatunniste 2</strong></td>
+              <td>14</td>
+              <td>820 px</td>
+              <td>87,23%</td>
+              <td>joustava</td>
+            </tr>
+          </tbody>
+        </table>
+        </p>
+        <p>Yleinen sivupohja:<br>
+          <img src="img/sivupohja.png"></p>
+        <h3 id="ylatunniste">Ylätunniste</h3>
+        <p>Virkailijapalvelujen ylätunniste sisältää:
+        <ul>
+          <li>Opintopolku-logo vasemmassa laidassa.</li>
+          <li>Kirjaudu ulos linkki oikeassa laidassa, joka kirjaa käyttäjän ulos palvelusta ja vie sisäänkirjautumis-sivulle.</li>
+        </ul>
+        </p>
+        <p>Virkailijapalvelun sisäänkirjautumissivulla ylätunniste sisältää poikkeuksellisesti:
+        <ul>
+          <li>Opintopolku-logo vasemmassa laidassa</li>
+          <li>Kielivalinta oikeassa laidassa: Suomeksi | På Svenska. Kielivalinta vaihtaa sisäänkirjatumissivun kielen sekä siihen liitettyjen Rekisteriseloste ja Tietosuojaseloste sivujen kielen.</li>
+        </ul>
+        </p>
+        <p>Oppijan palvelun ylätunniste sisältää:
+        <ul>
+          <li>Opintopolku-logo vasemmassa laidassa. Logo on linkki Oppijan palvelun etusivulle.</li>
+          <li>Kielivalinta oikeassa laidassa. Kielivalinnasta voi vaihtaa käyttöliittymän kielen milloin tahansa. Kaikki tarjolla olevat kielet ovat koko ajan näkyvillä. Mikäli tarjolla on vain yksi kieli, ei kielivalintaa esitetä. Kielet kirjoitetaan aina kyseisellä kielellä seuraavasti: Suomeksi, På Svenska, In English.</li>
+          <li>Muistilista oikeassa laidassa ennen Kielivalintaa. Muistilista vie Muistilista-sivulle. Se sisältää reaaliaikaisesti päivittyvän määräindikaattorin joka esittää kulloinkin muistilistalle lisättyjen koulutusten lukumäärän numeraalisesti. Koulutukset säilyvät muistilistalla selaimen sulkemiseen asti.</li>
+        </ul>
+        </p>
+        <h3 id="navigointipalkki">Navigointipalkki</h3>
+        <p>Navigointipalkki sisältää päävalikon. Katso Navigointi > Päävalikko.</p>
+        <h3 id="alatunniste1">Alatunniste 1</h3>
+        <p>Alatunniste 1 on käytössä ainoastaan Oppijan palvelussa. Sen tarkoituksena on koota palvelun hallintoon ja asiakaspalveluun liittyvät tiedot ja linkit yhteen.</p>
+        <p>Alatunniste 1 sisältää:
+        <ul>
+          <li>Opintopolku-logo vasemmassa laidassa. Logo on linkki Oppijan palvelun etusivulle.</li>
+          <li>Linkki: Mikä on Opintopolku? Linkki vie palvelun kuvaus-sivulle.</li>
+          <li>Linkki: Anna palautetta – kysy neuvoa. Linkki vie palautteenanto-sivulle.</li>
+          <li>Linkki: Rekisteriseloste. Linkki vie rekisteriseloste-sivulle.</li>
+          <li>Linkki: Oppilaitoshakemisto. Linkki vie oppilaitoshakemisto-sivulle.</li>
+          <li>Lisäksi sen yhteydessä esitetään merkintä tietojen oikeellisuudesta kaikilla koulutuksiin liittyvää tietoa sisältävillä sivuilla: “Koulutuksen järjestäjät ja korkeakoulut ylläpitävät tietoja koulutuksistaan Opintopolussa. Tietojen oikeellisuuden voit tarkistaa kyseisestä oppilaitoksesta tai korkeakoulusta.”</li>
+        </ul>
+        </p>
+        <h3 id="alatunniste2">Alatunniste 2</h3>
+        <p>Alatunniste 2:n tarkoituksena on palvelun omistajuuden osoittaminen. Se sisältää Opetushallituksen logon, Opetus- ja kulttuuriministeriön logon sekä tekijänoikeuslausekkeen: “Copyright © 2013 Opetushallitus”. Logot toimivat linkkeinä ko. organisaatioiden www-sivustojen etusivuille. Virkailijapalvelussa esitetään logojen yhteydessä myös ko. organisaatioiden yhteystiedot.</p>
+      </div>
+      <div class="row-fluid"> 
+      
+      <h2 id="virkailija_sivupohja">Virkailijapalvelun sisältöalueen sivupohjat</h2>
+      <p>Seuraavien virkailijapalvelun sivupohjien noudattaminen on yhdenmukaisuuden vuoksi suositeltavaa. Muissa tapauksissa noudatetaan pääsääntöisesti yleistä sivupohjaa, näiden sivupohjien mallia, yhdenmukaisia tiedon esitystapoja sekä tässä tyylioppaassa esiteltyjä toiminnallisia komponentteja.</p>
+      
+      <h3 id="hakutulosnakyma">Hakutulosnäkymä</h3>
+      <img src="img/hakutulosnakyma.png">
+      
+      <h3 id="lomakenakyma">Lomakenäkymä</h3>
+      <p>Tallenna-painike näkymän yläosassa tallentaa kaiken painikkeen alapuolella olevan sisällön. Monisivuisessa lomakkeessa tiedot tulee tallentaa ennen siirtymistä seuraavalle välilehdelle. Jos tallennusta ei ole tehty, käyttäjä ohjataan tallentamaan.<br>
+      <img src="img/lomakenakyma.png"></p>
+      
+      <h3 id="tarkastelunakyma">Tarkastelunäkymä</h3>
+      <img src="img/tarkastelunakyma.png">
+      
+      </div>
+      
+      <div class="row-fluid"> 
+      <h2 id="visuaalinen_tyyli">Visuaalinen tyyli ja graafiset elementit</h2>
+      <p>Katso HTML ohjeisto.</p>
+      </div>
+      
+      
+    </div>
+    <!-- END ROW -->
+    
+   
+  </div>
+  <!-- END SISÄLTÖOSA span10 --> 
+</div>
+<!-- END container--> 
+<script src="http://code.jquery.com/jquery-latest.js"></script> 
+<script src="js/bootstrap.js"></script>
 </body>
 </html>
