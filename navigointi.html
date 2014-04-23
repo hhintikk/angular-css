@@ -11,27 +11,24 @@
 .well {
 	background: white;
 }
-
 .sidebar-nav-fixed {
-     position:fixed;
-     top:60px;
-     width:16%;
- }
-
- @media (max-width: 767px) {
-     .sidebar-nav-fixed {
-         width:auto;
-     }
- }
-
- @media (max-width: 979px) {
-     .sidebar-nav-fixed {
-         position:static;
-        width: auto;
-     }
-
+	position: fixed;
+	top: 60px;
+	width: 16%;
 }
 
+@media (max-width: 767px) {
+.sidebar-nav-fixed {
+	width: auto;
+}
+}
+
+@media (max-width: 979px) {
+.sidebar-nav-fixed {
+	position: static;
+	width: auto;
+}
+}
 </style>
 </head>
 <body>
@@ -40,7 +37,7 @@
   <div class="navbar"> <!-- PÄÄNAVI -->
     <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
       <ul class="nav">
-      <li><a href="johdanto.html">Johdanto</a></li>
+        <li><a href="johdanto.html">Johdanto</a></li>
         <li><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
         <li><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
         <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
@@ -68,50 +65,42 @@
     <!-- END SIVUNAVI -->
     
     <div class="span10">
-      
-      
       <div class="row-fluid">
         <h1 id="navigointi">Navigointi</h1>
         <hr>
         <p>Palvelussa navigointiin käytetään seuraavia elementtejä.</p>
         <h2 id="paavalikko">Päävalikko</h2>
         <div class="well">
-        <p>Päävalikko sijoitetaan navigointipalkkiin ylätunnisteen alle. Oletusarvoisesti siinä on esillä sivurakenteen ensimmäisen tason valinnat, jotka toimivat linkkeinä käyttöliittymän pääsivuille. Valitsemalla näitä linkkejä käyttäjä siirtyy sivulta toiselle.</p>
-        <p>Vietäessä hiiren kursori valinta-alueen ylle korostetaan valinta-alue ja avataan pudotusvalikko, joka sisältää ensimmäiselle tasolle alisteisena sivurakenteen toisen tason valinnat. Pudotusvalikko pidetään auki kunnes kursori siirretään pois valinta-alueen tai pudotusvalikon päältä. Siirrettäessä kursoria pudotusvalikon yllä korostetaan valinta-alue jonka yllä kursori kulloinkin on. Klikattaessa päävalikon valintaa tai pudotusvalikon valintaa siirrytään valintaan linkitetylle sivulle, ja valittu päävalikon valinta esitetään korostettuna.</p>
-        <p>Päävalikossa korostetaan aina se valinta, johon kuuluvalla sivulla (sivurakenne) kulloinkin ollaan (poikkeuksena etusivu). Päävalikon alavalikossa (pudostusvalikko) korostetaan aina se valinta johon kuuluvalla sivulla (sivurakenne) tai johon linkitetyllä sivulla ollaan.</p>
+          <p>Päävalikko sijoitetaan navigointipalkkiin ylätunnisteen alle. Oletusarvoisesti siinä on esillä sivurakenteen ensimmäisen tason valinnat, jotka toimivat linkkeinä käyttöliittymän pääsivuille. Valitsemalla näitä linkkejä käyttäjä siirtyy sivulta toiselle.</p>
+          <p>Vietäessä hiiren kursori valinta-alueen ylle korostetaan valinta-alue ja avataan pudotusvalikko, joka sisältää ensimmäiselle tasolle alisteisena sivurakenteen toisen tason valinnat. Pudotusvalikko pidetään auki kunnes kursori siirretään pois valinta-alueen tai pudotusvalikon päältä. Siirrettäessä kursoria pudotusvalikon yllä korostetaan valinta-alue jonka yllä kursori kulloinkin on. Klikattaessa päävalikon valintaa tai pudotusvalikon valintaa siirrytään valintaan linkitetylle sivulle, ja valittu päävalikon valinta esitetään korostettuna.</p>
+          <p>Päävalikossa korostetaan aina se valinta, johon kuuluvalla sivulla (sivurakenne) kulloinkin ollaan (poikkeuksena etusivu). Päävalikon alavalikossa (pudostusvalikko) korostetaan aina se valinta johon kuuluvalla sivulla (sivurakenne) tai johon linkitetyllä sivulla ollaan.</p>
         </div>
-        
         <h2 id="alavalikko">Alavalikko</h2>
         <div class="well">
-        <p>Alavalikkoa käytetään kun halutaan mahdollistaa navigointi päävalikosta valitun aiheen sisällä myös päävalikkoa käyttämättä.</p>
-        <p>Alavalikossa esitetään sivurakenteen toisen ja sitä syvempien tasojen navigointi alisteisena päävalikossa tehdylle ensimmäisen tason valinnalle. Alavalikossa käytetään hierarkista listakomponenttia. Alavalikko esitetään puurakenteena jossa ylimmäisenä on päävalikosta valittu tietorakenteen ensimmäisen tason valinta, sen alla sisennetysti sille alisteiset tietorakenteen toisen tason sisällöt sekä niille alisteisesti ja sisennetysti mahdolliset syvemmät tietorakenteen tasot.</p>
-        <p>Oletusarvoisesti kaikki tasot ovat puurakenteessa auki. Käyttäjä voi avata ja sulkea puurakenteen tasoja alatasoja sisältävien tasojen vieressä (vasemmalla puolen) sijaitsevista nuolista, jotka käännetään alaspäin kun taso on auki ja oikealle kun taso on kiinni. Tasot jotka sisältävät alatasoja esitetään lihavoidulla fontilla.</p>
-        <p>Puurakenteesta korostetaan se käyttöliittymän sivu jolla sillä hetkellä ollaan, sekä se valinta-alue jonka yllä kursori kulloinkin on. Klikkaamalla valinta-aluetta siirrytään siihen linkitetylle sivulle.</p>
+          <p>Alavalikkoa käytetään kun halutaan mahdollistaa navigointi päävalikosta valitun aiheen sisällä myös päävalikkoa käyttämättä.</p>
+          <p>Alavalikossa esitetään sivurakenteen toisen ja sitä syvempien tasojen navigointi alisteisena päävalikossa tehdylle ensimmäisen tason valinnalle. Alavalikossa käytetään hierarkista listakomponenttia. Alavalikko esitetään puurakenteena jossa ylimmäisenä on päävalikosta valittu tietorakenteen ensimmäisen tason valinta, sen alla sisennetysti sille alisteiset tietorakenteen toisen tason sisällöt sekä niille alisteisesti ja sisennetysti mahdolliset syvemmät tietorakenteen tasot.</p>
+          <p>Oletusarvoisesti kaikki tasot ovat puurakenteessa auki. Käyttäjä voi avata ja sulkea puurakenteen tasoja alatasoja sisältävien tasojen vieressä (vasemmalla puolen) sijaitsevista nuolista, jotka käännetään alaspäin kun taso on auki ja oikealle kun taso on kiinni. Tasot jotka sisältävät alatasoja esitetään lihavoidulla fontilla.</p>
+          <p>Puurakenteesta korostetaan se käyttöliittymän sivu jolla sillä hetkellä ollaan, sekä se valinta-alue jonka yllä kursori kulloinkin on. Klikkaamalla valinta-aluetta siirrytään siihen linkitetylle sivulle.</p>
         </div>
-        
         <h2 id="navigaatiopolku">Navigaatiopolku</h2>
         <div class="well">
-        <p>Navigaatiopolku sijoitetaan sivulle sivupohjien mukaan. Navigaatiopolku esittää aina navigaatiorakenteen (sivurakenne) esillä olevasta sivusta ylöspäin. Se sisältää:
-        <ul>
-          <li>Vasemmalla ensimmäisenä Koti-ikonin, joka toimii linkkinä palvelun etusivulle</li>
-          <li>Oikealla viimeisenä esillä olevan sivun otsikon (tämä ei ole linkki)</li>
-          <li>Koti-ikonin ja esillä olevan sivun otsikon välissä kaikkien niiden tasojen otsikot joiden kautta esillä olevalle sivulle tietorakenteessa päädytään erotettuna > merkillä. Otsikot ovat linkkejä kunkin tason etusivulle eli otsikkoon linkitetylle sivulle.</li>
-        </ul>
-        </p>
-        <p>Oppijan palvelun hakutuloksessa ensimmäinen taso koti-ikonin jälkeen on aina “Hakutulokset” ja sen jälkeen tietorakenteena käytetään valitun koulutuksen koulutusrakennetta.</p>
+          <p>Navigaatiopolku sijoitetaan sivulle sivupohjien mukaan. Navigaatiopolku esittää aina navigaatiorakenteen (sivurakenne) esillä olevasta sivusta ylöspäin. Se sisältää:
+          <ul>
+            <li>Vasemmalla ensimmäisenä Koti-ikonin, joka toimii linkkinä palvelun etusivulle</li>
+            <li>Oikealla viimeisenä esillä olevan sivun otsikon (tämä ei ole linkki)</li>
+            <li>Koti-ikonin ja esillä olevan sivun otsikon välissä kaikkien niiden tasojen otsikot joiden kautta esillä olevalle sivulle tietorakenteessa päädytään erotettuna > merkillä. Otsikot ovat linkkejä kunkin tason etusivulle eli otsikkoon linkitetylle sivulle.</li>
+          </ul>
+          </p>
+          <p>Oppijan palvelun hakutuloksessa ensimmäinen taso koti-ikonin jälkeen on aina “Hakutulokset” ja sen jälkeen tietorakenteena käytetään valitun koulutuksen koulutusrakennetta.</p>
         </div>
-        
         <h2 id="back">Back-painikkeen käyttö</h2>
         <div class="well">
-        <p>Selaimen back-painikkeen käyttöä ei suositella käyttöliittymässä. Jotta tietojen syötössä vältetään virheitä estetään lomakkeille ja dialogeihin pääsy selaimen back-painikkeella. Selaimen back-painikkeella voidaan selata tarkastelunäkymien ja hakutulosnäkymien historiaa.</p>
+          <p>Selaimen back-painikkeen käyttöä ei suositella käyttöliittymässä. Jotta tietojen syötössä vältetään virheitä estetään lomakkeille ja dialogeihin pääsy selaimen back-painikkeella. Selaimen back-painikkeella voidaan selata tarkastelunäkymien ja hakutulosnäkymien historiaa.</p>
         </div>
       </div>
-      
-            
     </div>
-    <!-- END ROW -->
+    <!-- END ROW --> 
     
-   
   </div>
   <!-- END SISÄLTÖOSA span10 --> 
 </div>
