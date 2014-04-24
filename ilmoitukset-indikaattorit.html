@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ilmoitukset ja tilaindikaattorit</title>
+<title>Opintopolku tyyliopas - Ilmoitukset ja tilaindikaattorit</title>
 <style type="text/css"></style>
 <link href="css/bootstrap-combined.css" rel="stylesheet" type="text/css">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
@@ -11,41 +11,23 @@
 .well {
 	background: white;
 }
-.sidebar-nav-fixed {
-	position: fixed;
-	top: 60px;
-	width: 16%;
-}
 
-@media (max-width: 767px) {
-.sidebar-nav-fixed {
-	width: auto;
-}
-}
-
-@media (max-width: 979px) {
-.sidebar-nav-fixed {
-	position: static;
-	width: auto;
-}
-}
 </style>
 </head>
 <body>
 <div class="container-fluid"> 
   <!-- container -->
   <div class="navbar"> <!-- PÄÄNAVI -->
-    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
+    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi tyyliopas</a>
       <ul class="nav">
-        <li><a href="johdanto.html">Johdanto</a></li>
-        <li><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+        <li><a href="index.html">Johdanto</a></li>
         <li><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
+        <li><a href="tietojen-lisaaminen.html">Tietojen muokkaaminen</a></li>
         <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
-        <li><a href="tietojen-lisaaminen.html">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li class="active"><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja indikaattorit</a></li>
         <li><a href="navigointi.html">Navigointi</a></li>
-        <li><a href="haku.html">Haku</a></li>
-        <li class="active"><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja tilaindikaattorit</a></li>
-        <li><a href="sivupohjat.html">Sivupohjat</a></li>
+		 <li><a href="sivupohjat.html">Sivupohjat</a></li>
+        <li><a href="graafinen.html">Visuaalinen tyyli</a></li>
       </ul>
     </div>
   </div>
@@ -54,9 +36,8 @@
   <div class="row-fluid"> 
     <!-- CONTAINER -->
     <div class="span2"> <!-- SIVUNAVI -->
-      <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
-        <li><a href="#ilmoitukset">Ilmoitukset ja tilaindikaattorit</a></li>
-        <li><a href="#neutraali">Neutraali</a></li>
+      <ul class="nav nav-tabs nav-stacked">
+        <li><a href="#neutraali">Ilmoitus</a></li>
         <li><a href="#palaute">Palaute</a></li>
         <li><a href="#virheilmoitus">Virheilmoitus</a></li>
         <li><a href="#tila">Järjestelmän tila</a></li>
@@ -76,7 +57,7 @@
         <p>Käyttöliittymässä käytetään useita erilaisia ilmoitustyyppejä, jotka on määritelty tässä. Ilmoitukset parantavat käyttöliittymän opittavuutta sekä järjestelmän tilan kommunikointia käyttäjälle ja niitä tulee käyttää systemaattisesti tässä määritettävien ohjeiden mukaisesti.</p>
         <p>Ilmoitukset esitetään sivun ylälaidassa 70% näytön leveydeltä niin, että ne ovat aina näkyvissä ilmestyessään riippumatta käyttäjän sijainnista sivulla. Ensisijaisesti käytetään kuvakkeellista ilmoitusta. Mikäli tilanpuutteen tai muun perustellun syyn vuoksi on tarpeen käyttää kuvakkeetonta ilmoitusta voidaan niin tehdä.</p>
         <p>Mikäli ilmoitus annetaan dialogissa esitetään se dialogi-ikkunan leveydeltä.</p>
-        <h2 id="neutraali">Neutraali</h2>
+        <h2 id="neutraali">Ilmoitus (Neutraali)</h2>
         <div class="well">
           <p>Neutraalia ilmoitusta käytetään kun käyttäjälle halutaan viestiä yleistä tai ohjaavaa informaatiota mikä ei liity suoranaisesti vahvistavaan palautteeseen tehdystä toiminnosta tai virheeseen. Neutraalia ilmoitusta käytetään esimerkiksi ohjaamaan käyttäjää haun käytössä kun haku ei palauta yhtään osumaa tai Virkailijan palvelussa lomakenäkymissä kokoamaan edellisissä näkymissä tehtyjä valintoja.</p>
           <p>Neutraali ilmoitus on aina väriltään sininen.</p>
@@ -86,7 +67,7 @@
           <p>Kuvakkeellinen neutraali-ilmoituksesta:<br>
             <img src="img/kuvakkeellinen_neutraali.png"></p>
         </div>
-        <h2 id="palaute">Palaute</h2>
+        <h2 id="palaute">Palauteilmoitus</h2>
         <div class="well">
           <p>Palauteilmoitusta käytetään kun käyttäjälle halutaan vahvistaa, että toiminto on toteutettu onnistuneesti, yleensä Lähettäminen tai Tallentaminen. Ilmoitus esitetään välittömästi toiminnon onnistuneen toteutumisen jälkeen.</p>
           <p>Ilmoitus pidetään esillä kunnes käyttäjä tekee uuden toiminnon tai poistuu näkymästä tai näkymän tiedot muuttuvat siten, että ilmoitus ei enään pidä paikkaansa. Esimerkiksi Virkailijan palvelun lomakenäkymässä onnistuneen tallennuksen palaute poistuu näkyvistä kun käyttäjä muokkaa lomaketta edelleen.</p>
@@ -140,7 +121,7 @@
         </div>
         <h2 id="koulutushaku">Koulutushaun tila</h2>
         <div class="well">
-          <p>Oppijan palvelussa koulutuksen kuvauksen yhteydessä esitetään koulutuksen haun tila tilanteen mukaan joko “Ei nyt haettavissa” tai “Haku käynnissä” tilaindikaattoreilla. Tilaindikaattorissa voidaan tarpeen mukaan käyttää myös tarkempia hakua yksilöiviä ilmaisuja, kuten ”Yleishaku käynnissä”.</p>
+          <p>Oppijan palvelussa koulutuksen kuvauksen yhteydessä esitetään koulutuksen haun tila tilanteen mukaan joko “Ei nyt haettavissa” tai “Haku käynnissä” tilaindikaattoreilla. Tilaindikaattorissa voidaan tarpeen mukaan käyttää myös tarkempia hakua yksilöiviä ilmaisuja, kuten ”Yhteishaku käynnissä”.</p>
         </div>
         <h2 id="tiedon_alkupera">Tiedon alkuperä</h2>
         <div class="well">

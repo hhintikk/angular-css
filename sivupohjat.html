@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sivupohjat</title>
+<title>Opintopolku tyyliopas - Sivupohjat</title>
 <style type="text/css"></style>
 <link href="css/bootstrap-combined.css" rel="stylesheet" type="text/css">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
@@ -11,41 +11,23 @@
 .well {
 	background: white;
 }
-.sidebar-nav-fixed {
-	position: fixed;
-	top: 60px;
-	width: 16%;
-}
 
-@media (max-width: 767px) {
-.sidebar-nav-fixed {
-	width: auto;
-}
-}
-
-@media (max-width: 979px) {
-.sidebar-nav-fixed {
-	position: static;
-	width: auto;
-}
-}
 </style>
 </head>
 <body>
 <div class="container-fluid"> 
   <!-- container -->
   <div class="navbar"> <!-- PÄÄNAVI -->
-    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
+    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi tyyliopas</a>
       <ul class="nav">
-        <li><a href="johdanto.html">Johdanto</a></li>
-        <li><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+        <li><a href="index.html">Johdanto</a></li>
         <li><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
+        <li><a href="tietojen-lisaaminen.html">Tietojen muokkaaminen</a></li>
         <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
-        <li><a href="tietojen-lisaaminen.html">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja indikaattorit</a></li>
         <li><a href="navigointi.html">Navigointi</a></li>
-        <li><a href="haku.html">Haku</a></li>
-        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja tilaindikaattorit</a></li>
-        <li class="active"><a href="sivupohjat.html">Sivupohjat</a></li>
+		 <li class="active"><a href="sivupohjat.html">Sivupohjat</a></li>
+        <li><a href="graafinen.html">Visuaalinen tyyli</a></li>
       </ul>
     </div>
   </div>
@@ -54,8 +36,7 @@
   <div class="row-fluid"> 
     <!-- CONTAINER -->
     <div class="span2"> <!-- SIVUNAVI -->
-      <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
-        <li><a href="#asemointi">Sivujen asemointi</a></li>
+      <ul class="nav nav-tabs nav-stacked">
         <li><a href="#sivupohja">Yleinen sivupohja</a></li>
         <li><a href="#ylatunniste">Ylätunniste</a></li>
         <li><a href="#navigointipalkki">Navigointipalkki</a></li>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tietojen esittäminen</title>
+<title>Opintopolku tyyliopas - Tietojen esittäminen</title>
 <style type="text/css"></style>
 <link href="css/bootstrap-combined.css" rel="stylesheet" type="text/css">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
@@ -11,41 +11,23 @@
 .well {
 	background: white;
 }
-.sidebar-nav-fixed {
-	position: fixed;
-	top: 60px;
-	width: 16%;
-}
 
-@media (max-width: 767px) {
-.sidebar-nav-fixed {
-	width: auto;
-}
-}
-
-@media (max-width: 979px) {
-.sidebar-nav-fixed {
-	position: static;
-	width: auto;
-}
-}
 </style>
 </head>
 <body>
 <div class="container-fluid"> 
   <!-- container -->
   <div class="navbar"> <!-- PÄÄNAVI -->
-    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
+    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi tyyliopas</a>
       <ul class="nav">
-        <li><a href="johdanto.html">Johdanto</a></li>
-        <li><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+        <li><a href="index.html">Johdanto</a></li>
         <li class="active"><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
+        <li><a href="tietojen-lisaaminen.html">Tietojen muokkaaminen</a></li>
         <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
-        <li><a href="tietojen-lisaaminen.html">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja indikaattorit</a></li>
         <li><a href="navigointi.html">Navigointi</a></li>
-        <li><a href="haku.html">Haku</a></li>
-        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja tilaindikaattorit</a></li>
-        <li><a href="sivupohjat.html">Sivupohjat</a></li>
+		 <li><a href="sivupohjat.html">Sivupohjat</a></li>
+        <li><a href="graafinen.html">Visuaalinen tyyli</a></li>
       </ul>
     </div>
   </div>
@@ -54,8 +36,8 @@
   <div class="row-fluid"> 
     <!-- CONTAINER -->
     <div class="span2"> <!-- SIVUNAVI -->
-      <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
-        <li><a href="#tietojen_esittaminen">Tietojen esittäminen</a></li>
+      <ul class="nav nav-tabs nav-stacked">
+        <li><a href="#teksti">Teksti ja kuvat</a></li>
         <li><a href="#kieliversiot">Kieliversiot</a></li>
         <li><a href="#terminologia">Terminologia</a></li>
         <li><a href="#lyhenteet">Lyhenteet</a></li>
@@ -73,16 +55,22 @@
         <!-- ROW -->
         <h1 id="tietojen_esittaminen">Tietojen esittäminen</h1>
         <hr>
-        <p>Tässä kuvattavia yleisiä tietojen esitystapoja käytetään yhdenmukaisesti käyttöliittymän kaikilla sivuilla. Mikäli käyttäjällä on ollut mahdollisuus tietoja järjestelmään tallennettaessa vaikuttaa tietojen muotoiluun tai esitystapaan, noudatetaan aina käyttäjän tallentamaa muotoilua.</p>
+        <p>Tässä kuvattavia tietojen esitystapoja käytetään yhdenmukaisesti käyttöliittymän kaikilla sivuilla. Mikäli käyttäjällä on ollut mahdollisuus tietoja järjestelmään tallennettaessa vaikuttaa tietojen muotoiluun tai esitystapaan, noudatetaan aina käyttäjän tallentamaa muotoilua.</p>
+        <h2 id="teksti">Teksti ja kuvat</h2>
+        <div class="well">
+        <p>Tekstimuotoinen tieto tasataan oletusarvoisesti vasemmalle. Käyttöliittymässä käytetään helposti luettavia kirjasimia jotka ovat selkeitä ja yleisesti käytössä. Tekstikappaleet pyritään pitämään lyhyinä, ja väliotsikoita käytetään riittävästi jäsentämään tekstiä. Sivut otsikoidaan asianmukaisesti ja otsikot erotetaan muusta sisällöstä. Sivun pääotsikko on esitetty selvästi muuta sisältöä isommilla kirjaimilla. Väliotsikot erottuvat leipätekstistä, mutta ovat pienemmällä kuin pääotsikko.</p>
+        <p>Sivuilla käytetään vain kuvia jotka liittyvät sivulla esitettävään tekstiin. Sivulla olevien kuvien ja tekstin ei tule olla sisällöltään ristiriidassa. Kuva sijoitetaan sen tekstikohdan lähelle, jota se kuvaa. Käytetään hyvälaatuisia ja selkeitä kuvia jotka ovat riittävän suurikokoisia niin, että yksityiskohdat erottuvat selvästi.
+        <p><a href="graafinen.html#typografia">Katso Typografia määritys</a></p>
+        </div>
         <h2 id="kieliversiot">Kieliversiot</h2>
         <div class="well">
           <p>Palvelu sisältää useita kieliversioita. Käyttöliittymäkielet ovat virkailijapalveluissa suomi ja ruotsi, Oppijan palvelussa suomi (Opintopolku.fi), ruotsi (Studieinfo.fi) ja englanti (Studyinfo.fi).</p>
           <p>Virkailijapalveluissa käyttöliittymäkieli määräytyy käyttäjän omissa tiedoissa valitun asiointikielien mukaisesti. Palvelun aloitusnäkymässä (kirjautumissivu) jossa käyttäjää ei vielä ole tunnistettu tarjotaan ylätunnisteessa kielivalinta suomi / ruotsi, mikä vaikuttaa ainoastaan kyseiseen näkymään sekä siihen suoraan liitettyihin lisänäkymiin, kuten Rekisteriseloste ja Tietosuojaseloste. Oletusarvoinen kieli aloitusnäkymässä on suomi.</p>
           <p>Oppijan palvelussa käyttäjä voi tehdä kielivalinnan milloin tahansa palvelun käytön aikana. Kielivalinta muuttaa käyttöliittymän koko sisällön valitulle kielelle, seuraavia poikkeuksia lukuun ottamatta:
           <ul>
-            <li>Korkoeakouluja lukuunottamatta koulutuksen kuvauksen tekstisisältö ja nimi näytetään aina oletusarvoisesti opetuskielellä. Koulutuskuvauksesta voi katsoa myös muunkieliset kuvaukset mikäli ne ovat olemassa.</li>
-            <li>Korkoeakouluja lukuunottamatta koulutukseen hakeutuminen näytetään sillä kielellä, jolla valintaperusteet on kuvattu, oletusarvoisesti opetuskielellä. Esimerkiksi lukiokoulutuksen ja ammatillisten perustutkintojen opiskelijaksi ottamisen perusteet ovat vain suomeksi ja ruotsiksi (asetusteksti).</li>
-            <li>Korkoeakouluja lukuunottamatta oppilaitoksen kuvaus näytetään samalla kielellä kuin koulutuskuvaus, mikäli organisaation kuvaus on olemassa ko. kielellä. Muussa tapauksessa esitetään käyttöliittymän kielisenä.</li>
+            <li>Korkeakouluja lukuunottamatta koulutuksen kuvauksen tekstisisältö ja nimi näytetään aina oletusarvoisesti opetuskielellä. Koulutuskuvauksesta voi katsoa myös muunkieliset kuvaukset mikäli ne ovat olemassa.</li>
+            <li>Korkeakouluja lukuunottamatta koulutukseen hakeutuminen näytetään sillä kielellä, jolla valintaperusteet on kuvattu, oletusarvoisesti opetuskielellä. Esimerkiksi lukiokoulutuksen ja ammatillisten perustutkintojen opiskelijaksi ottamisen perusteet ovat vain suomeksi ja ruotsiksi (asetusteksti).</li>
+            <li>Korkeakouluja lukuunottamatta oppilaitoksen kuvaus näytetään samalla kielellä kuin koulutuskuvaus, mikäli organisaation kuvaus on olemassa ko. kielellä. Muussa tapauksessa esitetään käyttöliittymän kielisenä.</li>
           </ul>
           </p>
           <p>Käyttöliittymässä tulee kiinnittää huomiota siihen, että sen kieli pysyy samana, vaikka sisältö olisi monikielistä. Syöttökenttien nimet ovat esimerkiksi suomenkielisessä käyttöliittymässä aina suomeksi, vaikka syötettäisiin ruotsin- tai  englanninkielistä sisältöä.</p>
@@ -92,7 +80,7 @@
         <h2 id="terminologia">Terminologia</h2>
         <div class="well">
           <p>Käyttöliittymässä suositellaan käytettävän yleiskieltä ja mahdollisimman yhdenmukaisia termejä sekä virkailijapalvelussa että Oppijan palvelussa. Viranomaispalvelun luonteen vuoksi myös laki- ja asetusteksti hyväksytään, mutta tällöin asia suositellaan selitettäväksi ohjetekstissä asiayhteydessään.</p>
-          <p>Opetus- ja koulutussanaston osalta palvelussa käytetään Oksa-sanastoa: <a href="https://confluence.csc.fi/pages/viewpage.action?pageId=8688189">https://confluence.csc.fi/pages/viewpage.action?pageId=8688189</a></p>
+          <p>Opetus- ja koulutussanaston osalta palvelussa käytetään Oksa-sanastoa: <a href="https://confluence.csc.fi/pages/viewpage.action?pageId=8688189" target="_blank">https://confluence.csc.fi/pages/viewpage.action?pageId=8688189</a></p>
           <p>Palvelun kehityksessä hyödynnetään palveluun luotua Koodistopalvelua, jotta termit ovat yhtenevät ja samassa muodossa kaikissa alipalveluissa.</p>
           <p>Käyttöliittymän tekstit tulee aina oikolukea ja tarkistaa niiden oikeakielisyys.</p>
         </div>
@@ -227,7 +215,6 @@
             <li>Henkilötunnus</li>
             <ul>
               <li>Kaikki henkilötunnuksen sisältämät merkit erottimineen kirjoitetaan yhteen ilman välejä</li>
-              <li>Henkilötunnus on aina linkki henkilön tietoihin</li>
             </ul>
             <li>Hakemusnumero</li>
             <ul>
@@ -295,39 +282,49 @@
         </div>
         <h2 id="jarjestys">Järjestys ja ryhmittely</h2>
         <div class="well">
-          <p>Tiedot esitetään pääsääntöisesti yhdellä sivulla ja ryhmitellään sopiviin asiakokonaisuuksiin jotka otsikoidaan kuvaavasti. Olennaisimmat tiedot pyritään aina esittämään ensin. Tekstimuotoinen tieto tasataan oletusarvoisesti vasemmalle ja otsikot erotetaan muusta sisällöstä.</p>
-          <p>Tietoa voidaan jäsentää sekä numeroimattomiin että numeroituihin listoihin, sekä taulukoihin (kts. Taulukot).</p>
+          <p>Tiedot esitetään pääsääntöisesti yhdellä sivulla ja ryhmitellään sopiviin asiakokonaisuuksiin jotka otsikoidaan kuvaavasti. Olennaisimmat tiedot pyritään aina esittämään ensin.</p>
           <p>Mikäli esitettäviä tietoja on runsaasti voidaan tiedot jakaa usealle sivulle käyttäen joko
           <ul>
-            <li>Välilehtiä (tab)</li>
-            <li>Sivutusta (pagination)</li>
-            <li>Ohjattua sivutusta (wizard)</li>
+            <li>Välilehtiä (tab). <a href="toiminnalliset-komponentit.html#valilehtivalikko">Katso: Toiminnalliset komponentit</a></li>
+            <li>Sivutusta (pagination). <a href="toiminnalliset-komponentit.html#sivutus">Katso: Toiminnalliset komponentit</a></li>
+            <li>Ohjattua sivutusta (wizard). <a href="toiminnalliset-komponentit.html#ohjattu_sivutus">Katso: Toiminnalliset komponentit</a></li>
           </ul>
           </p>
           <p>Ensisijaisesti tulee käyttää välilehtiä. Välilehtien käytön edellytyksenä on, että tieto voidaan jakaa asiakokonaisuuksiin jotka voidaan selkeästi nimetä ja erottaa toisistaan. Kullekin välilehdelle tulee antaa otsikko joka kuvaa sillä esitettävää asiakokonaisuutta.</p>
           <p>Mikäli välilehtiä ei voida käyttää käytetään sivutusta. Sivutusta käytettäessä suositellaan, että käyttäjällä on mahdollisuus vaikuttaa tiedon esitysjärjestykseen sekä yhdellä sivulla esitettävän tiedon määrään, ja tätä kautta sivujen lukumäärään.</p>
-          <p>Ohjattua sivutusta käytetään ainoastaan kun halutaan ohjata käyttäjä käymään läpi tai syöttämään tietoja määrätyssä järjestyksessä.</p>
+          <p>Ohjattua sivutusta käytetään kun halutaan ohjata käyttäjä käymään läpi tai syöttämään tietoja määrätyssä järjestyksessä.</p>
         </div>
         <h2 id="taulukot">Taulukot ja listat</h2>
         <div class="well">
+          <p><b>Taulukot</b></p>
           <p>Taulukoita käytetään kun tietoa tulee jäsentää yksinkertaista tekstiä tai listaa enemmän. Taulukolla ei ole välttämätöntä olla otsikkoa, mutta taulukon sarakkeilla tulee olla sarakeotsikot. Sarakkeiden tai rivien lukumäärää ei ole rajattu.</p>
           <p>Taulukon soluissa voidaan vapaasti käyttää tekstiä, kuvia, kuvakkeita, numeraalista tietoa, syöttökenttiä, linkkejä, kontrolleja ja toimintoja. Taulukon rivit erotetaan toisistaan raidoituksella (kts. Visuaalinen tyyli) ja taulukon yhteydessä käytetään hover-toimintoa joka korostaa sen taulukon rivin jonka yllä hiiren kursori kulloinkin on.</p>
-          <p>Käyttäjä voi järjestää taulukon kunkin sarakeotsikon mukaan joko nousevaan tai laskevaan järjstykseen. Taulukko on aina järjestetty jonkin sarakeotsikon mukaan, oletusarvoisesti ensimmäinen vasemmalta. Taulukon järjestävä sarake indikoidaan nuoli-ikonilla ja nuolen suunta osoittaa järjestyksen suunnan.</p>
+          <p>Käyttäjä voi järjestää taulukon kunkin sarakeotsikon mukaan joko nousevaan tai laskevaan järjestykseen. Taulukko on aina järjestetty jonkin sarakeotsikon mukaan, oletusarvoisesti ensimmäinen vasemmalta. Taulukon järjestävä sarake indikoidaan nuoli-ikonilla ja nuolen suunta osoittaa järjestyksen suunnan.</p>
+          <p><a href="graafinen.html#taulukot">Katso Taulukoiden visuaalinen määritys</a></p>
+          <p><b>Listat</b></p>
           <p>Listalla tulee olla otsikko. Seuraavien listatyyppien käyttöä suositellaan:
           <ul>
             <li>Numeroimaton lista, jossa luettelomerkkinä käytetään palloa (bullet point)</li>
+            <ul><li><a href="graafinen.html#typografia">Katso Typografia määritys</a></li></ul>
             <li>Numeroitu lista jossa luettelomerkkinä käytetään järjestysnumeroa</li>
+            <ul><li><a href="graafinen.html#typografia">Katso Typografia määritys</a></li></ul>            
             <li>Linkkilista jossa luettelomerkkinä käytetään >> -tunnistetta linkkien edessä</li>
             <ul>
               <li>Linkkilistassa linkit ovat valittavissa ja käyttäytyvät kuten linkeille on määritetty</li>
+            <li><a href="graafinen.html#linkit">Katso Linkkien visuaalinen määritys</a></li> 
             </ul>
             <li>Kuvakkeellinen lista jossa luettelomerkkinä käytetään graafista kuvaketta</li>
             <ul>
-              <li>Kuvakkeellisessa listassa merkinnät voivat olla valittavissa tai kuvake voi toimia valikkona</li>
+              <li>Kuvakkeellisessa listassa kuvakkeet ja/tai tekstit voivat olla linkkejä, tai kuvake voi toimia toimintopainikkeena (valikko), tai listaa voidaan käyttää valintalistana (yksivalinta)</li>
+				<li>Käytettäessä kuvakkeellista listaa valintalistana korostetaan visuaalisesti kulloinkin listasta valittuna oleva listamerkintä</li>
+            <li><a href="graafinen.html#muuta">Katso visuaalinen määritys</a></li> 
             </ul>
-            <li>Toiminnalliset listat joissa käyttäjä voi tehdä valintoja.</li>
+            <li>Kaksipalstainen lista, jossa tiedon nimiö esitetään vasemmalla ja tieto oikealla. Nimiä on oikealle tasattu ja tieto on vasemmalle tasattu.</li>
+            <li>Toiminnalliset listat, kuten taittuva lista, hierarkinen lista ja valintalista</li>
             <ul>
-              <li>Katso lisää: Toiminnalliset komponentit</li>
+              <li><a href="toiminnalliset-komponentit.html#taittuva_lista">Taittuva lista: Katso toiminnalliset komponentit</a></li>
+				<li><a href="toiminnalliset-komponentit.html#hierarkinen_lista">Hierarkinen lista: Katso toiminnalliset komponentit</a></li>
+				<li><a href="toiminnalliset-komponentit.html#valintalista">Valintalista: Katso toiminnalliset komponentit</a></li>
             </ul>
           </ul>
           </p>

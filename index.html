@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Johdanto</title>
+<title>Opintopolku tyyliopas</title>
 <style type="text/css"></style>
 <link href="css/bootstrap-combined.css" rel="stylesheet" type="text/css">
 <link href="css/css-tyylikirjasto-virkailija.css" rel="stylesheet" type="text/css">
@@ -11,41 +11,23 @@
 .well {
 	background: white;
 }
-.sidebar-nav-fixed {
-	position: fixed;
-	top: 60px;
-	width: 16%;
-}
 
-@media (max-width: 767px) {
-.sidebar-nav-fixed {
-	width: auto;
-}
-}
-
-@media (max-width: 979px) {
-.sidebar-nav-fixed {
-	position: static;
-	width: auto;
-}
-}
 </style>
 </head>
 <body>
 <div class="container-fluid"> 
   <!-- container -->
   <div class="navbar"> <!-- PÄÄNAVI -->
-    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi</a>
+    <div class="navbar-inner"> <a class="brand" href="#">Opintopolku.fi tyyliopas</a>
       <ul class="nav">
-        <li class="active"><a href="johdanto.html">Johdanto</a></li>
-        <li><a href="css-tyylikirjasto-virkailija.html">Visuaalisen tyylin opas</a></li>
+        <li class="active"><a href="index.html">Johdanto</a></li>
         <li><a href="tietojen-esittaminen.html">Tietojen esittäminen</a></li>
+        <li><a href="tietojen-lisaaminen.html">Tietojen muokkaaminen</a></li>
         <li><a href="toiminnalliset-komponentit.html">Toiminnalliset komponentit</a></li>
-        <li><a href="tietojen-lisaaminen.html">Tietojen lisääminen, muokkaaminen ja poistaminen</a></li>
+        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja indikaattorit</a></li>
         <li><a href="navigointi.html">Navigointi</a></li>
-        <li><a href="haku.html">Haku</a></li>
-        <li><a href="ilmoitukset-indikaattorit.html">Ilmoitukset ja tilaindikaattorit</a></li>
-        <li><a href="sivupohjat.html">Sivupohjat</a></li>
+		 <li><a href="sivupohjat.html">Sivupohjat</a></li>
+        <li><a href="graafinen.html">Visuaalinen tyyli</a></li>
       </ul>
     </div>
   </div>
@@ -54,9 +36,8 @@
   <div class="row-fluid"> 
     <!-- CONTAINER -->
     <div class="span2"> <!-- SIVUNAVI -->
-      <ul class="nav nav-tabs nav-stacked sidebar-nav-fixed">
-        <li><a href="#johdanto">Johdanto</a></li>
-        <li><a href="#yleiset_periaatteet">Käyttöliittymän yleiset suunnitteluperiaatteet</a></li>
+      <ul class="nav nav-tabs nav-stacked">
+        <li><a href="#yleiset_periaatteet">Yleiset suunnitteluperiaatteet</a></li>
         <li><a href="#vaatimukset">Selain- ja käyttövaatimukset</a></li>
       </ul>
     </div>
@@ -64,7 +45,9 @@
     
     <div class="span10">
       <div class="row-fluid"> <!-- ROW -->
-        <h1 id="johdanto">Johdanto</h1>
+        <h1 id="johdanto">Opintopolku.fi -palvelun käyttöliittymän tyyliopas</h1>
+        <hr>
+        <p>Versio 1.0 - 24.4.2014 - elina.melkko@cresense.com (interaktiot ja käytettävyys) - matti.kilponen@cresense.com (visuaalinen tyyli)</p>
         <hr>
         <p>Tämä ohjeisto määrittelee Opintopolku-palvelun käyttöliittymän yhdenmukaisuussuositukset. Ohjeistoa käytetään Opintopolun virkalijapalveluiden ja julkisen palvelun (jäljempänä Oppijan palvelun) käyttöliittymien ylläpidon, käyttöliittymäsuunnittelun, visuaalisen suunnittelun ja käytettävyyssuunnittelun apuna ja ohjeena. Ohjeiston tarkoituksena on varmistaa palvelun yhdenmukainen käyttökokemus ja tehostaa palvelun suunnittelu, kehitys- ja ylläpitotyötä.</p>
         <p>Tämä ohjeisto ei kuvaa Opintopolku-palveluun sisältyvien palveluiden toimintalogiikkaa tai kokonaisuuksia, ainoastaan komponentit ja käytänteet joita palveluissa tulee käyttää jotta kokonaisuudesta tulee yhdenmukainen. Jokainen palvelu, sen logiikka, kokonaisuus ja käyttötarkoitus kuvataan erikseen palvelukohtaisissa määrityksissä.</p>
@@ -75,7 +58,7 @@
           <p>Opintopolku-palvelun suunnittelussa noudatetaan seuraavia yleisiä suunnitteluperiaatteita:
           <ul>
             <li>Käyttöliittymä suunnitellaan WWW-ympäristöön. Järjestelmän tulee olla loppukäyttäjille kokonaisuudessaan selainkäyttöinen ilman selainlaajennusten plug-in) asentamista.</li>
-            <li>Oppijan palvelu suunnitellaan esteettömäksi WCAG A-tason vaatimusten mukaisesti ja hakulomakkeen osalta AA-tason  vaatimusten mukaisesti.
+            <li>Oppijan palvelu suunnitellaan esteettömästi saavutettavaksi WCAG A-tason vaatimusten mukaisesti ja hakulomakkeen osalta AA-tason vaatimusten mukaisesti.
               <ul>
                 <li>Virkailijapalvelussa javascriptin käyttöä ei ole tarve rajoittaa.</li>
               </ul>
@@ -92,10 +75,17 @@
             </ul>
           </ul>
           </p>
+          <p><b>Saavutettavuusvaatimukset</b>
+          <ul>
+          <li><a href="doc/Esteettömyys-ja saavutettavuusvaatimukset.pdf" target="_blank">WCAG A ja AA -tason saavutettavuusvaatimukset (PDF)</a></li>
+          <li><a href="http://www.w3.org/TR/WCAG20/" target="_blank">W3C Web Content Accessibility Guidelines</a></li>
+          </ul>
+          </p>
         </div>
         <h2 id="vaatimukset">Selain- ja käyttövaatimukset</h2>
         <div class="well">
-          <p>Käyttöliittymä suunnitellaan ensisijaisesti tietokoneella ja tietokoneen hiirellä käytettäväksi. Käyttöliittymän tulee olla käytettävissä seuraavilla WWW-selaimilla:
+          <p>Käyttöliittymä suunnitellaan ensisijaisesti tietokoneella ja tietokoneen hiirellä käytettäväksi. </p>
+          <p>Käyttöliittymän tulee olla käytettävissä seuraavilla WWW-selaimilla:
           <ul>
             <li>Internet Explorer (versio 9 ja uudemmat)</li>
             <li>Mozilla Firefox (versio 4 ja uudemmat)</li>
@@ -105,6 +95,7 @@
           </ul>
           </p>
           <p>Käyttöliittymän toteutus tulee testata ja sen standardinmukaisuus todentaa selainkohtaisesti.</p>
+          <p><b>Käyttö näppäimistöllä</b></p>
           <p>Oppijan palvelun esteettömyysvaatimukset sisältävät määrityksiä käyttöliittymän käyttöön tietokoneen näppäimistöllä. Näiden määritysten ulkopuolella suositellaan seuraavien näppäintoimintojen tukemista sekä virkailijapalveluissa että Oppijan palvelussa:
           <ul>
             <li>Tietoja syötettäessä CTRL + S näppäinyhdistelmä tallentaa tiedot kuten Tallenna-painike</li>
@@ -114,8 +105,9 @@
           </ul>
           </p>
           <p> Lisäksi tuetaan yleisiä selainten tukemia näppäinkomentoja niiltä osin kuin ne eivät ole ristiriidassa yllä määritettyjen kanssa. </p>
+          <p><b>Käyttö mobiili- ja tablet -laitteilla</b></p>
           <p>Oppijan palvelu suunnitellaan responsiiviseksi niin, että sen käyttö myös mobiili- ja tablet-laitteilla on miellyttävää ja käytettävää.</p>
-          <p><b>Huom: Tämä tyylioppaan versio ei sisällä responsiivista käyttöliittymää. Se lisätään tyylioppaaseen määritysten valmistuttua.</b></p>
+          <p><i>HUOM: Tämä tyylioppaan versio ei sisällä responsiivista käyttöliittymää. Se lisätään tyylioppaaseen määritysten valmistuttua.</i></p>
         </div>
       </div>
     </div>
